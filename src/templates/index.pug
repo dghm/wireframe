@@ -46,7 +46,7 @@ html(lang="zh-TW")
                   path(d="M8 21H16", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
                   path(d="M12 17V21", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
               .stat-content
-                .stat-number#activeProjectsCount 1
+                .stat-number#activeProjectsCount= projects ? projects.length : 0
                 .stat-label 活躍專案
               
             .stat-card
@@ -75,7 +75,54 @@ html(lang="zh-TW")
             p.section-subtitle 管理和預覽所有 Website Wireframe 專案
           
           .projects-grid#projectsGrid
-            // 專案將透過 JavaScript 動態載入
+            if projects
+              each project in projects
+                .project-card(data-project-id=project.id)
+                  .project-header
+                    .project-logo
+                      svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                        if project.type === '企業網站'
+                          rect(x="8", y="8", width="32", height="32", rx="6", fill="#2563EB")
+                          path(d="M16 20H32M16 24H32M16 28H24", stroke="white", stroke-width="2")
+                        else if project.type === '能源網站'
+                          circle(cx="24", cy="24", r="16", fill="#10B981")
+                          path(d="M24 12L28 20H36L30 26L32 34L24 30L16 34L18 26L12 20H20L24 12Z", fill="white")
+                        else if project.type === '工程網站'
+                          rect(x="8", y="8", width="32", height="32", rx="6", fill="#DC2626")
+                          path(d="M16 16L24 12L32 16V32C32 33.1 31.1 34 30 34H18C16.9 34 16 33.1 16 32V16Z", fill="white")
+                    .project-info
+                      h3.project-title= project.name
+                      p.project-description= project.description
+                    .project-status
+                      span.status-badge(class=project.status === 'active' ? 'status--active' : 'status--inactive')
+                        = project.status === 'active' ? '活躍' : '非活躍'
+                  
+                  .project-details
+                    .project-meta
+                      .meta-item
+                        .meta-label 類型
+                        .meta-value
+                          span.type-badge= project.type
+                      .meta-item
+                        .meta-label 技術
+                        .meta-value
+                          each tech in project.tech
+                            span.tech-badge= tech
+                      .meta-item
+                        .meta-label 更新
+                        .meta-value
+                          span.updated-text= project.lastUpdated
+                    
+                    .project-features
+                      each feature in project.features.slice(0, 3)
+                        span.feature-tag= feature
+                  
+                  .project-actions
+                    button.btn.btn--primary.preview-btn(data-preview-path=project.previewPath) 預覽
+                    button.btn.btn--outline.edit-btn 編輯
+            else
+              .empty-state
+                p 沒有找到專案
 
         // Quick Actions
         section.actions-section
@@ -160,56 +207,12 @@ html(lang="zh-TW")
 
     // Scripts
     script.
-      // 專案配置
+      // 專案配置從伺服器端傳入
       const projectsConfig = {
-        "projects": [
-          {
-            "id": "tailormed-2026",
-            "name": "TailorMed 2026",
-            "description": "專業冷鏈物流公司首頁線框圖",
-            "path": "Projects/TailorMed-2026",
-            "previewPath": "/Projects/TailorMed-2026/dist/index.html",
-            "tech": ["Pug", "Stylus"],
-            "type": "企業網站",
-            "status": "active",
-            "features": ["響應式設計", "現代化 UI", "冷鏈專業", "合規展示"],
-            "lastUpdated": "今天"
-          },
-          {
-            "id": "ynenergy",
-            "name": "YnEnergy",
-            "description": "綠色能源解決方案官方網站",
-            "path": "Projects/ynenergy",
-            "previewPath": "/Projects/ynenergy/dist/index.html",
-            "tech": ["Pug", "Stylus"],
-            "type": "能源網站",
-            "status": "active",
-            "features": ["草綠色主題", "響應式設計", "能源解決方案", "聯絡表單"],
-            "lastUpdated": "今天"
-          }
-        ]
+        "projects": !{JSON.stringify(projects || [])}
       };
 
-      // 載入專案列表
-      function loadProjects() {
-        const projectsGrid = document.getElementById('projectsGrid');
-        const activeProjectsCount = document.getElementById('activeProjectsCount');
-        
-        // 更新統計數字
-        activeProjectsCount.textContent = projectsConfig.projects.length;
-        
-        // 清空現有專案
-        projectsGrid.innerHTML = '';
-        
-        // 動態生成專案卡片
-        projectsConfig.projects.forEach(project => {
-          const projectCard = createProjectCard(project);
-          projectsGrid.appendChild(projectCard);
-        });
-        
-        // 重新綁定事件
-        bindProjectEvents();
-      }
+      // 移除了 loadProjects 函數，因為專案卡片現在由伺服器端 Pug 模板直接生成
 
       // 創建專案卡片
       function createProjectCard(project) {
@@ -327,7 +330,7 @@ html(lang="zh-TW")
 
       // 頁面載入完成後初始化
       document.addEventListener('DOMContentLoaded', function() {
-        loadProjects();
+        bindProjectEvents();
       });
 
       // 編譯所有專案

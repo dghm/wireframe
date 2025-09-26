@@ -23,6 +23,18 @@
       "status": "active",
       "features": ["草綠色主題", "響應式設計", "能源解決方案", "聯絡表單"],
       "lastUpdated": "今天"
+    },
+    {
+      "id": "ylpm",
+      "name": "YLPM",
+      "description": "專業工程解決方案單頁式網站",
+      "path": "Projects/YLPM",
+      "previewPath": "/Projects/YLPM/dist/index.html",
+      "tech": ["Pug", "Stylus"],
+      "type": "工程網站",
+      "status": "active",
+      "features": ["紅色系主題", "單頁式設計", "三大工程領域", "工業4.0專區"],
+      "lastUpdated": "今天"
     }
   ]
 }

@@ -1,0 +1,268 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title 關於我們 - YLPM 專業工程解決方案
+    meta(name="description", content="了解 YLPM 的企業背景、核心團隊與專業實力，致力於提供卓越的工程解決方案")
+    link(rel="stylesheet", href="css/main.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap", rel="stylesheet")
+  
+  body.about-page
+    // Header
+    header.header
+      .container
+        .header-content
+          .header-logo
+            svg(width="40", height="40", viewBox="0 0 40 40", fill="none")
+              rect(x="4", y="4", width="32", height="32", rx="6", fill="#DC2626")
+              path(d="M12 12L20 8L28 12V28C28 29.1 27.1 30 26 30H14C12.9 30 12 29.1 12 28V12Z", fill="white")
+            .logo-text YLPM
+          
+          .header-nav
+            ul.nav-list
+              li.nav-item: a.nav-link(href="index.html") 首頁
+              li.nav-item: a.nav-link(href="services.html") 服務項目
+              li.nav-item: a.nav-link(href="projects.html") 工程實績
+              li.nav-item: a.nav-link.active(href="about.html") 關於我們
+              li.nav-item: a.nav-link(href="partners.html") 生態伙伴
+              li.nav-item: a.nav-link(href="news.html") 最新消息
+          
+          .header-cta
+            button.btn.btn--primary 聯絡我們
+
+    // Hero Section
+    section.hero-section.about-hero
+      .container
+        .hero-content
+          .hero-badge
+            span 關於 YLPM
+          h1.hero-title 專業工程解決方案的領導者
+          p.hero-subtitle 自成立以來，YLPM 致力於為客戶提供創新、可靠的工程解決方案。我們結合先進技術與豐富經驗，在建築工程、機械工程和電子工程領域建立了卓越的聲譽。
+          .hero-stats
+            .stat-item
+              .stat-number 15+
+              .stat-label 年專業經驗
+            .stat-item
+              .stat-number 500+
+              .stat-label 成功案例
+            .stat-item
+              .stat-number 50+
+              .stat-label 專業團隊
+            .stat-item
+              .stat-number 98%
+              .stat-label 客戶滿意度
+
+    // Company Story Section
+    section.story-section
+      .container
+        .section-header
+          h2.section-title 我們的故事
+          p.section-subtitle 從小型工程團隊到業界領導者的成長歷程
+        
+        .story-timeline
+          .timeline-item
+            .timeline-year 2009
+            .timeline-content
+              h3 公司創立
+              p 由三位資深工程師共同創立，專注於建築結構設計與諮詢服務
+          
+          .timeline-item
+            .timeline-year 2012
+            .timeline-content
+              h3 業務擴展
+              p 擴展至機械工程領域，開始承接大型工業設備設計專案
+          
+          .timeline-item
+            .timeline-year 2016
+            .timeline-content
+              h3 技術創新
+              p 導入 BIM 建築資訊模型，提升設計效率與品質
+          
+          .timeline-item
+            .timeline-year 2019
+            .timeline-content
+              h3 數位轉型
+              p 全面採用數位化管理系統，整合 AI 與 IoT 技術
+          
+          .timeline-item
+            .timeline-year 2023
+            .timeline-content
+              h3 工業 4.0
+              p 成為工業 4.0 解決方案供應商，引領智慧製造新趨勢
+
+    // Team Section
+    section.team-section
+      .container
+        .section-header
+          h2.section-title 核心團隊
+          p.section-subtitle 匯聚各領域專家，打造卓越的專業團隊
+        
+        .team-grid
+          .team-member
+            .member-avatar
+              .avatar-circle
+                span 王
+            .member-info
+              h3.member-name 王建國
+              .member-role 執行長 & 創辦人
+              p.member-description 土木工程博士，擁有20年大型建設專案管理經驗，曾參與多項國家重點工程建設。
+              .member-expertise
+                span.expertise-tag 結構設計
+                span.expertise-tag 專案管理
+                span.expertise-tag 建築規劃
+          
+          .team-member
+            .member-avatar
+              .avatar-circle
+                span 李
+            .member-info
+              h3.member-name 李美華
+              .member-role 技術長
+              p.member-description 機械工程碩士，專精於工業自動化與智慧製造系統設計，多項專利技術持有人。
+              .member-expertise
+                span.expertise-tag 機械設計
+                span.expertise-tag 自動化系統
+                span.expertise-tag 工業 4.0
+          
+          .team-member
+            .member-avatar
+              .avatar-circle
+                span 張
+            .member-info
+              h3.member-name 張志明
+              .member-role 營運長
+              p.member-description 電子工程碩士，專長於電力系統設計與能源管理，致力於綠色能源解決方案開發。
+              .member-expertise
+                span.expertise-tag 電力系統
+                span.expertise-tag 能源管理
+                span.expertise-tag 綠色科技
+
+    // Values Section
+    section.values-section
+      .container
+        .section-header
+          h2.section-title 核心價值
+          p.section-subtitle 我們堅持的理念與承諾
+        
+        .values-grid
+          .value-card
+            .value-icon
+              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                rect(x="8", y="8", width="32", height="32", rx="6", fill="#DC2626")
+                path(d="M24 16L28 20L24 24L20 20L24 16Z", fill="white")
+                circle(cx="24", cy="24", r="3", fill="white")
+            .value-content
+              h3.value-title 專業品質
+              p.value-description 嚴格的品質管控標準，確保每個專案都達到最高水準的工程品質要求。
+          
+          .value-card
+            .value-icon
+              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                rect(x="8", y="8", width="32", height="32", rx="6", fill="#DC2626")
+                path(d="M16 24L22 30L32 18", stroke="white", stroke-width="3", fill="none")
+            .value-content
+              h3.value-title 誠信負責
+              p.value-description 以誠待人，對每個委託案件負責到底，建立長期穩固的客戶信任關係。
+          
+          .value-card
+            .value-icon
+              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                rect(x="8", y="8", width="32", height="32", rx="6", fill="#DC2626")
+                path(d="M24 12L30 18L24 24L18 18L24 12Z", fill="white")
+                path(d="M24 24L30 30L24 36L18 30L24 24Z", fill="white")
+            .value-content
+              h3.value-title 持續創新
+              p.value-description 積極採用新技術與創新方法，為客戶提供更高效、更經濟的工程解決方案。
+          
+          .value-card
+            .value-icon
+              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                rect(x="8", y="8", width="32", height="32", rx="6", fill="#DC2626")
+                circle(cx="20", cy="20", r="4", fill="white")
+                circle(cx="28", cy="20", r="4", fill="white")
+                circle(cx="24", cy="28", r="4", fill="white")
+            .value-content
+              h3.value-title 團隊合作
+              p.value-description 重視團隊協作精神，整合不同專業領域的專家，共同完成複雜的工程挑戰。
+
+    // Certifications Section
+    section.certifications-section
+      .container
+        .section-header
+          h2.section-title 專業認證
+          p.section-subtitle 獲得的專業資質與榮譽認證
+        
+        .certifications-grid
+          .cert-item
+            .cert-icon
+              svg(width="64", height="64", viewBox="0 0 64 64", fill="none")
+                circle(cx="32", cy="32", r="28", stroke="#DC2626", stroke-width="4")
+                path(d="M22 32L28 38L42 24", stroke="#DC2626", stroke-width="3", fill="none")
+            .cert-info
+              h3.cert-title ISO 9001:2015
+              p.cert-description 品質管理系統認證
+          
+          .cert-item
+            .cert-icon
+              svg(width="64", height="64", viewBox="0 0 64 64", fill="none")
+                circle(cx="32", cy="32", r="28", stroke="#DC2626", stroke-width="4")
+                path(d="M32 16L38 28L50 28L40 36L44 48L32 42L20 48L24 36L14 28L26 28L32 16Z", fill="#DC2626")
+            .cert-info
+              h3.cert-title 建築師公會
+              .cert-description 專業建築設計資格認證
+          
+          .cert-item
+            .cert-icon
+              svg(width="64", height="64", viewBox="0 0 64 64", fill="none")
+                rect(x="8", y="8", width="48", height="48", rx="6", stroke="#DC2626", stroke-width="4")
+                path(d="M20 28L28 36L44 20", stroke="#DC2626", stroke-width="3", fill="none")
+            .cert-info
+              h3.cert-title 技師證照
+              p.cert-description 土木、機械、電機技師專業證照
+
+    // CTA Section
+    section.cta-section
+      .container
+        .cta-content
+          h2.cta-title 與我們一起創造卓越工程
+          p.cta-subtitle 無論您需要建築設計、機械工程或電子系統解決方案，YLPM 都能為您提供專業服務
+          .cta-buttons
+            button.btn.btn--primary 聯絡我們
+            button.btn.btn--outline 下載公司簡介
+
+    // Footer
+    footer.main-footer
+      .container
+        .footer-content
+          .footer-section
+            h3.footer-title 關於 YLPM
+            p.footer-text 專業工程解決方案領導品牌，致力於為客戶提供創新、可靠的工程服務。
+            .social-links
+              a.social-link(href="#") 
+                span LinkedIn
+              a.social-link(href="#") 
+                span Facebook
+              a.social-link(href="#") 
+                span YouTube
+          
+          .footer-section
+            h3.footer-title 服務項目
+            ul.footer-links
+              li: a(href="services.html") 建築工程
+              li: a(href="services.html") 機械工程
+              li: a(href="services.html") 電子工程
+              li: a(href="services.html") 工業 4.0
+          
+          .footer-section
+            h3.footer-title 聯絡資訊
+            .contact-info
+              p 📍 台北市信義區信義路五段 150 號
+              p 📞 (02) 2345-6789
+              p 📧 info@ylpm.com.tw
+              p 🕐 週一至週五 09:00-18:00
+        
+        .footer-bottom
+          p.copyright © 2024 YLPM 專業工程解決方案. All rights reserved.
