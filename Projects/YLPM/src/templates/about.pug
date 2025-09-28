@@ -6,263 +6,335 @@ html(lang="zh-TW")
     title 關於我們 - YLPM 專業工程解決方案
     meta(name="description", content="了解 YLPM 的企業背景、核心團隊與專業實力，致力於提供卓越的工程解決方案")
     link(rel="stylesheet", href="css/main.css")
+    link(rel="stylesheet", href="css/about.css")
     link(rel="preconnect", href="https://fonts.googleapis.com")
     link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap", rel="stylesheet")
   
   body.about-page
-    // Header
+    // Header Navigation
     header.header
       .container
         .header-content
           .header-logo
             svg(width="40", height="40", viewBox="0 0 40 40", fill="none")
-              rect(x="4", y="4", width="32", height="32", rx="6", fill="#DC2626")
-              path(d="M12 12L20 8L28 12V28C28 29.1 27.1 30 26 30H14C12.9 30 12 29.1 12 28V12Z", fill="white")
-            .logo-text YLPM
+              circle(cx="20", cy="20", r="18", fill="#DC2626")
+              path(d="M12 14L20 8L28 14V26C28 27.1 27.1 28 26 28H14C12.9 28 12 27.1 12 26V14Z", fill="white")
+              path(d="M16 18H24V24H16V18Z", fill="#DC2626")
+            h1.logo-text YLPM
           
-          .header-nav
+          nav.header-nav
             ul.nav-list
-              li.nav-item: a.nav-link(href="index.html") 首頁
-              li.nav-item: a.nav-link(href="services.html") 服務項目
-              li.nav-item: a.nav-link(href="projects.html") 工程實績
-              li.nav-item: a.nav-link.active(href="about.html") 關於我們
-              li.nav-item: a.nav-link(href="partners.html") 生態伙伴
-              li.nav-item: a.nav-link(href="news.html") 最新消息
+              li.nav-item
+                a.nav-link(href="index.html") 首頁
+              li.nav-item
+                a.nav-link(href="services.html") 服務項目
+              li.nav-item
+                a.nav-link(href="projects.html") 工程實績
+              li.nav-item
+                a.nav-link.active(href="about.html") 關於我們
+              li.nav-item
+                a.nav-link(href="partners.html") 生態伙伴
+              li.nav-item
+                a.nav-link(href="news.html") 最新消息
           
           .header-cta
             button.btn.btn--primary 聯絡我們
 
     // Hero Section
-    section.hero-section.about-hero
+    section.hero-section
+      .hero-background
+        .hero-overlay
       .container
         .hero-content
           .hero-badge
             span 關於 YLPM
           h1.hero-title 專業工程解決方案的領導者
-          p.hero-subtitle 自成立以來，YLPM 致力於為客戶提供創新、可靠的工程解決方案。我們結合先進技術與豐富經驗，在建築工程、機械工程和電子工程領域建立了卓越的聲譽。
-          .hero-stats
-            .stat-item
-              .stat-number 15+
-              .stat-label 年專業經驗
-            .stat-item
-              .stat-number 500+
-              .stat-label 成功案例
-            .stat-item
-              .stat-number 50+
-              .stat-label 專業團隊
-            .stat-item
-              .stat-number 98%
-              .stat-label 客戶滿意度
+          p.hero-subtitle 結合多年工程經驗與創新技術，打造全方位服務
+          .hero-cta
+            button.btn.btn--primary.btn--large 聯絡我們
 
-    // Company Story Section
-    section.story-section
+    // Company Introduction
+    section.company-intro
       .container
-        .section-header
-          h2.section-title 我們的故事
-          p.section-subtitle 從小型工程團隊到業界領導者的成長歷程
-        
-        .story-timeline
-          .timeline-item
-            .timeline-year 2009
-            .timeline-content
-              h3 公司創立
-              p 由三位資深工程師共同創立，專注於建築結構設計與諮詢服務
-          
-          .timeline-item
-            .timeline-year 2012
-            .timeline-content
-              h3 業務擴展
-              p 擴展至機械工程領域，開始承接大型工業設備設計專案
-          
-          .timeline-item
-            .timeline-year 2016
-            .timeline-content
-              h3 技術創新
-              p 導入 BIM 建築資訊模型，提升設計效率與品質
-          
-          .timeline-item
-            .timeline-year 2019
-            .timeline-content
-              h3 數位轉型
-              p 全面採用數位化管理系統，整合 AI 與 IoT 技術
-          
-          .timeline-item
-            .timeline-year 2023
-            .timeline-content
-              h3 工業 4.0
-              p 成為工業 4.0 解決方案供應商，引領智慧製造新趨勢
+        .intro-content
+          .intro-text
+            h2.section-title 關於 YLPM
+            p.section-description YLPM 作為業界領導者，專注於專業工程技術的研發、執行與創新。我們以深厚的技術底蘊與嚴謹的專案管理，為客戶打造最可靠的解決方案。
+            
+            .mission-vision
+              .mission-item
+                h3 願景
+                p 成為推動產業升級與智慧化工程發展的關鍵夥伴
+              .mission-item
+                h3 使命
+                p 以專業、創新與責任，提供客戶全方位服務
 
-    // Team Section
-    section.team-section
+    // Core Values
+    section.core-values
       .container
-        .section-header
-          h2.section-title 核心團隊
-          p.section-subtitle 匯聚各領域專家，打造卓越的專業團隊
-        
-        .team-grid
-          .team-member
-            .member-avatar
-              .avatar-circle
-                span 王
-            .member-info
-              h3.member-name 王建國
-              .member-role 執行長 & 創辦人
-              p.member-description 土木工程博士，擁有20年大型建設專案管理經驗，曾參與多項國家重點工程建設。
-              .member-expertise
-                span.expertise-tag 結構設計
-                span.expertise-tag 專案管理
-                span.expertise-tag 建築規劃
-          
-          .team-member
-            .member-avatar
-              .avatar-circle
-                span 李
-            .member-info
-              h3.member-name 李美華
-              .member-role 技術長
-              p.member-description 機械工程碩士，專精於工業自動化與智慧製造系統設計，多項專利技術持有人。
-              .member-expertise
-                span.expertise-tag 機械設計
-                span.expertise-tag 自動化系統
-                span.expertise-tag 工業 4.0
-          
-          .team-member
-            .member-avatar
-              .avatar-circle
-                span 張
-            .member-info
-              h3.member-name 張志明
-              .member-role 營運長
-              p.member-description 電子工程碩士，專長於電力系統設計與能源管理，致力於綠色能源解決方案開發。
-              .member-expertise
-                span.expertise-tag 電力系統
-                span.expertise-tag 能源管理
-                span.expertise-tag 綠色科技
-
-    // Values Section
-    section.values-section
-      .container
-        .section-header
-          h2.section-title 核心價值
-          p.section-subtitle 我們堅持的理念與承諾
-        
+        h2.section-title 核心價值
         .values-grid
           .value-card
             .value-icon
-              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
-                rect(x="8", y="8", width="32", height="32", rx="6", fill="#DC2626")
-                path(d="M24 16L28 20L24 24L20 20L24 16Z", fill="white")
-                circle(cx="24", cy="24", r="3", fill="white")
+              svg(width="64", height="64", viewBox="0 0 64 64", fill="none")
+                circle(cx="32", cy="32", r="28", fill="#DC2626", fill-opacity="0.1")
+                path(d="M20 24H44M20 28H40M20 32H36", stroke="#DC2626", stroke-width="3", stroke-linecap="round")
+                path(d="M28 40C28 42.2091 26.2091 44 24 44C21.7909 44 20 42.2091 20 40C20 37.7909 21.7909 36 24 36C26.2091 36 28 37.7909 28 40Z", stroke="#DC2626", stroke-width="3")
             .value-content
-              h3.value-title 專業品質
-              p.value-description 嚴格的品質管控標準，確保每個專案都達到最高水準的工程品質要求。
+              h3 專業工程
+              p 多年經驗累積，深厚的技術底蘊
           
           .value-card
             .value-icon
-              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
-                rect(x="8", y="8", width="32", height="32", rx="6", fill="#DC2626")
-                path(d="M16 24L22 30L32 18", stroke="white", stroke-width="3", fill="none")
+              svg(width="64", height="64", viewBox="0 0 64 64", fill="none")
+                circle(cx="32", cy="32", r="28", fill="#DC2626", fill-opacity="0.1")
+                path(d="M32 8V16M32 48V56M56 32H48M16 32H8M45.66 18.34L40.24 23.76M23.76 40.24L18.34 45.66M45.66 45.66L40.24 40.24M23.76 23.76L18.34 18.34", stroke="#DC2626", stroke-width="3", stroke-linecap="round")
+                circle(cx="32", cy="32", r="12", stroke="#DC2626", stroke-width="3")
             .value-content
-              h3.value-title 誠信負責
-              p.value-description 以誠待人，對每個委託案件負責到底，建立長期穩固的客戶信任關係。
+              h3 精準執行
+              p 嚴格品質控管，確保專案成功
           
           .value-card
             .value-icon
-              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
-                rect(x="8", y="8", width="32", height="32", rx="6", fill="#DC2626")
-                path(d="M24 12L30 18L24 24L18 18L24 12Z", fill="white")
-                path(d="M24 24L30 30L24 36L18 30L24 24Z", fill="white")
+              svg(width="64", height="64", viewBox="0 0 64 64", fill="none")
+                circle(cx="32", cy="32", r="28", fill="#DC2626", fill-opacity="0.1")
+                path(d="M32 12C40.8366 12 48 19.1634 48 28C48 36.8366 40.8366 44 32 44C23.1634 44 16 36.8366 16 28C16 19.1634 23.1634 12 32 12Z", stroke="#DC2626", stroke-width="3")
+                path(d="M24 28L28 32L40 20", stroke="#DC2626", stroke-width="3", stroke-linecap="round", stroke-linejoin="round")
+                path(d="M32 44V52M28 48H36", stroke="#DC2626", stroke-width="3", stroke-linecap="round")
             .value-content
-              h3.value-title 持續創新
-              p.value-description 積極採用新技術與創新方法，為客戶提供更高效、更經濟的工程解決方案。
-          
-          .value-card
-            .value-icon
-              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
-                rect(x="8", y="8", width="32", height="32", rx="6", fill="#DC2626")
-                circle(cx="20", cy="20", r="4", fill="white")
-                circle(cx="28", cy="20", r="4", fill="white")
-                circle(cx="24", cy="28", r="4", fill="white")
-            .value-content
-              h3.value-title 團隊合作
-              p.value-description 重視團隊協作精神，整合不同專業領域的專家，共同完成複雜的工程挑戰。
+              h3 客戶導向
+              p 量身定制解決方案，滿足客戶需求
 
-    // Certifications Section
-    section.certifications-section
+    // Milestones & Achievements
+    section.milestones
       .container
-        .section-header
-          h2.section-title 專業認證
-          p.section-subtitle 獲得的專業資質與榮譽認證
-        
-        .certifications-grid
-          .cert-item
-            .cert-icon
-              svg(width="64", height="64", viewBox="0 0 64 64", fill="none")
-                circle(cx="32", cy="32", r="28", stroke="#DC2626", stroke-width="4")
-                path(d="M22 32L28 38L42 24", stroke="#DC2626", stroke-width="3", fill="none")
-            .cert-info
-              h3.cert-title ISO 9001:2015
-              p.cert-description 品質管理系統認證
+        h2.section-title 里程碑與成就
+        .milestones-grid
+          .milestone-card
+            .milestone-icon
+              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                circle(cx="24", cy="24", r="20", fill="#DC2626", fill-opacity="0.1")
+                path(d="M24 8L26 16H34L28 22L30 30L24 26L18 30L20 22L14 16H22L24 8Z", stroke="#DC2626", stroke-width="2", stroke-linejoin="round")
+            .milestone-content
+              h3 2010 年成立
+              p 累積完成 100+ 專案
           
-          .cert-item
-            .cert-icon
-              svg(width="64", height="64", viewBox="0 0 64 64", fill="none")
-                circle(cx="32", cy="32", r="28", stroke="#DC2626", stroke-width="4")
-                path(d="M32 16L38 28L50 28L40 36L44 48L32 42L20 48L24 36L14 28L26 28L32 16Z", fill="#DC2626")
-            .cert-info
-              h3.cert-title 建築師公會
-              .cert-description 專業建築設計資格認證
+          .milestone-card
+            .milestone-icon
+              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                circle(cx="24", cy="24", r="20", fill="#DC2626", fill-opacity="0.1")
+                path(d="M24 8C15.1634 8 8 15.1634 8 24C8 32.8366 15.1634 40 24 40C32.8366 40 40 32.8366 40 24C40 15.1634 32.8366 8 24 8ZM24 36C18.4772 36 14 31.5228 14 26C14 20.4772 18.4772 16 24 16C29.5228 16 34 20.4772 34 26C34 31.5228 29.5228 36 24 36Z", stroke="#DC2626", stroke-width="2")
+                path(d="M20 24L23 27L28 22", stroke="#DC2626", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            .milestone-content
+              h3 國際認證
+              p 取得 ISO 品質標準
           
-          .cert-item
-            .cert-icon
-              svg(width="64", height="64", viewBox="0 0 64 64", fill="none")
-                rect(x="8", y="8", width="48", height="48", rx="6", stroke="#DC2626", stroke-width="4")
-                path(d="M20 28L28 36L44 20", stroke="#DC2626", stroke-width="3", fill="none")
-            .cert-info
-              h3.cert-title 技師證照
-              p.cert-description 土木、機械、電機技師專業證照
+          .milestone-card
+            .milestone-icon
+              svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                circle(cx="24", cy="24", r="20", fill="#DC2626", fill-opacity="0.1")
+                path(d="M16 16H32V32H16V16ZM20 20V28H28V20H20Z", stroke="#DC2626", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+                path(d="M24 8V16M24 32V40M8 24H16M32 24H40", stroke="#DC2626", stroke-width="2", stroke-linecap="round")
+            .milestone-content
+              h3 智慧化技術
+              p 導入工業 4.0 管理系統
 
-    // CTA Section
-    section.cta-section
+    // Our Team
+    section.our-team
+      .container
+        .team-content
+          .team-text
+            h2.section-title 專業團隊
+            p.section-description 我們的團隊由資深工程師、專案經理與技術顧問組成，具備跨領域整合能力，秉持創新、專業與責任感，持續為客戶創造價值。
+          
+          .team-stats
+            .stat-item
+              .stat-number 50+
+              .stat-label 專業工程師
+            .stat-item
+              .stat-number 15+
+              .stat-label 年經驗
+            .stat-item
+              .stat-number 100%
+              .stat-label 客戶滿意度
+
+    // Services Overview
+    section.services-overview
+      .container
+        h2.section-title 核心服務
+        .services-grid
+          .service-item
+            .service-icon
+              svg(width="32", height="32", viewBox="0 0 32 32", fill="none")
+                path(d="M16 2L20 10H28L22 16L24 24L16 20L8 24L10 16L4 10H12L16 2Z", stroke="#DC2626", stroke-width="2", stroke-linejoin="round")
+            .service-content
+              h3 智慧工程系統整合
+          
+          .service-item
+            .service-icon
+              svg(width="32", height="32", viewBox="0 0 32 32", fill="none")
+                path(d="M16 4C20.4183 4 24 7.58172 24 12C24 16.4183 20.4183 20 16 20C11.5817 20 8 16.4183 8 12C8 7.58172 11.5817 4 16 4Z", stroke="#DC2626", stroke-width="2")
+                path(d="M16 8V12L18 14", stroke="#DC2626", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            .service-content
+              h3 自動化解決方案
+          
+          .service-item
+            .service-icon
+              svg(width="32", height="32", viewBox="0 0 32 32", fill="none")
+                path(d="M8 8H24V24H8V8ZM12 12V20H20V12H12Z", stroke="#DC2626", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+                path(d="M12 4V8M20 4V8M8 12H4M8 20H4M24 12H28M24 20H28M12 24V28M20 24V28", stroke="#DC2626", stroke-width="2", stroke-linecap="round")
+            .service-content
+              h3 建築與工業設計
+          
+          .service-item
+            .service-icon
+              svg(width="32", height="32", viewBox="0 0 32 32", fill="none")
+                path(d="M16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2Z", stroke="#DC2626", stroke-width="2")
+                path(d="M12 16L14.5 18.5L20 13", stroke="#DC2626", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            .service-content
+              h3 品質控管與檢測
+          
+          .service-item
+            .service-icon
+              svg(width="32", height="32", viewBox="0 0 32 32", fill="none")
+                path(d="M16 4L20 12H28L22 18L24 26L16 22L8 26L10 18L4 12H12L16 4Z", stroke="#DC2626", stroke-width="2", stroke-linejoin="round")
+            .service-content
+              h3 客製化專案規劃
+
+    // Clients & Partners
+    section.clients-partners
+      .container
+        .partners-content
+          .partners-text
+            h2.section-title 合作客戶與夥伴
+            p.section-description 我們服務於建築、製造與智慧工廠領域，並與國內外知名企業、政府單位及大型建設公司合作。
+          
+          .partners-grid
+            .partner-logo
+              .logo-placeholder 政府機關
+            .partner-logo
+              .logo-placeholder 建設公司
+            .partner-logo
+              .logo-placeholder 製造業
+            .partner-logo
+              .logo-placeholder 科技公司
+            .partner-logo
+              .logo-placeholder 工程顧問
+            .partner-logo
+              .logo-placeholder 國際企業
+
+    // Contact CTA
+    section.contact-cta
       .container
         .cta-content
-          h2.cta-title 與我們一起創造卓越工程
-          p.cta-subtitle 無論您需要建築設計、機械工程或電子系統解決方案，YLPM 都能為您提供專業服務
-          .cta-buttons
-            button.btn.btn--primary 聯絡我們
-            button.btn.btn--outline 下載公司簡介
+          .cta-text
+            h2.cta-title 與我們合作
+            p.cta-description 如需專案合作或技術支援，請立即與我們聯繫
+          .cta-actions
+            button.btn.btn--primary.btn--large 聯絡我們
+            button.btn.btn--outline.btn--large 查看服務
 
     // Footer
-    footer.main-footer
+    footer.footer
       .container
         .footer-content
-          .footer-section
-            h3.footer-title 關於 YLPM
-            p.footer-text 專業工程解決方案領導品牌，致力於為客戶提供創新、可靠的工程服務。
-            .social-links
-              a.social-link(href="#") 
-                span LinkedIn
-              a.social-link(href="#") 
-                span Facebook
-              a.social-link(href="#") 
-                span YouTube
-          
-          .footer-section
-            h3.footer-title 服務項目
-            ul.footer-links
-              li: a(href="services.html") 建築工程
-              li: a(href="services.html") 機械工程
-              li: a(href="services.html") 電子工程
-              li: a(href="services.html") 工業 4.0
-          
-          .footer-section
-            h3.footer-title 聯絡資訊
-            .contact-info
-              p 📍 台北市信義區信義路五段 150 號
-              p 📞 (02) 2345-6789
-              p 📧 info@ylpm.com.tw
-              p 🕐 週一至週五 09:00-18:00
+          .footer-brand
+            .logo
+              svg(width="32", height="32", viewBox="0 0 32 32", fill="none")
+                circle(cx="16", cy="16", r="14", fill="#DC2626")
+                path(d="M10 12L16 8L22 12V20C22 21.1 21.1 22 20 22H12C10.9 22 10 21.1 10 20V12Z", fill="white")
+                path(d="M13 15H19V18H13V15Z", fill="#DC2626")
+              span YLPM
+            p.brand-description 專業工程解決方案提供商
+            
+          .footer-links
+            a(href="index.html") 首頁
+            a(href="services.html") 服務項目
+            a(href="projects.html") 工程實績
+            a(href="about.html") 關於我們
+            a(href="contact.html") 聯絡我們
+            
+          .social-links
+            a.social-link(href="#")
+              svg(width="20", height="20", viewBox="0 0 20 20", fill="currentColor")
+                path(d="M18 2H16C15.17 2 14.37 2.37 13.83 2.97L10 6.8L6.17 2.97C5.63 2.37 4.83 2 4 2H2C0.9 2 0 2.9 0 4V16C0 17.1 0.9 18 2 18H4C4.83 18 5.63 17.63 6.17 17.03L10 13.2L13.83 17.03C14.37 17.63 15.17 18 16 18H18C19.1 18 20 17.1 20 16V4C20 2.9 19.1 2 18 2ZM18 16H16L10 10L4 16H2V4H4L10 10L16 4H18V16Z")
+            a.social-link(href="#")
+              svg(width="20", height="20", viewBox="0 0 20 20", fill="currentColor")
+                path(d="M18.258 3.266C17.521 3.498 16.734 3.65 15.915 3.707C16.751 3.218 17.405 2.455 17.729 1.541C16.944 1.995 16.073 2.33 15.147 2.521C14.411 1.728 13.344 1.25 12.154 1.25C9.927 1.25 8.123 3.054 8.123 5.281C8.123 5.621 8.16 5.952 8.23 6.271C5.604 6.125 3.231 4.766 1.529 2.687C1.151 3.325 0.931 4.068 0.931 4.862C0.931 6.366 1.739 7.682 2.938 8.418C2.294 8.399 1.695 8.223 1.179 7.927V7.975C1.179 9.912 2.562 11.534 4.432 11.925C4.064 12.023 3.67 12.073 3.263 12.073C2.983 12.073 2.713 12.045 2.449 11.992C2.995 13.588 4.485 14.746 6.269 14.775C4.869 15.843 3.155 16.485 1.302 16.485C0.948 16.485 0.6 16.462 0.255 16.418C2.058 17.554 4.256 18.25 6.597 18.25C12.145 18.25 15.272 12.125 15.272 6.798C15.272 6.604 15.268 6.41 15.26 6.218C16.055 5.668 16.745 4.988 17.321 4.211L18.258 3.266Z")
+            a.social-link(href="#")
+              svg(width="20", height="20", viewBox="0 0 20 20", fill="currentColor")
+                path(d="M10 0C4.477 0 0 4.477 0 10C0 14.991 3.657 19.128 8.438 19.878V12.89H5.898V10H8.438V7.797C8.438 5.292 9.93 3.907 12.215 3.907C13.309 3.907 14.453 4.102 14.453 4.102V6.562H13.193C11.95 6.562 11.563 7.333 11.563 8.124V10H14.336L13.893 12.89H11.563V19.878C16.343 19.128 20 14.991 20 10C20 4.477 15.523 0 10 0Z")
         
         .footer-bottom
-          p.copyright © 2024 YLPM 專業工程解決方案. All rights reserved.
+          p.copyright © 2024 YLPM. All rights reserved. | Privacy Policy | Terms of Service
+
+    // Scripts
+    script.
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Animate stats on scroll
+      const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+              const finalValue = stat.textContent;
+              const isPercentage = finalValue.includes('%');
+              const isPlus = finalValue.includes('+');
+              const numericValue = parseInt(finalValue.replace(/[^\d]/g, ''));
+              
+              let currentValue = 0;
+              const increment = numericValue / 50;
+              
+              const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= numericValue) {
+                  stat.textContent = finalValue;
+                  clearInterval(timer);
+                } else {
+                  let displayValue = Math.floor(currentValue);
+                  if (isPercentage) displayValue += '%';
+                  if (isPlus) displayValue += '+';
+                  stat.textContent = displayValue;
+                }
+              }, 30);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe stats sections
+      const statsSections = document.querySelectorAll('.team-stats, .milestones-grid');
+      statsSections.forEach(section => {
+        observer.observe(section);
+      });
+
+      // Button hover effects
+      document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-2px)';
+        });
+        
+        btn.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+        });
+      });
