@@ -1,0 +1,106 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title 工程實績 - YLPM 專業工程解決方案
+    link(rel="stylesheet", href="css/main.css")
+    meta(name="description", content="YLPM 工程實績展示，透過專業的系統整合與自動化技術，為客戶提供高效管理流程解決方案")
+  
+  body
+    include components/header.pug
+    +header('projects')
+
+    // Breadcrumb
+    .container
+      nav.breadcrumb(style="padding: 100px 0 20px 0; font-size: 14px; color: #6B7280;")
+        a(href="index.html", style="color: #DC2626; text-decoration: none;") 首頁
+        span(style="margin: 0 8px;") /
+        span 工程實績
+
+    // Section 1 - 專案挑戰
+    section.challenge-section
+      .container
+        .challenge-content
+          h1.challenge-title 專案挑戰
+          p.challenge-description
+            | 客戶面臨產線效率不足與設備相容性低的挑戰，導致工時與成本不斷增加。
+            br
+            | 他們需要一套可靠的智慧化工程解決方案，來提升效能並降低風險。
+          
+          .challenge-visual
+            .placeholder-image
+              svg(width="400", height="300", viewBox="0 0 400 300", fill="none")
+                rect(x="0", y="0", width="400", height="300", fill="#F3F4F6", stroke="#E5E7EB", stroke-width="2")
+                rect(x="50", y="50", width="300", height="200", fill="#FEE2E2", stroke="#DC2626", stroke-width="2")
+                path(d="M100 100L150 150L200 100L250 150L300 100", stroke="#DC2626", stroke-width="3", fill="none")
+                circle(cx="150", cy="150", r="8", fill="#DC2626")
+                circle(cx="200", cy="100", r="8", fill="#DC2626")
+                circle(cx="250", cy="150", r="8", fill="#DC2626")
+                text(x="200", y="250", text-anchor="middle", fill="#6B7280", font-size="16") 產線效率優化示意圖
+
+    // Section 2 - 我們的解決方案
+    section.solution-section
+      .container
+        .solution-content
+          h2.solution-title 我們的解決方案
+          p.solution-description
+            | 我們透過專業的系統整合與自動化技術，為客戶設計並導入一套高效管理流程，確保專案能夠如期如質完成。
+          
+          .solution-points
+            .solution-point
+              .point-icon
+                svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                  rect(x="8", y="12", width="32", height="24", rx="4", stroke="#DC2626", stroke-width="2")
+                  path(d="M16 20H32M16 24H28M16 28H24", stroke="#DC2626", stroke-width="2")
+                  circle(cx="36", cy="16", r="3", fill="#DC2626")
+              .point-content
+                h3.point-title 系統化管理流程
+                p.point-description 強化跨部門協作
+              
+            .solution-point
+              .point-icon
+                svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                  path(d="M12 20C12 14.5 16.5 10 22 10H26C31.5 10 36 14.5 36 20V28C36 33.5 31.5 38 26 38H22C16.5 38 12 33.5 12 28V20Z", stroke="#DC2626", stroke-width="2")
+                  path(d="M20 22L24 26L28 22", stroke="#DC2626", stroke-width="2", fill="none")
+                  circle(cx="24", cy="15", r="2", fill="#DC2626")
+              .point-content
+                h3.point-title 自動化控制技術
+                p.point-description 減少人工錯誤
+              
+            .solution-point
+              .point-icon
+                svg(width="48", height="48", viewBox="0 0 48 48", fill="none")
+                  circle(cx="24", cy="24", r="16", stroke="#DC2626", stroke-width="2")
+                  path(d="M18 24L22 28L30 20", stroke="#DC2626", stroke-width="2", fill="none")
+                  circle(cx="24", cy="12", r="2", fill="#DC2626")
+              .point-content
+                h3.point-title 品質監測與數據分析
+                p.point-description 持續優化生產
+
+    // Section 3 - 專案成果
+    section.results-section
+      .container
+        .results-content
+          h2.results-title 專案成果
+          p.results-description
+            | 專案完成後，客戶的生產效率顯著提升，成本與工期均獲得大幅改善，並為後續營運奠定長期優勢。
+          
+          .results-stats
+            .stat-badge
+              .stat-number 30%
+              .stat-label 生產效率提升
+            .stat-badge
+              .stat-number 20
+              .stat-label 工期縮短 (天)
+            .stat-badge
+              .stat-number 15%
+              .stat-label 能耗降低
+          
+          .cta-block
+            h3.cta-title 想了解更多成功案例嗎？
+            p.cta-description 歡迎與我們聯繫，了解更多工程實績與解決方案
+            a.btn.btn--primary.btn--large(href="#contact") 聯絡我們
+
+    include components/footer.pug
+    +footer()

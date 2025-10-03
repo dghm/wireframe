@@ -1,0 +1,67 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title TailorMed｜貨件追蹤系統 MVP
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="css/main.css")
+  body
+    header.site-header
+      .container
+        .brand
+          img.brand-logo(src="assets/logo.png", alt="TailorMed")
+        nav.site-nav
+          a.nav-link(href="https://tailormed.com.tw", target="_blank", rel="noopener") Back to TailorMed
+
+    section.hero-banner
+      .hero-overlay
+      .container
+        .hero-content
+          .hero-text
+            h1.hero-title Track Your TailorMed Shipments Anytime
+            p.hero-subtitle.hero-subtitle--desktop Use your order number and job ID to review the latest checkpoints, handovers, and delivery milestones.
+            p.hero-subtitle.hero-subtitle--mobile Enter your IDs to see the current shipment status.
+
+    section.hero-summary
+      .summary-card
+        h2.summary-title Shipment Tracking Lookup
+        .summary-search
+          form.summary-form(action="#", method="get")
+            .form-row
+              label.input-group
+                span.input-label Order No.
+                input(type="text", name="order", placeholder="e.g. TM-439812", required)
+              label.input-group
+                span.input-label Job No.
+                input(type="text", name="job", placeholder="e.g. JOB-20451", required)
+              button.btn.btn--primary(type="submit") CHECK STATUS
+            p.form-helper
+              | Need help? Contact your TailorMed logistics specialist at 
+              span.contact-phone +886 2-2694-6168
+              |  for priority support.
+
+      .results-card
+        h3.results-title Latest shipment updates
+        p.results-description Review recorded checkpoints, customs clearance notes, and recent delivery milestones.
+        .results-highlight
+          .summary-grid
+            .summary-field
+              span.field-label Order No.
+              span.field-value TM-439812
+            .summary-field
+              span.field-label Job No.
+              span.field-value JOB-20451
+            .summary-field
+              span.field-label MAWB
+              span.field-value 074-12345678
+            .summary-field.status-field
+              span.field-label Status
+              span.field-value.status-inline.status-in-transit In Transit
+            .summary-field
+              span.field-label ETA
+              span.field-value 2025-10-06 14:30 (local)
+        p.results-note No recent updates. Please check again later.
+

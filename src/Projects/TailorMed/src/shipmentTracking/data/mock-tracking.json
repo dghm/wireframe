@@ -1,0 +1,74 @@
+{
+  "TM123456789": {
+    "statusSummary": {
+      "currentStatus": "配送中",
+      "updatedAt": "2025-10-01 14:32",
+      "eta": "2025-10-02",
+      "location": "桃園物流中心"
+    },
+    "events": [
+      {
+        "status": "配送中",
+        "timestamp": "2025-10-01 14:32",
+        "location": "桃園物流中心",
+        "note": "已裝車，預計今日完成北部路線"
+      },
+      {
+        "status": "到達轉運站",
+        "timestamp": "2025-10-01 08:10",
+        "location": "桃園物流中心",
+        "note": "完成轉運站卸貨"
+      },
+      {
+        "status": "出貨準備",
+        "timestamp": "2025-09-30 21:40",
+        "location": "台南廠",
+        "note": "完成包裝，等待轉運車輛"
+      },
+      {
+        "status": "確認訂單",
+        "timestamp": "2025-09-30 10:05",
+        "location": "台南廠",
+        "note": "貨件資訊確認完畢"
+      }
+    ]
+  },
+  "TM987654321": {
+    "statusSummary": {
+      "currentStatus": "已送達",
+      "updatedAt": "2025-09-28 16:05",
+      "eta": "2025-09-28",
+      "location": "客戶端（台北市信義區）"
+    },
+    "events": [
+      {
+        "status": "已送達",
+        "timestamp": "2025-09-28 16:05",
+        "location": "台北市信義區",
+        "note": "已由收貨人簽收"
+      },
+      {
+        "status": "配送中",
+        "timestamp": "2025-09-28 12:30",
+        "location": "台北市南港區",
+        "note": "配送車前往客戶地址"
+      },
+      {
+        "status": "到達轉運站",
+        "timestamp": "2025-09-27 22:15",
+        "location": "台北轉運中心"
+      },
+      {
+        "status": "出貨準備",
+        "timestamp": "2025-09-27 17:55",
+        "location": "桃園物流中心"
+      },
+      {
+        "status": "確認訂單",
+        "timestamp": "2025-09-27 09:25",
+        "location": "台南廠"
+      }
+    ]
+  }
+}
+

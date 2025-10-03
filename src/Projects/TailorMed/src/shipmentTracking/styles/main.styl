@@ -1,0 +1,420 @@
+@import '../../styles/main.styl'
+
+.site-header
+  background white
+  border-bottom 1px solid rgba(15, 23, 42, 0.08)
+  position sticky
+  top 0
+  z-index 10
+  backdrop-filter blur(8px)
+  box-shadow 0 8px 24px rgba(15, 23, 42, 0.05)
+
+  .container
+    display flex
+    align-items center
+    justify-content space-between
+    padding 18px 18px
+    height 60px
+
+.brand-logo
+  display block
+  max-height 44px
+  width 80%
+
+.site-nav
+  display flex
+  gap 18px
+
+.nav-link
+  color var(--secondary)
+  text-decoration none
+  font-weight 500
+  padding 8px 14px
+  border-radius 999px
+  transition .2s ease
+
+  &:hover
+    background rgba(37, 99, 235, 0.08)
+    color var(--accent)
+
+.hero-banner
+  position relative
+  width 100%
+  min-height 400px
+  background linear-gradient(135deg, #0f172a 0%, #1f2a44 100%)
+  background-image url('../assets/shipmentTracking.webp')
+  background-size cover
+  background-position center
+  background-repeat no-repeat
+  color white
+  display flex
+  align-items center
+  overflow hidden
+
+  .hero-overlay
+    position absolute
+    inset 0
+    background rgba(15, 23, 42, 0.55)
+
+  .container
+    position relative
+    z-index 1
+    display flex
+    align-items center
+    justify-content space-between
+    gap 40px
+    padding 48px 0 78px 0
+
+  .hero-content
+    display grid
+    align-items center
+    gap 40px
+
+  .hero-text
+    max-width 520px
+    text-align left
+
+  .hero-title
+    font-size 2.5rem
+    font-weight 700
+    margin-bottom 16px
+
+  .hero-subtitle
+    font-size 1.125rem
+    line-height 1.8
+    color rgba(255, 255, 255, 0.85)
+    text-align left
+
+    &--mobile
+      display none
+
+  .hero-actions
+    display flex
+    gap 16px
+
+  .btn--outline
+    border-color white
+    color white
+
+    &:hover
+      background rgba(255, 255, 255, 0.1)
+      color white
+
+.hero-summary
+  display flex
+  justify-content center
+  margin-top -60px
+  padding 0 5%
+  flex-direction column
+  align-items center
+  gap 32px
+  margin-bottom 80px
+
+  .summary-card
+    width 100%
+    max-width 1200px
+    background white
+    border-radius 16px
+    box-shadow 0 5px 10px rgba(12, 48, 88, 0.2)
+    padding 32px 40px
+    display flex
+    flex-direction column
+    gap 24px
+    position relative
+    z-index 2
+
+  .results-card
+    width 100%
+    max-width 1200px
+    background white
+    border-radius 16px
+    box-shadow 0 5px 10px rgba(12, 48, 88, 0.2)
+    padding 28px 36px
+    display flex
+    flex-direction column
+    gap 20px
+
+    .results-title
+      font-size 1.4rem
+      font-weight 600
+      color #0f172a
+
+    .results-description
+      font-size 0.95rem
+      color #475569
+
+    .results-highlight
+      padding 20px 24px
+      background rgba(12, 48, 88, 0.06)
+      border 1px solid rgba(12, 48, 88, 0.12)
+      border-radius 14px
+
+      .summary-grid
+        display grid
+        grid-template-columns repeat(auto-fit, minmax(160px, 1fr))
+        gap 18px
+
+        .summary-field
+          display flex
+          flex-direction column
+          gap 6px
+
+          .field-label
+            font-size 0.75rem
+            font-weight 600
+            color #64748b
+            text-transform uppercase
+            letter-spacing 0.08em
+
+          .field-value
+            font-size 1.4rem
+            font-weight 600
+            color #0C3058
+
+          .status-inline
+            color #2563eb
+
+          .status-badge
+            display inline-flex
+            align-items center
+            justify-content center
+            padding 10px 16px
+            border-radius 999px
+            font-size 0.85rem
+            font-weight 700
+            text-transform uppercase
+            letter-spacing 0.08em
+            background rgba(37, 99, 235, 0.1)
+            color #2563eb
+
+            &.status-in-transit
+              background rgba(37, 99, 235, 0.12)
+              color #2563eb
+
+            &.status-customs
+              background rgba(245, 158, 11, 0.12)
+              color #f59e0b
+
+            &.status-departed
+              background rgba(16, 185, 129, 0.12)
+              color #10b981
+
+            &.status-delivered
+              background rgba(16, 185, 129, 0.18)
+              color #047857
+
+            &.status-exception
+              background rgba(225, 29, 72, 0.12)
+              color #e11d48
+
+    .results-note
+      font-size 0.9rem
+      color #64748b
+      padding 12px 16px
+      background rgba(248, 250, 252, 0.9)
+      border 1px dashed rgba(12, 48, 88, 0.15)
+      border-radius 12px
+      text-align center
+
+    .results-summary,
+    .results-list,
+    .results-empty
+      display none
+
+  .summary-title
+    font-size 1.75rem
+    font-weight 600
+    color #0f172a
+
+  .summary-description
+    font-size 1rem
+    line-height 1.8
+    color #475569
+    max-width 720px
+
+  .summary-stats
+    display flex
+    gap 32px
+
+    .stat
+      display flex
+      flex-direction column
+      gap 8px
+
+      .stat-value
+        font-size 1.5rem
+        font-weight 700
+        color #2563eb
+
+      .stat-label
+        font-size 0.875rem
+        color #64748b
+        letter-spacing 0.02em
+        text-transform uppercase
+
+  .summary-search
+    display flex
+    flex-direction column
+    gap 16px
+    padding 20px 24px
+    background rgba(37, 99, 235, 0.06)
+    border 1px solid rgba(37, 99, 235, 0.12)
+    border-radius 12px
+
+    .search-hint
+      font-size 0.95rem
+      color #1e293b
+
+    .summary-form
+      display flex
+      flex-direction column
+      gap 12px
+
+      .form-row
+        display grid
+        grid-template-columns repeat(3, minmax(0, 1fr))
+        gap 16px
+
+        @media (max-width: 992px)
+          grid-template-columns 1fr
+
+      .input-group
+        display flex
+        flex-direction column
+        gap 6px
+
+        .input-label
+          font-size 0.825rem
+          font-weight 600
+          color #0f172a
+          text-transform uppercase
+          letter-spacing 0.08em
+
+        input
+          padding 12px 14px
+          border 1px solid rgba(15, 23, 42, 0.15)
+          border-radius 10px
+          font-size 1rem
+          transition all 0.2s ease
+
+          &:focus
+            border-color #2563eb
+            box-shadow 0 0 0 3px rgba(37, 99, 235, 0.18)
+            outline none
+
+      .form-helper
+        font-size 0.85rem
+        color #64748b
+
+        .contact-phone
+          color #BB2749
+          font-weight 600
+
+      button.btn--primary
+        font-weight 700
+        letter-spacing 0.05em
+        text-transform uppercase
+        font-size 1.2rem
+
+@media (max-width: 768px)
+  .hero-banner
+    min-height 320px
+    background-position 80% center
+
+    .container
+      flex-direction column
+      align-items flex-start
+      gap 24px
+      padding 40px 0
+
+    .hero-content
+      grid-template-columns 1fr
+      gap 24px
+
+    .hero-actions
+      width 100%
+      flex-direction column
+      align-items stretch
+
+    .hero-text
+      width 100%
+      padding 0 5%
+
+      .hero-subtitle--desktop
+        display none
+
+      .hero-subtitle--mobile
+        display block
+        font-size 1rem
+        margin-top 8px
+        color rgba(255, 255, 255, 0.9)
+
+  .site-header
+    .container
+      padding 18px 5%
+
+  .hero-summary
+    margin-top -40px
+    margin-bottom 48px
+
+    .summary-card
+      width 100%
+      padding 28px 24px
+
+    .results-card
+      width 100%
+      padding 24px 22px
+      gap 16px
+
+      .results-title
+        font-size 1.2rem
+
+      .results-description
+        font-size 0.9rem
+
+      .results-highlight
+        padding 18px 18px
+
+        .summary-grid
+          grid-template-columns 1fr 1fr
+          gap 14px
+
+          .summary-field
+            .field-value
+              font-size 1.4rem
+
+      .results-note
+        font-size 0.85rem
+        padding 12px 12px
+
+    .summary-description
+      display none
+
+    .summary-search
+      padding 18px 20px
+
+      .search-hint
+        display none
+
+      .summary-form
+        .form-row
+          grid-template-columns 1fr
+
+        .input-group
+          input
+            width 100%
+
+        button.btn--primary
+          width 100%
+          padding 14px 0
+
+      .form-helper
+        display none
+
+    .summary-stats
+      flex-direction column
+      gap 20px
+
+      .stat
+        align-items flex-start
+
