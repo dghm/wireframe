@@ -3,6 +3,10 @@ const stylus = require('stylus');
 const fs = require('fs');
 const path = require('path');
 
+// 設定路徑
+const PROJECT_ROOT = path.resolve(__dirname, '../../..');
+const DIST_DIR = path.join(PROJECT_ROOT, 'dist', 'ynenergy');
+
 console.log('🌱 開始編譯 YnEnergy 綠色能源網站...\n');
 
 // 編譯 Pug 模板
@@ -12,11 +16,11 @@ try {
   const html = pug.render(template);
   
   // 確保 dist 目錄存在
-  if (!fs.existsSync('dist')) {
-    fs.mkdirSync('dist');
+  if (!fs.existsSync(DIST_DIR)) {
+    fs.mkdirSync(DIST_DIR, { recursive: true });
   }
   
-  fs.writeFileSync('dist/index.html', html);
+  fs.writeFileSync(path.join(DIST_DIR, 'index.html'), html);
   console.log('✅ Pug 模板編譯完成\n');
 } catch (error) {
   console.error('❌ Pug 編譯錯誤:', error.message);
@@ -33,15 +37,16 @@ try {
       process.exit(1);
     }
     
-    // 確保 css 目錄存在
-    if (!fs.existsSync('dist/css')) {
-      fs.mkdirSync('dist/css', { recursive: true });
+    // 確保 CSS 目錄存在
+    const cssDir = path.join(DIST_DIR, 'css');
+    if (!fs.existsSync(cssDir)) {
+      fs.mkdirSync(cssDir, { recursive: true });
     }
     
-    fs.writeFileSync('dist/css/main.css', css);
+    fs.writeFileSync(path.join(cssDir, 'main.css'), css);
     console.log('✅ Stylus 樣式編譯完成\n');
-    console.log('🌱 編譯完成！可以在 dist/ 目錄中查看結果');
-    console.log('📁 開啟 dist/index.html 來預覽 YnEnergy 網站');
+    console.log('🌱 編譯完成！可以在 dist/ynenergy/ 目錄中查看結果');
+    console.log('📁 開啟 dist/ynenergy/index.html 來預覽 YnEnergy 網站');
     console.log('🌿 草綠色主題已應用，包含完整的響應式設計');
   });
 } catch (error) {

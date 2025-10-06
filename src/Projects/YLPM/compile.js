@@ -3,14 +3,19 @@ const stylus = require('stylus');
 const fs = require('fs');
 const path = require('path');
 
+// 設定路徑
+const PROJECT_ROOT = path.resolve(__dirname, '../../..');
+const DIST_DIR = path.join(PROJECT_ROOT, 'dist', 'ylpm');
+
 console.log('🚀 開始編譯 YLPM 線框圖...\n');
 
 // 確保 dist 目錄存在
-if (!fs.existsSync('dist')) {
-  fs.mkdirSync('dist');
+if (!fs.existsSync(DIST_DIR)) {
+  fs.mkdirSync(DIST_DIR, { recursive: true });
 }
-if (!fs.existsSync('dist/css')) {
-  fs.mkdirSync('dist/css');
+const cssDir = path.join(DIST_DIR, 'css');
+if (!fs.existsSync(cssDir)) {
+  fs.mkdirSync(cssDir, { recursive: true });
 }
 
 // 編譯 Pug 模板
@@ -38,7 +43,7 @@ try {
         filename: templatePath,
         basedir: 'src/templates',
       });
-      fs.writeFileSync(`dist/${page.output}`, html);
+      fs.writeFileSync(path.join(DIST_DIR, page.output), html);
       console.log(`✅ 已編譯 ${page.input} -> ${page.output}`);
     } else {
       console.log(`⚠️  ${templatePath} 不存在，跳過編譯`);
@@ -63,10 +68,10 @@ try {
         console.error('❌ Stylus 編譯錯誤:', err.message);
         process.exit(1);
       }
-      fs.writeFileSync('dist/css/main.css', css);
+      fs.writeFileSync(path.join(cssDir, 'main.css'), css);
       console.log('✅ Stylus 樣式編譯完成\n');
-      console.log('🎉 編譯完成！可以在 dist/ 目錄中查看結果');
-      console.log('📁 開啟 dist/index.html 來預覽線框圖');
+      console.log('🎉 編譯完成！可以在 dist/ylpm/ 目錄中查看結果');
+      console.log('📁 開啟 dist/ylpm/index.html 來預覽線框圖');
     });
   } else {
     console.log('⚠️  src/styles/main.styl 不存在，跳過樣式編譯');
