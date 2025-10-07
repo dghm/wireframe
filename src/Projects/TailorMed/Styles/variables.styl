@@ -1,0 +1,26 @@
+// TailorMed 色彩系統
+
+primary-color = #143463
+secondary-color = #97d3df
+neutral-light = #dfeaf3
+neutral-dark = #222222
+neutral-gray = #666666
+base-white = #ffffff
+accent-color = #bb2749
+
+breakpoints = {
+  desktop: 1280px,
+  laptop: 1024px,
+  tablet: 768px,
+  mobile: 480px
+}
+
+respond(size)
+  breakpoint = breakpoints[size]
+  if breakpoint
+    @media (max-width: breakpoint)
+      {block}
+  else
+    @media (max-width: size)
+      {block}
+
