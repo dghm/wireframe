@@ -1,10 +1,10 @@
 .site-footer
-  background primary-color
-  color base-white
+  background primaryColor
+  color baseWhite
   padding 64px 0 20px
 
   .container
-    layout-container()
+    layoutContainer()
     display grid
     grid-template-columns 30% 1fr 30%
     column-gap 64px
@@ -12,15 +12,15 @@
 
   .footer-meta
     margin-top 52px
-    border-top 1px solid rgba(base-white, 0.15)
+    border-top 1px solid rgba(baseWhite, 0.15)
     padding-top 24px
 
     .container
-      layout-container()
+      layoutContainer()
       display flex
       justify-content space-between
       align-items center
-      color rgba(base-white, 0.75)
+      color rgba(baseWhite, 0.75)
 
     .footer-legal
       display flex
@@ -28,15 +28,15 @@
       align-items center
 
       .footer-link
-        color rgba(base-white, 0.85)
+        color rgba(baseWhite, 0.85)
         text-decoration none
         font-weight 500
 
         &:hover
-          color base-white
+          color baseWhite
 
       .separator
-        color rgba(base-white, 0.4)
+        color rgba(baseWhite, 0.4)
 
     .footer-copy
       font-size 0.85rem
@@ -50,14 +50,14 @@
     .footer-logo
       font-size 1.8rem
       font-weight 700
-      color base-white
+      color baseWhite
       text-decoration none
       letter-spacing 0.04em
 
     .footer-mission
       font-size 0.95rem
       line-height 1.6
-      color rgba(base-white, 0.85)
+      color rgba(baseWhite, 0.85)
       max-width 340px
       margin 0
 
@@ -72,14 +72,14 @@
         width 40px
         height 40px
         border-radius 50%
-        background rgba(base-white, 0.15)
-        color base-white
+        background rgba(baseWhite, 0.15)
+        color baseWhite
         font-weight 600
         text-decoration none
         transition background 0.2s ease, transform 0.2s ease
 
         &:hover
-          background rgba(base-white, 0.35)
+          background rgba(baseWhite, 0.35)
           transform translateY(-2px)
 
   .footer-links
@@ -101,14 +101,14 @@
       gap 10px
 
       a
-        color rgba(base-white, 0.85)
+        color rgba(baseWhite, 0.85)
         text-decoration none
         font-weight 500
         transition color 0.2s ease
         white-space nowrap
 
         &:hover
-          color base-white
+          color baseWhite
 
   .footer-social
     flex 0 0 30%
@@ -124,7 +124,7 @@
       flex-direction column
       gap 12px
       font-size 0.95rem
-      color rgba(base-white, 0.85)
+      color rgba(baseWhite, 0.85)
 
       .footer-heading
         font-size 1rem
@@ -162,39 +162,12 @@
         justify-content center
         padding 10px 24px
         border-radius 999px
-        background base-white
-        color primary-color
+        background baseWhite
+        color primaryColor
         font-weight 600
         text-decoration none
         transition transform 0.2s ease, box-shadow 0.2s ease
 
         &:hover
           transform translateY(-2px)
-          box-shadow 0 12px 24px rgba(base-white, 0.2)
-
-    .footer-copy
-      font-size 0.85rem
-      color rgba(base-white, 0.7)
-      margin 0
-
-respond(tablet)
-  .site-footer
-    .container
-      flex-direction column
-      gap 32px
-      flex-wrap wrap
-
-    .footer-links
-      flex-direction column
-      gap 24px
-
-respond(mobile)
-  .site-footer
-    padding 48px 0 40px
-
-    .footer-brand,
-    .footer-social
-      width 100%
-
-    .footer-social
-      align-items flex-start
+          box-shadow 0 12px 24px rgba(baseWhite, 0.2)
