@@ -5,7 +5,7 @@
 @import 'variables.styl'
 
 // Import Components
-@import '../../../../COMPONENTS/ShipmentTimeline/Styles/timeline.styl'
+@import 'components/timeline.styl'
 
 // CSS Variables
 :root
@@ -242,26 +242,26 @@ p
   gap 24px
   margin-bottom 80px
 
-  .tracking-lookup-card
+  .tracking-lookup-panel
     display flex
     width 100%
     max-width 1200px
     background white
     border-radius 16px
-    box-shadow 0 5px 10px rgba(12, 48, 88, 0.4)
+    box-shadow panel-shadow
     padding 32px 40px
     flex-direction column
     gap 0
     position relative
     z-index 2
 
-  .results-card
+  .results-panel
     display flex
     width 100%
     max-width 1200px
     background white
     border-radius 16px
-    box-shadow 0 5px 10px rgba(12, 48, 88, 0.4)
+    box-shadow panel-shadow
     padding 28px 36px
     flex-direction column
     gap 20px
@@ -525,11 +525,11 @@ p
     margin-bottom 48px
     gap 24px
 
-    .tracking-lookup-card
+    .tracking-lookup-panel
       width 100%
       padding 28px 24px
 
-    .results-card
+    .results-panel
       width 100%
       padding 24px 22px
       gap 16px
@@ -623,8 +623,8 @@ respond(laptop)
     grid-template-columns 1fr
     gap 24px
 
-  .tracking-lookup-card,
-  .results-card
+  .tracking-lookup-panel,
+  .results-panel
     padding 28px 28px
 
 respond(tablet)
@@ -654,10 +654,10 @@ respond(mobile)
     margin-bottom 48px
     gap 0
 
-  .tracking-lookup-card
+  .tracking-lookup-panel
     padding 28px 24px
 
-  .results-card
+  .results-panel
     padding 24px 22px
     gap 16px
 
