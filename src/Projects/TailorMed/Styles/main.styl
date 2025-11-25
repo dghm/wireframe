@@ -76,6 +76,9 @@ body
   flex 1
   justify-content center
 
+  @media (max-width: breakpoint-mobile)
+    display none
+
 .nav-link
   color primary-color
   text-decoration none
@@ -91,6 +94,9 @@ body
 .header-actions
   display flex
   align-items center
+
+  @media (max-width: breakpoint-mobile)
+    display none
 
 .btn-track
   height 40px
@@ -110,6 +116,93 @@ body
 
   &:hover
     background-color darken(primary-color, 10%)
+
+// Hamburger Menu
+.hamburger-menu
+  display none
+  flex-direction column
+  justify-content space-around
+  width 30px
+  height 30px
+  background transparent
+  border none
+  cursor pointer
+  padding 0
+  z-index 1001
+  position relative
+
+  @media (max-width: breakpoint-mobile)
+    display flex
+
+  &:focus
+    outline none
+
+.hamburger-line
+  width 100%
+  height 3px
+  background-color primary-color
+  border-radius 2px
+  transition all 0.3s ease
+  transform-origin center
+
+  .hamburger-menu.active &
+    &:nth-child(1)
+      transform rotate(45deg) translate(8px, 8px)
+
+    &:nth-child(2)
+      opacity 0
+
+    &:nth-child(3)
+      transform rotate(-45deg) translate(7px, -7px)
+
+// Mobile Navigation
+.mobile-nav
+  display none
+  flex-direction column
+  position absolute
+  top 100%
+  left 0
+  right 0
+  background-color rgba(255, 255, 255, 0.98)
+  backdrop-filter blur(10px)
+  -webkit-backdrop-filter blur(10px)
+  border-top 1px solid rgba(233, 236, 239, 0.5)
+  box-shadow 0 4px 12px rgba(0, 0, 0, 0.1)
+  max-height 0
+  overflow hidden
+  transition max-height 0.3s ease
+
+  @media (max-width: breakpoint-mobile)
+    display flex
+
+  &.active
+    max-height 520px
+
+.mobile-nav-link
+  display block
+  padding spacing-md container-padding
+  color primary-color
+  text-decoration none
+  font-weight 500
+  font-size 1rem
+  border-bottom 1px solid rgba(233, 236, 239, 0.5)
+  transition all 0.3s ease
+
+  &:hover
+    background-color rgba(20, 52, 99, 0.05)
+    color darken(primary-color, 10%)
+
+  &:last-child
+    border-bottom none
+
+  &.mobile-nav-track
+    background-color primary-color
+    color #fff
+    font-weight 600
+
+    &:hover
+      background-color darken(primary-color, 10%)
+      color #fff
 
 // Main Content
 .main-content
@@ -957,20 +1050,20 @@ body
 
 // 響應式設計
 @media (max-width: breakpoint-mobile)
+  .main-content
+    padding-top 0
+
   .site-header
     height auto
     min-height 78px
+    position relative
 
   .header-content
-    flex-direction column
-    height auto
-    padding spacing-sm 0
-    gap spacing-sm
-
-  .site-nav
-    flex-wrap wrap
-    justify-content center
-    gap spacing-xs
+    flex-direction row
+    height 78px
+    padding 0
+    gap 0
+    position relative
 
   .logo-placeholder
     height 32px
@@ -978,14 +1071,14 @@ body
 
   .hero-section
     min-height auto
-    padding spacing-lg 0
+    padding 40px 0
 
   .hero-title
     font-size 2rem
 
   .hero-actions
-    flex-direction column
-    align-items center
+    flex-direction row
+    justify-content center
 
   .trust-bar-content
     flex-direction column
@@ -1014,7 +1107,7 @@ body
     display none
 
   .footer-content
-    grid-template-columns 1fr
+    grid-template-columns repeat(2, 1fr)
     gap spacing-md
 
   .footer-column
@@ -1022,6 +1115,12 @@ body
 
   .solutions-grid
     grid-template-columns 1fr
+
+  .expertise-section.section
+    padding 0
+
+    .container
+      padding 0
 
   .expertise-content
     grid-template-columns 1fr
@@ -1038,10 +1137,12 @@ body
 
   .expertise-features
     grid-template-columns 1fr
+    padding 0 20px
 
   .expertise-stats
-    grid-template-columns 1fr
+    grid-template-columns repeat(2, 1fr)
     margin-top spacing-lg
+    padding 0 20px
 
   .global-network-content
     grid-template-columns 1fr

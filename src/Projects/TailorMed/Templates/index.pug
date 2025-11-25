@@ -23,6 +23,18 @@ html(lang="zh-TW")
             a.nav-link(href="#") Contact
           .header-actions
             a.btn.btn-track(href="#") Track
+          button.hamburger-menu(type="button", aria-label="Toggle navigation")
+            span.hamburger-line
+            span.hamburger-line
+            span.hamburger-line
+        .mobile-nav
+          a.mobile-nav-link(href="#") Solutions
+          a.mobile-nav-link(href="#") Industries
+          a.mobile-nav-link(href="#") Expertise
+          a.mobile-nav-link(href="#") Resources
+          a.mobile-nav-link(href="#") Company
+          a.mobile-nav-link(href="#") Contact
+          a.mobile-nav-link.mobile-nav-track(href="#") Track
 
     main.main-content
       // Hero Section
@@ -31,7 +43,7 @@ html(lang="zh-TW")
           h1.hero-title Welcome to TailorMed
           p.hero-subtitle Your trusted partner in logistics and transportation solutions
           .hero-actions
-            a.btn.btn-primary(href="#") Get Started
+            a.btn.btn-primary(href="#") Track
             a.btn.btn-secondary(href="#") Learn More
 
       // Trust Bar
@@ -333,3 +345,4 @@ html(lang="zh-TW")
               p.footer-text Address: Taipei, Taiwan
         .footer-bottom
           p.site-footer__copy © 2025 TailorMed. All Rights Reserved.
+    script(src="./js/main.js")
