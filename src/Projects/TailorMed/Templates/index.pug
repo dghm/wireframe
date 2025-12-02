@@ -15,26 +15,28 @@ html(lang="zh-TW")
           .brand
             .logo-placeholder LOGO
           nav.site-nav
-            a.nav-link(href="#") Solutions
-            a.nav-link(href="#") Industries
-            a.nav-link(href="#") Expertise
-            a.nav-link(href="#") Resources
-            a.nav-link(href="#") Company
-            a.nav-link(href="#") Contact
+            a.nav-link(href="index.html") Home
+            a.nav-link(href="solutions/") Solutions
+            a.nav-link(href="industries/") Industries
+            a.nav-link(href="expertise/") Expertise
+            a.nav-link(href="resources/") Resources
+            a.nav-link(href="company/") Company
+            a.nav-link(href="contact/") Contact
           .header-actions
-            a.btn.btn-track(href="#") Track
+            a.btn.btn-track(href="track/index.html") Track
           button.hamburger-menu(type="button", aria-label="Toggle navigation")
             span.hamburger-line
             span.hamburger-line
             span.hamburger-line
         .mobile-nav
-          a.mobile-nav-link(href="#") Solutions
-          a.mobile-nav-link(href="#") Industries
-          a.mobile-nav-link(href="#") Expertise
-          a.mobile-nav-link(href="#") Resources
-          a.mobile-nav-link(href="#") Company
-          a.mobile-nav-link(href="#") Contact
-          a.mobile-nav-link.mobile-nav-track(href="#") Track
+          a.mobile-nav-link(href="index.html") Home
+          a.mobile-nav-link(href="solutions/") Solutions
+          a.mobile-nav-link(href="industries/") Industries
+          a.mobile-nav-link(href="expertise/") Expertise
+          a.mobile-nav-link(href="resources/") Resources
+          a.mobile-nav-link(href="company/") Company
+          a.mobile-nav-link(href="contact/") Contact
+          a.mobile-nav-link.mobile-nav-track(href="track/index.html") Track
 
     main.main-content
       // Hero Section
@@ -293,56 +295,5 @@ html(lang="zh-TW")
                 .info-label Phone
                 .info-value +886 2 1234 5678
 
-    footer.site-footer
-      .container
-        .footer-content
-          .footer-brand
-            .logo-placeholder LOGO
-            p.footer-description TailorMed provides professional logistics and transportation solutions
-            .social-icons
-              a.social-icon(href="#")
-                .social-icon-placeholder LN
-              a.social-icon(href="#")
-                .social-icon-placeholder X
-          .footer-column
-            h4.footer-title Company
-            ul.footer-links
-              li
-                a.footer-link(href="#") Our Expertise
-              li
-                a.footer-link(href="#") Latest Insights
-              li
-                a.footer-link(href="#") Careers
-              li
-                a.footer-link(href="#") News
-          .footer-column
-            h4.footer-title Solutions
-            ul.footer-links
-              li
-                a.footer-link(href="#") Services Overview
-              li
-                a.footer-link(href="#") How We Work
-              li
-                a.footer-link(href="#") Global Network
-              li
-                a.footer-link(href="#") Compliance
-          .footer-column
-            h4.footer-title Support
-            ul.footer-links
-              li
-                a.footer-link(href="#") Help Center
-              li
-                a.footer-link(href="#") Contact Us
-              li
-                a.footer-link(href="#") Track
-              li
-                a.footer-link(href="#") FAQ
-          .footer-column
-            h4.footer-title Contact
-            .footer-contact
-              p.footer-text Email: info@tailormed.com
-              p.footer-text Phone: +886 2 1234 5678
-              p.footer-text Address: Taipei, Taiwan
-        .footer-bottom
-          p.site-footer__copy © 2025 TailorMed. All Rights Reserved.
+    include components/footer-home.pug
     script(src="./js/main.js")

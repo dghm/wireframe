@@ -1,0 +1,141 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title TailorMed｜Biotech Logistics Solutions
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap")
+    link(rel="stylesheet", href="../css/main.css")
+  body
+    header.site-header
+      .container
+        .header-content
+          .brand
+            .logo-placeholder LOGO
+          nav.site-nav
+            a.nav-link(href="../index.html") Home
+            a.nav-link(href="../solutions/") Solutions
+            a.nav-link(href="index.html") Industries
+            a.nav-link(href="../expertise/") Expertise
+            a.nav-link(href="../resources/") Resources
+            a.nav-link(href="../company/") Company
+            a.nav-link(href="../contact/") Contact
+          .header-actions
+            a.btn.btn-track(href="../track/index.html") Track
+          button.hamburger-menu(type="button", aria-label="Toggle navigation")
+            span.hamburger-line
+            span.hamburger-line
+            span.hamburger-line
+        .mobile-nav
+          a.mobile-nav-link(href="../index.html") Home
+          a.mobile-nav-link(href="../solutions/") Solutions
+          a.mobile-nav-link(href="index.html") Industries
+          a.mobile-nav-link(href="../expertise/") Expertise
+          a.mobile-nav-link(href="../resources/") Resources
+          a.mobile-nav-link(href="../company/") Company
+          a.mobile-nav-link(href="../contact/") Contact
+          a.mobile-nav-link.mobile-nav-track(href="../track/index.html") Track
+
+    main.main-content
+      // SECTION 1 — HERO
+      section.hero-section
+        .container
+          h1.hero-title Biotech Logistics Solutions
+          p.hero-subtitle Temperature-controlled transport for biologics and research samples.
+          .hero-actions
+            a.btn.btn-primary(href="#") Request Consultation
+            a.btn.btn-secondary(href="../track/index.html") Track Shipment
+
+      // SECTION 2 — Why Biotech Logistics Matters
+      section.industry-context-section.section
+        .container
+          .industry-context-content
+            .industry-context-visual
+              .industry-context-image-placeholder IMAGE
+            .industry-context-text
+              h2.section-title Why Biotech Logistics Matters
+              ul.industry-context-list
+                li Biologic materials are highly temperature-sensitive.
+                li Research timelines depend on reliable delivery.
+                li Strict regulatory and chain-of-custody standards apply.
+
+      // SECTION 3 — Key Challenges in Biotech
+      section.industry-challenges-section.section
+        .container
+          .section-header
+            h2.section-title Key Challenges in Biotech
+          .challenges-grid
+            .challenge-item
+              .challenge-icon-placeholder ICON
+              h3.challenge-title Deep-Frozen Stability
+              p.challenge-subtitle –20°C / –80°C / LN2 materials with strict thermal requirements.
+            .challenge-item
+              .challenge-icon-placeholder ICON
+              h3.challenge-title Sensitivity to Excursions
+              p.challenge-subtitle Biologic samples are highly reactive to temperature deviations.
+            .challenge-item
+              .challenge-icon-placeholder ICON
+              h3.challenge-title Cross-Border Delays
+              p.challenge-subtitle International movement impacts time-critical research cycles.
+
+      // SECTION 4 — TailorMed Solutions for Biotech
+      section.industry-solutions-section.section
+        .container
+          .section-header
+            h2.section-title TailorMed Solutions for Biotech
+          .solutions-grid
+            .solution-item
+              .solution-icon-placeholder ICON
+              h3.solution-title Validated packaging for biologics
+            .solution-item
+              .solution-icon-placeholder ICON
+              h3.solution-title Continuous temperature logging
+            .solution-item
+              .solution-icon-placeholder ICON
+              h3.solution-title Deep-frozen / LN2 dry-ice support
+            .solution-item
+              .solution-icon-placeholder ICON
+              h3.solution-title Chain-of-custody documentation
+
+      // SECTION 5 — Biotech Case Highlight
+      section.industry-case-section.section
+        .container
+          .section-header
+            h2.section-title Biotech Case Highlight
+          .case-card
+            .case-image-placeholder IMAGE
+            .case-content
+              h3.case-title Cryogenic Samples Delivered From Taipei to Boston
+              p.case-summary Zero-excursion delivery for research materials.
+              a.case-link(href="#") View Full Case Study →
+
+      // SECTION 6 — FAQ
+      section.industry-faq-section.section
+        .container
+          .section-header
+            h2.section-title Frequently Asked Questions
+          .faq-list
+            .faq-item
+              h3.faq-question How do you prevent temperature excursions?
+              p.faq-answer Our validated packaging systems and continuous monitoring ensure temperature stability throughout transit.
+            .faq-item
+              h3.faq-question Do you support –80°C and LN2 shipments?
+              p.faq-answer Yes, we provide specialized deep-frozen and liquid nitrogen vapor transport solutions.
+            .faq-item
+              h3.faq-question What documentation is provided for research compliance?
+              p.faq-answer We provide complete chain-of-custody documentation and temperature logs for regulatory compliance.
+
+      // SECTION 7 — CTA Footer
+      section.cta-footer-section
+        .container
+          .cta-footer-content
+            h2.cta-footer-title Ready to Ship Biotech Materials?
+            p.cta-footer-subtitle Talk to our specialist team about compliant cold-chain support.
+            .cta-footer-actions
+              a.btn.btn-primary(href="#") Request Consultation
+
+    include ../components/footer.pug
+    script(src="../js/main.js")
+

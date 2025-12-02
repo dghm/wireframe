@@ -400,10 +400,13 @@ body
 .solutions-section
   background-color #f8f9fa
 
-.solutions-grid
+.solutions-section .solutions-grid
   display grid
   grid-template-columns repeat(auto-fit, minmax(280px, 1fr))
   gap spacing-lg
+
+  @media (min-width: breakpoint-tablet)
+    grid-template-columns repeat(3, 1fr) !important
 
 .solution-card
   background-color background-color
@@ -946,6 +949,13 @@ body
   gap spacing-lg
   margin-bottom spacing-xl
 
+  @media (max-width: breakpoint-tablet)
+    grid-template-columns 1fr 1fr
+    gap spacing-md
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
 .footer-brand
   display flex
   flex-direction column
@@ -958,13 +968,43 @@ body
     color rgba(255, 255, 255, 0.8)
 
 .footer-description
+  font-size font-size-small
+  font-weight 300
+  color rgba(255, 255, 255, 0.8)
+  line-height 1.6
+  margin-bottom spacing-md
+
+.footer-language-switcher
+  display flex
+  align-items center
+  gap spacing-xs
+  margin-top spacing-sm
+
+.language-link
+  color rgba(255, 255, 255, 0.7)
+  text-decoration none
+  font-size font-size-small
+  font-weight 500
+  transition all 0.3s ease
+
+  &:hover
+    color #fff
+
+  &.active
+    color #fff
+    font-weight 700
+
+.language-separator
+  color rgba(255, 255, 255, 0.5)
+  font-size font-size-small
+
+.footer-description
   color rgba(255, 255, 255, 0.8)
   font-size font-size-small
   font-weight 300
   line-height 1.6
-  margin 0
-  margin-bottom spacing-sm
-  max-width 250px
+  margin-bottom spacing-md
+  max-width 280px
 
 .social-icons
   display flex
@@ -1040,13 +1080,40 @@ body
 .footer-bottom
   border-top 1px solid rgba(255, 255, 255, 0.1)
   padding-top spacing-lg
-  text-align center
+  display flex
+  justify-content space-between
+  align-items center
+  flex-wrap wrap
+  gap spacing-md
+
+  @media (max-width: breakpoint-mobile)
+    flex-direction column
+    text-align center
 
 .site-footer__copy
   color rgba(255, 255, 255, 0.6)
   font-size font-size-small
   font-weight 300
   margin 0
+
+.footer-legal-links
+  display flex
+  gap spacing-md
+  flex-wrap wrap
+
+  @media (max-width: breakpoint-mobile)
+    justify-content center
+
+.footer-legal-link
+  color rgba(255, 255, 255, 0.7)
+  text-decoration none
+  font-size font-size-small
+  font-weight 300
+  transition all 0.3s ease
+
+  &:hover
+    color #fff
+    text-decoration underline
 
 // 響應式設計
 @media (max-width: breakpoint-mobile)
@@ -1170,7 +1237,7 @@ body
     flex-direction column
     gap spacing-md
 
-@media (min-width: breakpoint-mobile) and (max-width: breakpoint-tablet)
+@media (min-width: breakpoint-mobile) and (max-width: 1023px)
   .footer-content
     grid-template-columns 2fr repeat(2, 1fr)
     gap spacing-md
@@ -1179,7 +1246,7 @@ body
     grid-column span 2
     margin-bottom spacing-md
 
-  .solutions-grid
+  .solutions-section .solutions-grid
     grid-template-columns repeat(2, 1fr)
 
   .expertise-content
@@ -1199,3 +1266,2774 @@ body
 
   .support-grid
     grid-template-columns repeat(2, 1fr)
+
+// Solutions Page Styles
+.hero-background-placeholder
+  width 100%
+  height 300px
+  margin spacing-lg auto
+  background-color rgba(255, 255, 255, 0.1)
+  border 1px dashed rgba(255, 255, 255, 0.3)
+  border-radius 12px
+  display flex
+  align-items center
+  justify-content center
+  color rgba(255, 255, 255, 0.8)
+  font-size font-size-base
+  font-weight 500
+
+// Challenges vs Solutions Section
+.challenges-solutions-section
+  background-color #f8f9fa
+
+.challenges-solutions-grid
+  display grid
+  grid-template-columns 1fr 1fr
+  gap spacing-xl
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.challenges-column,
+.solutions-column
+  background-color background-color
+  padding spacing-lg
+  border-radius 12px
+  border 1px solid #e9ecef
+
+.challenges-title,
+.solutions-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-md
+
+.challenges-list,
+.solutions-list
+  list-style none
+  padding 0
+  margin 0
+
+.challenge-item,
+.solution-item
+  padding spacing-sm spacing-md
+  margin-bottom spacing-xs
+  border-left 3px solid accent-color
+  background-color rgba(187, 39, 73, 0.05)
+  font-size font-size-base
+  color text-color
+
+.solution-item
+  border-left-color primary-color
+  background-color rgba(20, 52, 99, 0.05)
+
+// Service Levels Section
+.service-levels-section
+  background-color background-color
+
+.service-levels-grid
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-tablet)
+    grid-template-columns 1fr
+
+.service-level-card
+  background-color #f8f9fa
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  text-align center
+  transition all 0.3s ease
+
+  &:hover
+    transform translateY(-5px)
+    box-shadow 0 10px 30px rgba(0, 0, 0, 0.1)
+
+.service-level-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-md
+
+.service-level-details
+  display flex
+  flex-direction column
+  gap spacing-md
+
+.detail-item
+  text-align left
+  padding spacing-sm
+  background-color background-color
+  border-radius 8px
+
+.detail-label
+  font-size font-size-small
+  font-weight 500
+  color rgba(51, 51, 51, 0.6)
+  margin-bottom spacing-xs
+  display block
+
+.detail-value
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+
+// Packaging & Monitoring Section
+.packaging-monitoring-section
+  background-color #f8f9fa
+
+.packaging-monitoring-content
+  display flex
+  flex-direction column
+  gap spacing-xl
+  margin-top spacing-xl
+
+// Packaging Section - 上區：左圖右文字
+.packaging-section
+  display flex
+  flex-direction row
+  gap spacing-xl
+  align-items center
+  background-color background-color
+  padding spacing-xl
+  border-radius 12px
+  border 1px solid #e9ecef
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column
+
+.packaging-visual
+  flex 1
+  display flex
+  flex-direction column
+  gap spacing-md
+  align-items center
+
+.packaging-image-placeholder
+  width 100%
+  max-width 400px
+  height 250px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 12px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-base
+  font-weight 500
+
+.packaging-text
+  flex 1
+  display flex
+  flex-direction column
+
+.packaging-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-md
+  text-align left
+
+.packaging-description
+  p
+    font-size font-size-base
+    font-weight 300
+    color text-color
+    line-height 1.8
+    margin-bottom spacing-sm
+
+    &:last-child
+      margin-bottom 0
+
+.packaging-grid
+  display grid
+  grid-template-columns repeat(2, 1fr)
+  gap spacing-md
+  margin-top spacing-md
+  width 100%
+
+.packaging-item
+  text-align center
+  padding spacing-md
+  background-color #f8f9fa
+  border-radius 8px
+
+.packaging-icon-placeholder
+  width 60px
+  height 60px
+  margin 0 auto spacing-sm
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.packaging-label
+  font-size font-size-base
+  font-weight 500
+  color primary-color
+
+// Monitoring Section - 下區：左文字右圖
+.monitoring-section
+  display flex
+  flex-direction row-reverse
+  gap spacing-xl
+  align-items center
+  background-color background-color
+  padding spacing-xl
+  border-radius 12px
+  border 1px solid #e9ecef
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column
+
+.monitoring-visual
+  flex 1
+  display flex
+  flex-direction column
+  gap spacing-md
+  align-items center
+
+.monitoring-image-placeholder
+  width 100%
+  max-width 400px
+  height 250px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 12px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-base
+  font-weight 500
+
+.monitoring-text
+  flex 1
+  display flex
+  flex-direction column
+
+.monitoring-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-md
+  text-align left
+
+.monitoring-description
+  p
+    font-size font-size-base
+    font-weight 300
+    color text-color
+    line-height 1.8
+    margin-bottom spacing-sm
+
+    &:last-child
+      margin-bottom 0
+
+.monitoring-features
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-md
+  margin-top spacing-md
+  width 100%
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.monitoring-feature-item
+  text-align center
+  padding spacing-md
+  background-color #f8f9fa
+  border-radius 8px
+
+.monitoring-icon-placeholder
+  width 60px
+  height 60px
+  margin 0 auto spacing-sm
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.monitoring-label
+  font-size font-size-base
+  font-weight 500
+  color primary-color
+
+// Logistics Timeline Section
+.logistics-timeline-section
+  background-color primary-color
+  color #fff
+
+  .section-title
+    color #fff
+
+  .section-subtitle
+    color rgba(255, 255, 255, 0.9)
+
+.timeline-intro
+  max-width 800px
+  margin spacing-lg auto spacing-xl
+  text-align center
+
+.timeline-intro-text
+  font-size font-size-base
+  font-weight 300
+  color rgba(255, 255, 255, 0.9)
+  line-height 1.8
+  margin 0
+
+.timeline-steps
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+  position relative
+
+  @media (max-width: breakpoint-tablet)
+    grid-template-columns repeat(2, 1fr)
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.timeline-step
+  display flex
+  flex-direction column
+  align-items center
+  text-align center
+  position relative
+
+.step-number
+  width 50px
+  height 50px
+  border-radius 50%
+  background-color #fff
+  color primary-color
+  display flex
+  align-items center
+  justify-content center
+  font-size font-size-large
+  font-weight 700
+  margin-bottom spacing-sm
+
+.step-icon-placeholder
+  width 60px
+  height 60px
+  margin-bottom spacing-sm
+  background-color rgba(255, 255, 255, 0.1)
+  border 1px dashed rgba(255, 255, 255, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color #fff
+  font-size font-size-small
+  font-weight 500
+
+.step-title
+  font-size font-size-large
+  font-weight 700
+  color #fff
+  margin-bottom spacing-xs
+
+.step-badge
+  display inline-block
+  padding 2px spacing-xs
+  background-color rgba(255, 255, 255, 0.2)
+  border-radius 4px
+  font-size font-size-small
+  font-weight 500
+  color rgba(255, 255, 255, 0.9)
+  font-style italic
+  margin-left spacing-xs
+  vertical-align middle
+
+.step-description
+  font-size font-size-base
+  font-weight 300
+  color rgba(255, 255, 255, 0.9)
+  line-height 1.6
+
+// Case Studies Section
+.case-studies-section
+  background-color background-color
+
+.case-studies-grid
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-tablet)
+    grid-template-columns 1fr
+
+.case-study-card
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  overflow hidden
+  transition all 0.3s ease
+
+  &:hover
+    transform translateY(-5px)
+    box-shadow 0 10px 30px rgba(0, 0, 0, 0.1)
+
+.case-study-image-placeholder
+  width 100%
+  height 200px
+  background-color rgba(20, 52, 99, 0.05)
+  border-bottom 1px solid #e9ecef
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+  border 1px dashed rgba(20, 52, 99, 0.3)
+
+.case-study-content
+  padding spacing-lg
+
+.case-study-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+
+.case-study-excerpt
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.6
+  margin-bottom spacing-md
+
+.case-study-link
+  color primary-color
+  text-decoration none
+  font-weight 500
+  font-size font-size-small
+  transition all 0.3s ease
+
+  &:hover
+    text-decoration underline
+
+// Compliance Section
+.compliance-section
+  background-color #f8f9fa
+
+.compliance-grid
+  display grid
+  grid-template-columns repeat(auto-fit, minmax(200px, 1fr))
+  gap spacing-lg
+  margin-top spacing-xl
+
+.compliance-item
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  text-align center
+  transition all 0.3s ease
+
+  &:hover
+    transform translateY(-5px)
+    box-shadow 0 10px 30px rgba(0, 0, 0, 0.1)
+
+.compliance-icon-placeholder
+  width 60px
+  height 60px
+  margin 0 auto spacing-md
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.compliance-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-xs
+
+.compliance-description
+  font-size font-size-small
+  font-weight 300
+  color text-color
+  line-height 1.5
+
+// Industry Use Cases Section
+.industry-use-cases-section
+  background-color background-color
+
+.industry-grid
+  display grid
+  grid-template-columns repeat(auto-fit, minmax(150px, 1fr))
+  gap spacing-lg
+  margin-top spacing-xl
+
+.industry-item
+  background-color #f8f9fa
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  text-align center
+  transition all 0.3s ease
+
+  &:hover
+    transform translateY(-5px)
+    box-shadow 0 10px 30px rgba(0, 0, 0, 0.1)
+
+.industry-icon-placeholder
+  width 60px
+  height 60px
+  margin 0 auto spacing-md
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.industry-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+
+// CTA Footer Section
+.cta-footer-section
+  background-color primary-color
+  color #fff
+  padding spacing-xl 0
+
+  &.expertise-cta-section
+    padding spacing-lg 0
+
+.cta-footer-content
+  text-align center
+
+.cta-footer-title
+  font-size 2rem
+  font-weight 700
+  color #fff
+  margin-bottom spacing-sm
+
+  .expertise-cta-section &
+    font-size 1.5rem
+    margin-bottom spacing-xs
+
+.cta-footer-subtitle
+  font-size font-size-large
+  font-weight 300
+  color rgba(255, 255, 255, 0.9)
+  margin-bottom spacing-xl
+
+  .expertise-cta-section &
+    font-size font-size-base
+    margin-bottom spacing-md
+
+.cta-footer-actions
+  display flex
+  gap spacing-sm
+  justify-content center
+
+  @media (max-width: breakpoint-mobile)
+    flex-direction column
+    align-items center
+
+// Industries Page Styles
+.industry-section
+  background-color #f8f9fa
+
+  &:nth-child(even)
+    background-color background-color
+
+.industry-section-content
+  display flex
+  gap spacing-xl
+  align-items center
+  min-height 400px
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column
+    min-height auto
+
+.industry-layout-left-image
+  flex-direction row
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column
+
+.industry-layout-right-image
+  flex-direction row-reverse !important
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column !important
+
+.industry-visual
+  flex 1
+  display flex
+  align-items center
+  justify-content center
+
+.industry-image-placeholder
+  width 100%
+  max-width 500px
+  height 350px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 12px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-base
+  font-weight 500
+
+.industry-text
+  flex 1
+  display flex
+  flex-direction column
+  padding spacing-lg 0
+
+.industry-section-title
+  font-size 2rem
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-md
+
+.industry-section-description
+  font-size font-size-large
+  font-weight 500
+  color primary-color
+  margin-bottom spacing-lg
+  line-height 1.6
+
+.industry-details
+  p
+    font-size font-size-base
+    font-weight 300
+    color text-color
+    line-height 1.8
+    margin-bottom spacing-sm
+
+.industry-cta
+  margin-top spacing-lg
+
+    &:last-child
+      margin-bottom 0
+
+// Supporting Note Section
+.supporting-note-section
+  background-color background-color
+
+.supporting-note-content
+  max-width 800px
+  margin 0 auto
+  text-align center
+
+.supporting-note-text
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.8
+  margin 0
+
+// Biotech Industry Detail Page Styles
+// Section 1: Industry Context
+.industry-context-section
+  background-color background-color
+
+.industry-context-content
+  display flex
+  flex-direction row
+  gap spacing-xl
+  align-items center
+  max-width 1000px
+  margin 0 auto
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column
+
+.industry-context-visual
+  flex 1
+
+.industry-context-image-placeholder
+  width 100%
+  max-width 450px
+  height 350px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 12px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-base
+  font-weight 500
+
+.industry-context-text
+  flex 1
+
+.industry-context-title
+  font-size 2rem
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-lg
+  line-height 1.3
+
+.industry-context-description
+  p
+    font-size font-size-base
+    font-weight 300
+    color text-color
+    line-height 1.9
+    margin-bottom spacing-md
+
+    &:last-child
+      margin-bottom 0
+
+// Section 2: Biotech-Specific Challenges
+.biotech-challenges-section
+  background-color #f8f9fa
+
+.biotech-challenges-list
+  max-width 900px
+  margin spacing-xl auto 0
+  display flex
+  flex-direction column
+  gap spacing-lg
+
+.biotech-challenge-item
+  display flex
+  gap spacing-lg
+  align-items start
+  background-color background-color
+  padding spacing-lg
+  border-radius 12px
+  border 1px solid #e9ecef
+  transition all 0.3s ease
+
+  &:hover
+    box-shadow 0 5px 15px rgba(0, 0, 0, 0.1)
+    transform translateX(5px)
+
+.challenge-icon-placeholder
+  width 60px
+  height 60px
+  min-width 60px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.challenge-content
+  flex 1
+
+.challenge-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+
+.challenge-description
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.7
+  margin 0
+
+// Section 3: Biotech Solutions
+.biotech-solutions-section
+  background-color background-color
+
+.biotech-solutions-layout
+  max-width 1000px
+  margin spacing-xl auto 0
+  display flex
+  flex-direction column
+  gap spacing-xl
+
+.solution-group
+  display flex
+  flex-direction row
+  gap spacing-xl
+  align-items center
+  padding spacing-lg
+  background-color #f8f9fa
+  border-radius 12px
+
+  &:nth-child(even)
+    flex-direction row-reverse
+    background-color background-color
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column !important
+
+.solution-visual
+  flex 1
+
+.solution-image-placeholder
+  width 100%
+  max-width 400px
+  height 250px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 12px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-base
+  font-weight 500
+
+.solution-details
+  flex 1
+
+.solution-group-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+
+.solution-group-description
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.8
+  margin 0
+
+// Section 4: Demonstrated Outcomes
+.outcomes-section
+  background-color primary-color
+  color #fff
+
+  .section-title
+    color #fff
+
+  .section-subtitle
+    color rgba(255, 255, 255, 0.9)
+
+.outcomes-grid
+  display grid
+  grid-template-columns repeat(2, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.outcome-card
+  background-color rgba(255, 255, 255, 0.1)
+  border 1px solid rgba(255, 255, 255, 0.2)
+  border-radius 12px
+  padding spacing-lg
+  text-align center
+  transition all 0.3s ease
+
+  &:hover
+    background-color rgba(255, 255, 255, 0.15)
+    transform translateY(-5px)
+
+.outcome-icon-placeholder
+  width 60px
+  height 60px
+  margin 0 auto spacing-md
+  background-color rgba(255, 255, 255, 0.2)
+  border 1px dashed rgba(255, 255, 255, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color #fff
+  font-size font-size-small
+  font-weight 500
+
+.outcome-metric
+  font-size 3rem
+  font-weight 700
+  color #fff
+  margin-bottom spacing-xs
+
+.outcome-label
+  font-size font-size-base
+  font-weight 700
+  color #fff
+  margin-bottom spacing-sm
+
+.outcome-description
+  font-size font-size-small
+  font-weight 300
+  color rgba(255, 255, 255, 0.9)
+  line-height 1.6
+
+// Section 5: Biotech Case Study
+.biotech-case-study-section
+  background-color #f8f9fa
+
+.biotech-case-study-content
+  max-width 1000px
+  margin 0 auto
+  display flex
+  flex-direction row
+  gap spacing-xl
+  align-items center
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column
+
+.case-study-visual
+  flex 1
+
+.case-study-image-placeholder
+  width 100%
+  max-width 450px
+  height 350px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 12px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-base
+  font-weight 500
+
+.case-study-text
+  flex 1
+
+.case-study-title
+  font-size 2rem
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-md
+  line-height 1.3
+
+.case-study-description
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.8
+  margin-bottom spacing-lg
+
+.case-study-outcome
+  padding spacing-lg
+  background-color background-color
+  border-left 4px solid primary-color
+  border-radius 8px
+  margin-bottom spacing-lg
+
+.outcome-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+
+.outcome-text
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.7
+  margin 0
+
+.case-study-link
+  color primary-color
+  text-decoration none
+  font-weight 500
+  font-size font-size-base
+  transition all 0.3s ease
+
+  &:hover
+    text-decoration underline
+
+// Section 6: Biotech FAQ
+.biotech-faq-section
+  background-color background-color
+
+.faq-list
+  max-width 900px
+  margin spacing-xl auto 0
+
+.faq-item
+  background-color #f8f9fa
+  border 1px solid #e9ecef
+  border-radius 12px
+  margin-bottom spacing-md
+  overflow hidden
+  transition all 0.3s ease
+
+  &:hover
+    box-shadow 0 5px 15px rgba(0, 0, 0, 0.1)
+
+.faq-question
+  display flex
+  justify-content space-between
+  align-items center
+  padding spacing-lg
+  cursor pointer
+  transition all 0.3s ease
+
+  &:hover
+    background-color rgba(20, 52, 99, 0.02)
+
+.faq-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin 0
+  flex 1
+
+.faq-toggle
+  width 30px
+  height 30px
+  display flex
+  align-items center
+  justify-content center
+  font-size 1.5rem
+  font-weight 700
+  color primary-color
+  transition transform 0.3s ease
+
+  .faq-item.active &
+    transform rotate(45deg)
+
+.faq-answer
+  max-height 0
+  overflow hidden
+  transition max-height 0.3s ease
+
+  .faq-item.active &
+    max-height 500px
+
+  p
+    padding 0 spacing-lg spacing-lg spacing-lg
+    margin 0
+    font-size font-size-base
+    font-weight 300
+    color text-color
+    line-height 1.8
+
+// Section 7: Biotech CTA
+.biotech-cta-section
+  background-color primary-color
+  color #fff
+  padding spacing-xl 0
+
+.biotech-cta-content
+  text-align center
+  max-width 800px
+  margin 0 auto
+
+.biotech-cta-title
+  font-size 2rem
+  font-weight 700
+  color #fff
+  margin-bottom spacing-sm
+
+.biotech-cta-subtitle
+  font-size font-size-large
+  font-weight 300
+  color rgba(255, 255, 255, 0.9)
+  margin-bottom spacing-xl
+  line-height 1.7
+
+.biotech-cta-actions
+  display flex
+  justify-content center
+  gap spacing-sm
+
+// ============================================
+// Industries Pages Styles
+// ============================================
+
+// Industries Overview Page
+.industries-overview-section
+  padding spacing-xl 0
+
+.industries-grid
+  display grid
+  grid-template-columns repeat(auto-fit, minmax(280px, 1fr))
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.industry-card
+  display block
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  text-decoration none
+  color text-color
+  transition all 0.3s ease
+  text-align center
+
+  &:hover
+    box-shadow 0 8px 24px rgba(0, 0, 0, 0.1)
+    transform translateY(-4px)
+    border-color primary-color
+
+.industry-card-icon-placeholder
+  width 60px
+  height 60px
+  margin 0 auto spacing-md
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.industry-card-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+
+.industry-card-description
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.6
+  margin 0
+
+// Industry Detail Page (Biotech)
+.industry-hero-section
+  .hero-background-placeholder
+    width 100%
+    height 300px
+    margin-top spacing-lg
+    background-color rgba(20, 52, 99, 0.05)
+    border 1px dashed rgba(20, 52, 99, 0.3)
+    border-radius 12px
+    display flex
+    align-items center
+    justify-content center
+    color primary-color
+    font-size font-size-base
+    font-weight 500
+
+// Industry Context Section
+.industry-context-section
+  padding spacing-xl 0
+
+.industry-context-content
+  display flex
+  gap spacing-xl
+  align-items center
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column
+
+.industry-context-visual
+  flex 1
+
+.industry-context-image-placeholder
+  width 100%
+  max-width 500px
+  height 350px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 12px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-base
+  font-weight 500
+
+.industry-context-text
+  flex 1
+
+.industry-context-list
+  list-style none
+  padding 0
+  margin-top spacing-lg
+
+  li
+    font-size font-size-base
+    font-weight 300
+    color text-color
+    line-height 1.8
+    margin-bottom spacing-md
+    padding-left spacing-lg
+    position relative
+
+    &:before
+      content "•"
+      position absolute
+      left 0
+      color primary-color
+      font-weight 700
+      font-size 1.5rem
+      line-height 1
+
+// Industry Challenges Section
+.industry-challenges-section
+  background-color #f8f9fa
+  padding spacing-xl 0
+
+.challenges-grid
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-tablet)
+    grid-template-columns repeat(2, 1fr)
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.challenge-item
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  text-align center
+  transition all 0.3s ease
+  display flex
+  flex-direction column
+  align-items center
+  height 100%
+
+  &:hover
+    box-shadow 0 5px 15px rgba(0, 0, 0, 0.1)
+    transform translateY(-3px)
+
+.challenge-icon-placeholder
+  width 40px
+  height 40px
+  margin 0 auto spacing-md
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+  flex-shrink 0
+
+.challenge-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+  margin-top 0
+
+.challenge-subtitle
+  font-size font-size-small
+  font-weight 300
+  color text-color
+  margin 0
+  line-height 1.6
+
+.challenge-description
+  font-size font-size-small
+  font-weight 300
+  color text-color
+  margin 0
+
+// Industry Solutions Section
+.industry-solutions-section
+  padding spacing-xl 0
+
+.solutions-grid
+  display grid
+  grid-template-columns repeat(4, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-desktop)
+    grid-template-columns repeat(2, 1fr)
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.solution-item
+  display flex
+  flex-direction column
+  align-items center
+  text-align center
+  gap spacing-md
+  padding spacing-lg
+  background-color #f8f9fa
+  border-radius 12px
+  border 1px solid #e9ecef
+  transition all 0.3s ease
+  height 100%
+
+  &:hover
+    background-color rgba(20, 52, 99, 0.05)
+    box-shadow 0 5px 15px rgba(0, 0, 0, 0.1)
+    transform translateY(-3px)
+
+.solution-icon-placeholder
+  width 50px
+  height 50px
+  flex-shrink 0
+  margin 0 auto
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.solution-title
+  font-size font-size-base
+  font-weight 500
+  color text-color
+  margin 0
+  text-align center
+  line-height 1.5
+
+// Industry Case Section
+.industry-case-section
+  background-color #f8f9fa
+  padding spacing-xl 0
+
+.case-card
+  max-width 800px
+  margin spacing-xl auto 0
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  overflow hidden
+  transition all 0.3s ease
+
+  &:hover
+    box-shadow 0 8px 24px rgba(0, 0, 0, 0.1)
+
+.case-image-placeholder
+  width 100%
+  height 250px
+  background-color rgba(20, 52, 99, 0.05)
+  border-bottom 1px dashed rgba(20, 52, 99, 0.3)
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-base
+  font-weight 500
+
+.case-content
+  padding spacing-lg
+
+.case-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+
+.case-summary
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.6
+  margin-bottom spacing-md
+
+.case-link
+  color primary-color
+  text-decoration none
+  font-weight 500
+  font-size font-size-base
+  transition all 0.3s ease
+
+  &:hover
+    text-decoration underline
+
+// Industry FAQ Section
+.industry-faq-section
+  padding spacing-xl 0
+
+.faq-question
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+
+.faq-answer
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.7
+  margin 0
+
+// ============================================
+// Expertise Page Styles
+// ============================================
+
+// Expertise Hero Section
+.expertise-hero-section
+  .hero-background-placeholder
+    width 100%
+    height 300px
+    margin-top spacing-lg
+    background-color rgba(20, 52, 99, 0.05)
+    border 1px dashed rgba(20, 52, 99, 0.3)
+    border-radius 12px
+    display flex
+    align-items center
+    justify-content center
+    color primary-color
+    font-size font-size-base
+    font-weight 500
+
+// Technical Expertise Cards Section
+.expertise-cards-section
+  padding spacing-xl 0
+
+.expertise-cards-grid
+  display grid
+  grid-template-columns repeat(4, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-desktop)
+    grid-template-columns repeat(2, 1fr)
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.expertise-card
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  text-align center
+  transition all 0.3s ease
+  display flex
+  flex-direction column
+  align-items center
+  height 100%
+
+  &:hover
+    box-shadow 0 5px 15px rgba(0, 0, 0, 0.1)
+    transform translateY(-3px)
+    border-color primary-color
+
+.expertise-card-icon-placeholder
+  width 50px
+  height 50px
+  margin 0 auto spacing-md
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+  flex-shrink 0
+
+.expertise-card-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+  margin-top 0
+
+.expertise-card-description
+  font-size font-size-small
+  font-weight 300
+  color text-color
+  line-height 1.6
+  margin 0
+
+// Compliance Summary (merged into Technical & Compliance Capabilities)
+.compliance-summary
+  margin-top spacing-xl
+  max-width 800px
+  margin-left auto
+  margin-right auto
+
+.compliance-summary-text
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.7
+  margin-bottom spacing-md
+  text-align center
+
+.compliance-summary-list
+  list-style none
+  padding 0
+  margin 0
+  text-align center
+
+  li
+    font-size font-size-base
+    font-weight 300
+    color text-color
+    line-height 1.8
+    margin-bottom spacing-xs
+    padding-left spacing-lg
+    position relative
+
+    &:before
+      content "•"
+      position absolute
+      left 0
+      color primary-color
+      font-weight 700
+      font-size 1.2rem
+      line-height 1.5
+
+// Certificates Section
+.certificates-section
+  background-color #f8f9fa
+  padding spacing-xl 0
+
+.certificates-list
+  max-width 900px
+  margin spacing-xl auto 0
+
+.certificate-list-item
+  display flex
+  align-items center
+  gap spacing-md
+  padding spacing-md spacing-lg
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 8px
+  margin-bottom spacing-sm
+  transition all 0.3s ease
+
+  &:hover
+    box-shadow 0 2px 8px rgba(0, 0, 0, 0.08)
+    border-color primary-color
+
+  &:last-child
+    margin-bottom 0
+
+.certificate-list-icon-placeholder
+  width 40px
+  height 40px
+  flex-shrink 0
+  display flex
+  align-items center
+  justify-content center
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 6px
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.certificate-list-content
+  flex 1
+
+.certificate-list-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-xs
+  margin-top 0
+  line-height 1.4
+
+.certificate-list-description
+  font-size font-size-small
+  font-weight 300
+  color text-color
+  line-height 1.6
+  margin 0
+
+// ============================================
+// Resources Page Styles
+// ============================================
+
+// Resources Hero Section
+.resources-hero-section
+  .hero-background-placeholder
+    display none
+
+// Resources Grid Section
+.resources-grid-section
+  padding spacing-xl 0
+
+.resources-grid
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-desktop)
+    grid-template-columns repeat(2, 1fr)
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.resource-card
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  text-align center
+  transition all 0.3s ease
+  display flex
+  flex-direction column
+  align-items center
+  height 100%
+
+  &:hover
+    box-shadow 0 5px 15px rgba(0, 0, 0, 0.1)
+    transform translateY(-3px)
+    border-color primary-color
+
+.resource-card-icon-placeholder
+  width 60px
+  height 60px
+  margin 0 auto spacing-md
+  background-color rgba(128, 128, 128, 0.1)
+  border 1px dashed rgba(128, 128, 128, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color #666
+  font-size font-size-small
+  font-weight 500
+  flex-shrink 0
+
+.resource-card-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+  margin-top 0
+
+.resource-card-description
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.6
+  margin-bottom spacing-lg
+  flex 1
+
+.resource-card
+  .btn
+    margin-top auto
+
+// Resources FAQ Section
+.resources-faq-section
+  background-color #f8f9fa
+  padding spacing-xl 0
+
+.resources-faq-section
+  .faq-list
+    max-width 900px
+    margin spacing-xl auto 0
+
+// Resources CTA Section
+.resources-cta-section
+  padding spacing-lg 0
+
+// ============================================
+// Resources Listing Page Styles
+// ============================================
+
+// Breadcrumb
+.breadcrumb-section
+  padding spacing-md 0
+  background-color #f8f9fa
+  border-bottom 1px solid #e9ecef
+
+.breadcrumb
+  display flex
+  align-items center
+  gap spacing-xs
+  font-size font-size-small
+  color text-color
+
+.breadcrumb-item
+  color text-color
+
+.breadcrumb-separator
+  color #999
+  margin 0 spacing-xs
+
+.breadcrumb-current
+  color primary-color
+  font-weight 500
+
+// Resources Listing Hero
+.resources-listing-hero
+  padding spacing-xl 0 spacing-md 0
+
+.resources-listing-title
+  font-size 2.5rem
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+
+.resources-listing-subtitle
+  font-size font-size-large
+  font-weight 300
+  color text-color
+  margin-bottom spacing-xs
+
+.resources-listing-meta
+  font-size font-size-small
+  font-weight 300
+  color #666
+  margin 0
+
+// Filter Bar
+.resources-filter-bar
+  padding spacing-md 0
+  background-color #f8f9fa
+  border-top 1px solid #e9ecef
+  border-bottom 1px solid #e9ecef
+
+.filter-bar-content
+  display flex
+  justify-content space-between
+  align-items center
+  gap spacing-lg
+
+  @media (max-width: breakpoint-mobile)
+    flex-direction column
+    align-items flex-start
+
+.filter-bar-left
+  display flex
+  align-items center
+  gap spacing-md
+
+.filter-label
+  font-size font-size-base
+  font-weight 500
+  color text-color
+
+.filter-pills
+  display flex
+  gap spacing-sm
+
+.filter-pill
+  padding spacing-xs spacing-md
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 20px
+  font-size font-size-small
+  font-weight 500
+  color text-color
+  cursor pointer
+  transition all 0.3s ease
+
+  &:hover
+    border-color primary-color
+    color primary-color
+
+  &.active
+    background-color primary-color
+    border-color primary-color
+    color #fff
+
+.filter-bar-right
+  display flex
+  align-items center
+  gap spacing-sm
+
+.sort-label
+  font-size font-size-base
+  font-weight 500
+  color text-color
+
+.sort-select
+  padding spacing-xs spacing-md
+  border 1px solid #e9ecef
+  border-radius 6px
+  font-size font-size-small
+  color text-color
+  background-color background-color
+  cursor pointer
+
+// Resources Listing Layout
+.resources-listing-content
+  padding spacing-xl 0
+
+.resources-listing-layout
+  display flex
+  gap spacing-xl
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column
+
+.resources-listing-main
+  flex 0 0 70%
+
+  @media (max-width: breakpoint-tablet)
+    flex 1
+
+.resource-post-list
+  display flex
+  flex-direction column
+  gap spacing-lg
+
+.resource-post-card
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  transition all 0.3s ease
+
+  &:hover
+    box-shadow 0 5px 15px rgba(0, 0, 0, 0.1)
+    border-color primary-color
+
+.resource-post-category
+  display inline-block
+  padding 4px spacing-sm
+  background-color rgba(20, 52, 99, 0.1)
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+  border-radius 4px
+  margin-bottom spacing-sm
+
+.resource-post-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-xs
+  margin-top 0
+  line-height 1.4
+
+.resource-post-meta
+  font-size font-size-small
+  font-weight 300
+  color #666
+  margin-bottom spacing-md
+
+.resource-post-excerpt
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.7
+  margin-bottom spacing-md
+
+.resource-post-link
+  display inline-block
+  color primary-color
+  text-decoration none
+  font-weight 500
+  font-size font-size-base
+  transition all 0.3s ease
+
+  &:hover
+    text-decoration underline
+
+// Pagination
+.resources-pagination
+  display flex
+  justify-content center
+  align-items center
+  gap spacing-sm
+  margin-top spacing-xl
+  padding-top spacing-xl
+  border-top 1px solid #e9ecef
+
+.pagination-btn
+  padding spacing-xs spacing-md
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 6px
+  font-size font-size-base
+  font-weight 500
+  color text-color
+  cursor pointer
+  transition all 0.3s ease
+
+  &:hover:not(:disabled)
+    border-color primary-color
+    color primary-color
+
+  &:disabled
+    opacity 0.5
+    cursor not-allowed
+
+.pagination-number
+  padding spacing-xs spacing-md
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 6px
+  font-size font-size-base
+  font-weight 500
+  color text-color
+  text-decoration none
+  transition all 0.3s ease
+
+  &:hover
+    border-color primary-color
+    color primary-color
+
+  &.active
+    background-color primary-color
+    border-color primary-color
+    color #fff
+
+// Sidebar
+.resources-listing-sidebar
+  flex 0 0 30%
+
+  @media (max-width: breakpoint-tablet)
+    flex 1
+
+.sidebar-widget
+  background-color #f8f9fa
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  margin-bottom spacing-lg
+
+  &:last-child
+    margin-bottom 0
+
+.sidebar-widget-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-md
+  margin-top 0
+
+// Search Widget
+.sidebar-search
+  display flex
+  gap spacing-xs
+
+.sidebar-search-input
+  flex 1
+  padding spacing-xs spacing-sm
+  border 1px solid #e9ecef
+  border-radius 6px
+  font-size font-size-base
+  color text-color
+
+.sidebar-search-btn
+  padding spacing-xs spacing-md
+  background-color primary-color
+  border 1px solid primary-color
+  border-radius 6px
+  color #fff
+  font-size font-size-small
+  font-weight 500
+  cursor pointer
+  transition all 0.3s ease
+
+  &:hover
+    background-color primary-color-dark
+
+// Categories Widget
+.sidebar-categories-list
+  list-style none
+  padding 0
+  margin 0
+
+  li
+    margin-bottom spacing-xs
+
+    &:last-child
+      margin-bottom 0
+
+.sidebar-category-link
+  color text-color
+  text-decoration none
+  font-size font-size-base
+  font-weight 300
+  transition all 0.3s ease
+
+  &:hover
+    color primary-color
+    text-decoration underline
+
+// Featured Resources Widget
+.sidebar-featured-list
+  list-style none
+  padding 0
+  margin 0
+
+.sidebar-featured-item
+  padding-bottom spacing-md
+  margin-bottom spacing-md
+  border-bottom 1px solid #e9ecef
+
+  &:last-child
+    padding-bottom 0
+    margin-bottom 0
+    border-bottom none
+
+.sidebar-featured-title
+  font-size font-size-base
+  font-weight 500
+  color primary-color
+  margin-bottom spacing-xs
+  margin-top 0
+  line-height 1.4
+
+.sidebar-featured-meta
+  font-size font-size-small
+  font-weight 300
+  color #666
+
+// ============================================
+// Resource Article Page Styles
+// ============================================
+
+// Article Header (inside article-content-main)
+.article-header-main
+  margin-bottom spacing-xl
+
+.article-category
+  display inline-block
+  padding 4px spacing-sm
+  background-color rgba(20, 52, 99, 0.1)
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+  border-radius 4px
+  margin-bottom spacing-md
+
+.article-title
+  font-size 2.5rem
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-md
+  line-height 1.3
+
+.article-meta
+  display flex
+  align-items center
+  gap spacing-xs
+  margin-bottom spacing-lg
+  font-size font-size-small
+  color #666
+
+.article-meta-item
+  font-weight 300
+
+.article-meta-separator
+  color #999
+
+.article-intro
+  font-size font-size-large
+  font-weight 300
+  color text-color
+  line-height 1.7
+
+  p
+    margin 0
+
+// Article Sidebar (Desktop)
+.article-sidebar
+  flex 0 0 300px
+  display flex
+  flex-direction column
+  gap spacing-lg
+  position sticky
+  top spacing-lg
+  align-self flex-start
+
+  @media (max-width: breakpoint-tablet)
+    display none
+
+.key-details-list
+  display flex
+  flex-direction column
+  gap spacing-md
+
+.key-detail-item
+  display flex
+  flex-direction column
+  gap spacing-xs
+
+.key-detail-label
+  font-size font-size-small
+  font-weight 500
+  color #666
+  text-transform uppercase
+  letter-spacing 0.5px
+
+.key-detail-value
+  font-size font-size-base
+  font-weight 500
+  color text-color
+
+// Featured Image (inside article-content-main)
+.article-featured-image-placeholder
+  width 100%
+  height 400px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 12px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-base
+  font-weight 500
+  margin-bottom spacing-xl
+
+// Article Content Section
+.article-content-section
+  padding spacing-xl 0
+
+.article-content-layout
+  display flex
+  gap spacing-xl
+  align-items flex-start
+
+  @media (max-width: breakpoint-tablet)
+    flex-direction column
+
+.article-content-main
+  flex 1
+  min-width 0
+
+.article-content-heading
+  font-size 2rem
+  font-weight 700
+  color primary-color
+  margin-top spacing-xl
+  margin-bottom spacing-lg
+
+  &:first-child
+    margin-top 0
+
+.article-content-paragraph
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  line-height 1.8
+  margin-bottom spacing-md
+
+.article-content-list
+  list-style none
+  padding 0
+  margin-bottom spacing-md
+
+  li
+    font-size font-size-base
+    font-weight 300
+    color text-color
+    line-height 1.8
+    margin-bottom spacing-sm
+    padding-left spacing-lg
+    position relative
+
+    &:before
+      content "•"
+      position absolute
+      left 0
+      color primary-color
+      font-weight 700
+      font-size 1.2rem
+      line-height 1.5
+
+// Results Stats
+.article-results-stats
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-lg
+  margin-top spacing-lg
+  margin-bottom spacing-xl
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.result-stat-item
+  text-align center
+  padding spacing-lg
+  background-color #f8f9fa
+  border-radius 12px
+  border 1px solid #e9ecef
+
+.result-stat-label
+  font-size font-size-small
+  font-weight 500
+  color #666
+  margin-bottom spacing-xs
+  text-transform uppercase
+  letter-spacing 0.5px
+
+.result-stat-value
+  font-size 3rem
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-xs
+  line-height 1
+
+.result-stat-caption
+  font-size font-size-small
+  font-weight 300
+  color text-color
+  line-height 1.5
+
+
+// Article Footer Section
+.article-footer-section
+  padding spacing-xl 0
+
+.article-footer-divider
+  height 1px
+  background-color #e9ecef
+  margin-bottom spacing-lg
+
+.article-back-link
+  margin-bottom spacing-xl
+
+.article-back-link-text
+  color primary-color
+  text-decoration none
+  font-weight 500
+  font-size font-size-base
+  transition all 0.3s ease
+
+  &:hover
+    text-decoration underline
+
+.article-footer-cta
+  background-color #f8f9fa
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  text-align center
+
+.article-footer-cta-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+  margin-top 0
+
+.article-footer-cta-subtitle
+  font-size font-size-base
+  font-weight 300
+  color text-color
+  margin-bottom spacing-md
+
+// Related Resources Section
+.related-resources-section
+  background-color #f8f9fa
+  padding spacing-xl 0
+
+.related-resources-grid
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-desktop)
+    grid-template-columns repeat(2, 1fr)
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.related-resource-card
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  transition all 0.3s ease
+
+  &:hover
+    box-shadow 0 5px 15px rgba(0, 0, 0, 0.1)
+    transform translateY(-3px)
+    border-color primary-color
+
+.related-resource-category
+  display inline-block
+  padding 4px spacing-sm
+  background-color rgba(20, 52, 99, 0.1)
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+  border-radius 4px
+  margin-bottom spacing-sm
+
+.related-resource-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-xs
+  margin-top 0
+  line-height 1.4
+
+.related-resource-meta
+  font-size font-size-small
+  font-weight 300
+  color #666
+  margin-bottom spacing-sm
+
+.related-resource-link
+  color primary-color
+  text-decoration none
+  font-weight 500
+  font-size font-size-base
+  transition all 0.3s ease
+
+  &:hover
+    text-decoration underline
+
+// Company Page Styles
+.company-hero-section
+  .hero-background-placeholder
+    width 100%
+    height 400px
+    background-color rgba(20, 52, 99, 0.1)
+    border 1px dashed rgba(20, 52, 99, 0.3)
+    border-radius 8px
+    display flex
+    align-items center
+    justify-content center
+    color rgba(255, 255, 255, 0.7)
+    font-size font-size-small
+    margin-top spacing-lg
+
+// Company About Section
+.company-about-section
+  background-color #f8f9fa
+  padding spacing-xl 0
+
+.company-about-content
+  max-width 900px
+  margin 0 auto spacing-xl
+
+.company-about-text
+  font-size font-size-base
+  line-height 1.8
+  color text-color
+  margin-bottom spacing-xl
+  font-weight 300
+  text-align center
+
+// Company Highlights Grid
+.company-highlights-grid
+  display grid
+  grid-template-columns repeat(4, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-desktop)
+    grid-template-columns repeat(2, 1fr)
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.highlight-card
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  text-align center
+  transition all 0.3s ease
+
+  &:hover
+    transform translateY(-5px)
+    box-shadow 0 10px 30px rgba(0, 0, 0, 0.1)
+    border-color primary-color
+
+.highlight-icon-placeholder
+  width 60px
+  height 60px
+  margin 0 auto spacing-md
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.highlight-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+
+.highlight-description
+  font-size font-size-small
+  line-height 1.6
+  color text-color
+  font-weight 300
+  margin 0
+
+// Leadership Section
+.company-leadership-section
+  padding spacing-xl 0
+  background-color background-color
+
+.leadership-grid
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-tablet)
+    grid-template-columns repeat(2, 1fr)
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.leadership-card
+  text-align center
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  transition all 0.3s ease
+
+  &:hover
+    transform translateY(-5px)
+    box-shadow 0 10px 30px rgba(0, 0, 0, 0.1)
+
+.leadership-photo-placeholder
+  width 120px
+  height 120px
+  margin 0 auto spacing-md
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 50%
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.leadership-name
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-xs
+
+.leadership-title
+  font-size font-size-base
+  font-weight 500
+  color #666
+  margin-bottom spacing-sm
+
+.leadership-description
+  font-size font-size-base
+  line-height 1.6
+  color text-color
+  font-weight 300
+  margin 0
+
+// Global Network Section
+.company-network-section
+  padding spacing-xl 0
+
+.global-network-content
+  margin-top spacing-xl
+
+.network-map-container
+  width 100%
+  margin-bottom spacing-xl
+
+.network-map-placeholder
+  width 100%
+  height 400px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+  text-align center
+  padding spacing-md
+
+.network-highlights-grid
+  display grid
+  grid-template-columns 1fr
+  gap spacing-lg
+  max-width 900px
+  margin 0 auto
+
+.network-highlight-card
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  display flex
+  align-items center
+  gap spacing-lg
+  transition all 0.3s ease
+
+  &:hover
+    transform translateY(-5px)
+    box-shadow 0 10px 30px rgba(0, 0, 0, 0.1)
+    border-color primary-color
+
+  @media (max-width: breakpoint-mobile)
+    flex-direction column
+    text-align center
+
+.network-highlight-icon-placeholder
+  width 80px
+  height 80px
+  min-width 80px
+  background-color rgba(20, 52, 99, 0.05)
+  border 1px dashed rgba(20, 52, 99, 0.3)
+  border-radius 8px
+  display flex
+  align-items center
+  justify-content center
+  color primary-color
+  font-size font-size-small
+  font-weight 500
+
+.network-highlight-title
+  font-size font-size-base
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+  margin-top 0
+
+.network-highlight-description
+  font-size font-size-small
+  line-height 1.6
+  color text-color
+  font-weight 300
+  margin 0
+
+// Newsroom Section
+.company-newsroom-section
+  padding spacing-xl 0
+
+.newsroom-grid
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+
+  @media (max-width: breakpoint-tablet)
+    grid-template-columns repeat(2, 1fr)
+
+  @media (max-width: breakpoint-mobile)
+    grid-template-columns 1fr
+
+.newsroom-card
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  transition all 0.3s ease
+
+  &:hover
+    transform translateY(-5px)
+    box-shadow 0 10px 30px rgba(0, 0, 0, 0.1)
+
+.newsroom-date
+  font-size font-size-small
+  color #666
+  font-weight 300
+  margin-bottom spacing-sm
+
+.newsroom-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-sm
+  line-height 1.4
+
+.newsroom-summary
+  font-size font-size-base
+  line-height 1.6
+  color text-color
+  font-weight 300
+  margin-bottom spacing-md
+
+.newsroom-link
+  color primary-color
+  text-decoration none
+  font-weight 500
+  font-size font-size-base
+  transition all 0.3s ease
+
+  &:hover
+    text-decoration underline
+
+// Company CTA Section
+.company-cta-section
+  background-color primary-color
+  color #fff
+
+  .cta-footer-title
+    color #fff
+
+  .cta-footer-subtitle
+    color rgba(255, 255, 255, 0.9)
+
+// Contact Page Styles
+.contact-hero-section
+  .hero-background-placeholder
+    width 100%
+    height 400px
+    background-color rgba(20, 52, 99, 0.1)
+    border 1px dashed rgba(20, 52, 99, 0.3)
+    border-radius 8px
+    display flex
+    align-items center
+    justify-content center
+    color rgba(255, 255, 255, 0.7)
+    font-size font-size-small
+    margin-top spacing-lg
+
+// Contact Form Section
+.contact-form-section
+  padding spacing-xl 0
+  background-color #f8f9fa
+
+.contact-form-wrapper
+  max-width 800px
+  margin 0 auto
+
+.contact-form
+  margin-top spacing-xl
+
+.form-row
+  margin-bottom spacing-lg
+
+.form-group
+  margin-bottom spacing-md
+
+  &.form-group-required
+    .form-label::after
+      content " *"
+      color accent-color
+
+.form-label
+  display block
+  font-size font-size-base
+  font-weight 500
+  color primary-color
+  margin-bottom spacing-sm
+
+.form-input,
+.form-select,
+.form-textarea
+  width 100%
+  padding spacing-sm spacing-md
+  border 1px solid #e9ecef
+  border-radius 8px
+  font-size font-size-base
+  font-family font-family-primary
+  color text-color
+  transition all 0.3s ease
+  box-sizing border-box
+
+  &:focus
+    outline none
+    border-color primary-color
+    box-shadow 0 0 0 3px rgba(20, 52, 99, 0.1)
+
+.form-textarea
+  resize vertical
+  min-height 150px
+
+.form-select
+  background-color background-color
+  cursor pointer
+
+.form-actions
+  margin-top spacing-xl
+  text-align center
+
+// Regional Contact Information Section
+.contact-regions-section
+  padding spacing-xl 0
+
+.contact-regions-grid
+  display grid
+  grid-template-columns repeat(2, 1fr)
+  gap spacing-lg
+  margin-top spacing-xl
+  max-width 1000px
+  margin-left auto
+  margin-right auto
+
+  @media (max-width: breakpoint-tablet)
+    grid-template-columns 1fr
+
+.region-contact-card
+  background-color background-color
+  border 1px solid #e9ecef
+  border-radius 12px
+  padding spacing-lg
+  transition all 0.3s ease
+
+  &:hover
+    box-shadow 0 5px 15px rgba(0, 0, 0, 0.1)
+    border-color primary-color
+
+.region-contact-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-lg
+
+.region-contact-info
+  display flex
+  flex-direction column
+  gap spacing-md
+
+.contact-info-item
+  display flex
+  flex-direction column
+  gap spacing-xs
+
+.contact-info-label
+  font-size font-size-small
+  font-weight 500
+  color #666
+  text-transform uppercase
+  letter-spacing 0.5px
+
+.contact-info-value
+  font-size font-size-base
+  color text-color
+  font-weight 300
+  line-height 1.6

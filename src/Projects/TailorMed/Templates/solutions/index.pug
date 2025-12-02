@@ -1,0 +1,302 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title TailorMed｜Solutions
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap")
+    link(rel="stylesheet", href="../../css/main.css")
+  body
+    header.site-header
+      .container
+        .header-content
+          .brand
+            .logo-placeholder LOGO
+          nav.site-nav
+            a.nav-link(href="../../index.html") Home
+            a.nav-link(href="index.html") Solutions
+            a.nav-link(href="../industries/") Industries
+            a.nav-link(href="../expertise/") Expertise
+            a.nav-link(href="../resources/") Resources
+            a.nav-link(href="../company/") Company
+            a.nav-link(href="../contact/") Contact
+          .header-actions
+            a.btn.btn-track(href="../../track/index.html") Track
+          button.hamburger-menu(type="button", aria-label="Toggle navigation")
+            span.hamburger-line
+            span.hamburger-line
+            span.hamburger-line
+        .mobile-nav
+          a.mobile-nav-link(href="../../index.html") Home
+          a.mobile-nav-link(href="index.html") Solutions
+          a.mobile-nav-link(href="../industries/") Industries
+          a.mobile-nav-link(href="../expertise/") Expertise
+          a.mobile-nav-link(href="../resources/") Resources
+          a.mobile-nav-link(href="../company/") Company
+          a.mobile-nav-link(href="../contact/") Contact
+          a.mobile-nav-link.mobile-nav-track(href="../../track/index.html") Track
+
+    main.main-content
+      // Hero Section
+      section.hero-section
+        .container
+          h1.hero-title Solutions
+          p.hero-subtitle Comprehensive logistics solutions for life sciences
+          .hero-actions
+            a.btn.btn-primary(href="#") Request Consultation
+            a.btn.btn-secondary(href="#") Track Shipment
+
+      // Challenges vs Solutions Section
+      section.challenges-solutions-section.section
+        .container
+          .section-header
+            h2.section-title Challenges vs Solutions
+            p.section-subtitle Addressing your logistics pain points
+          .challenges-solutions-grid
+            .challenges-column
+              h3.challenges-title Pain Points
+              ul.challenges-list
+                li.challenge-item Temperature deviations
+                li.challenge-item Customs delays
+                li.challenge-item Limited visibility
+                li.challenge-item Compliance risks
+                li.challenge-item Time-sensitive delivery
+            .solutions-column
+              h3.solutions-title TailorMed Solutions
+              ul.solutions-list
+                li.solution-item Validated packaging systems
+                li.solution-item Expert customs support
+                li.solution-item Temperature monitoring
+                li.solution-item GDP/GxP compliance
+                li.solution-item Express & critical services
+
+      // Service Levels Section
+      section.service-levels-section.section
+        .container
+          .section-header
+            h2.section-title Service Levels
+            p.section-subtitle Choose the right service for your needs
+          .service-levels-grid
+            .service-level-card
+              h3.service-level-title Standard
+              .service-level-details
+                .detail-item
+                  .detail-label Transit Time
+                  .detail-value 3-5 days
+                .detail-item
+                  .detail-label Temperature Range
+                  .detail-value 2-8°C
+                .detail-item
+                  .detail-label Coverage
+                  .detail-value Regional
+            .service-level-card
+              h3.service-level-title Express
+              .service-level-details
+                .detail-item
+                  .detail-label Transit Time
+                  .detail-value 1-3 days
+                .detail-item
+                  .detail-label Temperature Range
+                  .detail-value 2-8°C, -20°C
+                .detail-item
+                  .detail-label Coverage
+                  .detail-value Global
+            .service-level-card
+              h3.service-level-title Critical
+              .service-level-details
+                .detail-item
+                  .detail-label Transit Time
+                  .detail-value Same day / Next day
+                .detail-item
+                  .detail-label Temperature Range
+                  .detail-value All ranges
+                .detail-item
+                  .detail-label Coverage
+                  .detail-value Global
+
+      // Packaging & Monitoring Section
+      section.packaging-monitoring-section.section
+        .container
+          .section-header
+            h2.section-title Packaging & Monitoring
+            p.section-subtitle Validated packaging and temperature monitoring solutions
+          .packaging-monitoring-content
+            // Validated Packaging Solutions - 上區：左圖右文字
+            .packaging-section
+              .packaging-visual
+                .packaging-image-placeholder IMAGE
+                .packaging-grid
+                  .packaging-item
+                    .packaging-icon-placeholder ICON
+                    .packaging-label 2-8°C
+                  .packaging-item
+                    .packaging-icon-placeholder ICON
+                    .packaging-label -20°C
+                  .packaging-item
+                    .packaging-icon-placeholder ICON
+                    .packaging-label -80°C
+                  .packaging-item
+                    .packaging-icon-placeholder ICON
+                    .packaging-label LN2 Vapor
+              .packaging-text
+                h3.packaging-title Validated Packaging Solutions
+                .packaging-description
+                  p Qualified shippers for 2–8°C, -20°C, -80°C, and LN2 vapor transport
+                  p Preconditioned packaging prepared under controlled procedures
+                  p Stable temperature performance for regional and international shipments
+            // Temperature Monitoring & Quality Checks - 下區：左文字右圖
+            .monitoring-section
+              .monitoring-visual
+                .monitoring-image-placeholder IMAGE
+                .monitoring-features
+                  .monitoring-feature-item
+                    .monitoring-icon-placeholder ICON
+                    .monitoring-label Data Loggers
+                  .monitoring-feature-item
+                    .monitoring-icon-placeholder ICON
+                    .monitoring-label Quality Verification
+                  .monitoring-feature-item
+                    .monitoring-icon-placeholder ICON
+                    .monitoring-label SOP Compliance
+              .monitoring-text
+                h3.monitoring-title Temperature Monitoring & Quality Checks
+                .monitoring-description
+                  p Continuous temperature logging using data loggers
+                  p Proper placement to reflect actual sample conditions
+                  p Temperature data available for quality verification
+                  p Deviation handling aligned with internal SOPs
+
+      // Logistics Timeline Section
+      section.logistics-timeline-section.section
+        .container
+          .section-header
+            h2.section-title Logistics Timeline
+            p.section-subtitle Our streamlined process from order to delivery
+          .timeline-intro
+            p.timeline-intro-text International shipments include additional cold-chain validation and customs clearance steps, while domestic shipments follow a more streamlined process.
+          .timeline-steps
+            .timeline-step
+              .step-number 1
+              .step-icon-placeholder ICON
+              h3.step-title Order Confirmed
+              p.step-description Order received and validated
+            .timeline-step
+              .step-number 2
+              .step-icon-placeholder ICON
+              h3.step-title Packaging & Preconditioning
+              p.step-description Validated packaging prepared
+            .timeline-step
+              .step-number 3
+              .step-icon-placeholder ICON
+              h3.step-title Collection
+              p.step-description Secure pickup from origin
+            .timeline-step
+              .step-number 4
+              .step-icon-placeholder ICON
+              h3.step-title Temperature-Controlled Transit
+              p.step-description Continuous monitoring throughout
+            .timeline-step
+              .step-number 5
+              .step-icon-placeholder ICON
+              h3.step-title
+                | Customs
+                span.step-badge International Only
+              p.step-description Expert clearance support
+            .timeline-step
+              .step-number 6
+              .step-icon-placeholder ICON
+              h3.step-title Final Delivery
+              p.step-description Verified delivery to destination
+
+      // Compliance & Documentation Section
+      section.compliance-section.section
+        .container
+          .section-header
+            h2.section-title Compliance & Documentation
+            p.section-subtitle Meeting the highest industry standards
+          .compliance-grid
+            .compliance-item
+              .compliance-icon-placeholder ICON
+              h3.compliance-title GDP
+              p.compliance-description Good Distribution Practice
+            .compliance-item
+              .compliance-icon-placeholder ICON
+              h3.compliance-title GxP
+              p.compliance-description Good Practice guidelines
+            .compliance-item
+              .compliance-icon-placeholder ICON
+              h3.compliance-title IATA
+              p.compliance-description Air transport compliance
+            .compliance-item
+              .compliance-icon-placeholder ICON
+              h3.compliance-title Dry Ice Handling
+              p.compliance-description Safe handling protocols
+            .compliance-item
+              .compliance-icon-placeholder ICON
+              h3.compliance-title Permit Guidance
+              p.compliance-description Regulatory support
+
+      // Related Case Studies Section
+      section.case-studies-section.section
+        .container
+          .section-header
+            h2.section-title Related Case Studies
+            p.section-subtitle Success stories from our clients
+          .case-studies-grid
+            .case-study-card
+              .case-study-image-placeholder IMAGE
+              .case-study-content
+                h3.case-study-title Case Study 1
+                p.case-study-excerpt Brief description of case study...
+                a.case-study-link(href="#") Read More →
+            .case-study-card
+              .case-study-image-placeholder IMAGE
+              .case-study-content
+                h3.case-study-title Case Study 2
+                p.case-study-excerpt Brief description of case study...
+                a.case-study-link(href="#") Read More →
+            .case-study-card
+              .case-study-image-placeholder IMAGE
+              .case-study-content
+                h3.case-study-title Case Study 3
+                p.case-study-excerpt Brief description of case study...
+                a.case-study-link(href="#") Read More →
+
+      // Industry Use Cases Section
+      section.industry-use-cases-section.section
+        .container
+          .section-header
+            h2.section-title Industry Use Cases
+            p.section-subtitle Serving diverse life science sectors
+          .industry-grid
+            .industry-item
+              .industry-icon-placeholder ICON
+              h3.industry-title Biotech
+            .industry-item
+              .industry-icon-placeholder ICON
+              h3.industry-title CRO
+            .industry-item
+              .industry-icon-placeholder ICON
+              h3.industry-title Hospitals
+            .industry-item
+              .industry-icon-placeholder ICON
+              h3.industry-title IVF
+            .industry-item
+              .industry-icon-placeholder ICON
+              h3.industry-title Pharma
+
+      // CTA Footer Section
+      section.cta-footer-section
+        .container
+          .cta-footer-content
+            h2.cta-footer-title Ready to Get Started?
+            p.cta-footer-subtitle Let's discuss your logistics needs
+            .cta-footer-actions
+              a.btn.btn-primary(href="#") Request Consultation
+              a.btn.btn-secondary(href="../../track/index.html") Track Shipment
+
+    include ../components/footer.pug
+    script(src="../../js/main.js")
+

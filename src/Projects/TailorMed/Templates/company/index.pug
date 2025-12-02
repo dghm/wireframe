@@ -1,0 +1,146 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title TailorMed｜Company
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap")
+    link(rel="stylesheet", href="../../css/main.css")
+  body
+    header.site-header
+      .container
+        .header-content
+          .brand
+            .logo-placeholder LOGO
+          nav.site-nav
+            a.nav-link(href="../../index.html") Home
+            a.nav-link(href="../solutions/") Solutions
+            a.nav-link(href="../industries/") Industries
+            a.nav-link(href="../expertise/") Expertise
+            a.nav-link(href="../resources/") Resources
+            a.nav-link(href="index.html") Company
+            a.nav-link(href="../contact/") Contact
+          .header-actions
+            a.btn.btn-track(href="../../track/index.html") Track
+          button.hamburger-menu(type="button", aria-label="Toggle navigation")
+            span.hamburger-line
+            span.hamburger-line
+            span.hamburger-line
+        .mobile-nav
+          a.mobile-nav-link(href="../../index.html") Home
+          a.mobile-nav-link(href="../solutions/") Solutions
+          a.mobile-nav-link(href="../industries/") Industries
+          a.mobile-nav-link(href="../expertise/") Expertise
+          a.mobile-nav-link(href="../resources/") Resources
+          a.mobile-nav-link(href="index.html") Company
+          a.mobile-nav-link(href="../contact/") Contact
+          a.mobile-nav-link.mobile-nav-track(href="../../track/index.html") Track
+
+    main.main-content
+      // SECTION 1 — HERO
+      section.hero-section
+        .container
+          h1.hero-title Delivering Trusted Cold-Chain Logistics for Life Sciences
+          p.hero-subtitle TailorMed supports biotech and medical shipments with validated temperature-controlled solutions across Taiwan and expanding North America routes.
+
+      // SECTION 2 — About Us
+      section.company-about-section.section
+        .container
+          .section-header
+            h2.section-title TailorMed at a Glance
+          .company-about-content
+            p.company-about-text TailorMed is a Taiwan-based life-science logistics provider specializing in temperature-controlled transport for biotech and medical shipments. We combine validated packaging solutions with real-time temperature monitoring to ensure product integrity and regulatory compliance. Our service network currently covers Taiwan with strategic expansion toward North America routes.
+          .company-highlights-grid
+            .highlight-card
+              .highlight-icon-placeholder ICON
+              h3.highlight-title Temperature-controlled logistics
+              p.highlight-description Validated cold-chain transport for sensitive life-science materials.
+            .highlight-card
+              .highlight-icon-placeholder ICON
+              h3.highlight-title Validated packaging solutions
+              p.highlight-description Qualified packaging systems for all temperature ranges.
+            .highlight-card
+              .highlight-icon-placeholder ICON
+              h3.highlight-title Real-time temperature monitoring
+              p.highlight-description Continuous tracking and data logging throughout transit.
+            .highlight-card
+              .highlight-icon-placeholder ICON
+              h3.highlight-title Expanding North America coverage
+              p.highlight-description Growing coverage from Taiwan to North America routes.
+
+      // SECTION 3 — Leadership
+      section.company-leadership-section.section
+        .container
+          .section-header
+            h2.section-title Leadership
+          .leadership-grid
+            .leadership-card
+              .leadership-photo-placeholder PHOTO
+              h3.leadership-name Name Placeholder
+              p.leadership-title Title Placeholder
+              p.leadership-description One-line professional description placeholder.
+            .leadership-card
+              .leadership-photo-placeholder PHOTO
+              h3.leadership-name Name Placeholder
+              p.leadership-title Title Placeholder
+              p.leadership-description One-line professional description placeholder.
+            .leadership-card
+              .leadership-photo-placeholder PHOTO
+              h3.leadership-name Name Placeholder
+              p.leadership-title Title Placeholder
+              p.leadership-description One-line professional description placeholder.
+
+      // SECTION 4 — Global Network
+      section.company-network-section.section
+        .container
+          .section-header
+            h2.section-title Our Service Network
+            p.section-subtitle TailorMed operates from Taiwan (HQ) with expanding service coverage to North America through certified partners and established cold-chain routes.
+          .global-network-content
+            .network-map-container
+              .network-map-placeholder MAP: Taiwan (HQ), North America (Partner Network)
+            .network-highlights-grid
+              .network-highlight-card
+                .network-highlight-icon-placeholder ICON
+                h3.network-highlight-title Taiwan HQ
+                p.network-highlight-description Core operations center
+              .network-highlight-card
+                .network-highlight-icon-placeholder ICON
+                h3.network-highlight-title North America Coverage
+                p.network-highlight-description LAX / JFK corridors
+
+      // SECTION 5 — Newsroom
+      section.company-newsroom-section.section
+        .container
+          .section-header
+            h2.section-title Latest Updates
+          .newsroom-grid
+            .newsroom-card
+              .newsroom-date Dec 15, 2024
+              h3.newsroom-title News Title Placeholder
+              p.newsroom-summary Short summary placeholder text describing the news or announcement content.
+              a.newsroom-link(href="#") Read More →
+            .newsroom-card
+              .newsroom-date Nov 28, 2024
+              h3.newsroom-title News Title Placeholder
+              p.newsroom-summary Short summary placeholder text describing the news or announcement content.
+              a.newsroom-link(href="#") Read More →
+            .newsroom-card
+              .newsroom-date Nov 10, 2024
+              h3.newsroom-title News Title Placeholder
+              p.newsroom-summary Short summary placeholder text describing the news or announcement content.
+              a.newsroom-link(href="#") Read More →
+
+      // SECTION 6 — CTA
+      section.cta-footer-section.company-cta-section
+        .container
+          .cta-footer-content
+            h2.cta-footer-title Want to learn more about TailorMed?
+            p.cta-footer-subtitle Contact our team to discuss your logistics needs.
+            .cta-footer-actions
+              a.btn.btn-primary(href="../contact/") Contact Us
+
+    include ../components/footer.pug
+    script(src="../../js/main.js")

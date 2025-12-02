@@ -1,0 +1,131 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title TailorMed｜Technical Expertise & Compliance
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap")
+    link(rel="stylesheet", href="../../css/main.css")
+  body
+    header.site-header
+      .container
+        .header-content
+          .brand
+            .logo-placeholder LOGO
+          nav.site-nav
+            a.nav-link(href="../../index.html") Home
+            a.nav-link(href="../solutions/") Solutions
+            a.nav-link(href="../industries/") Industries
+            a.nav-link(href="index.html") Expertise
+            a.nav-link(href="../resources/") Resources
+            a.nav-link(href="../company/") Company
+            a.nav-link(href="../contact/") Contact
+          .header-actions
+            a.btn.btn-track(href="../../track/index.html") Track
+          button.hamburger-menu(type="button", aria-label="Toggle navigation")
+            span.hamburger-line
+            span.hamburger-line
+            span.hamburger-line
+        .mobile-nav
+          a.mobile-nav-link(href="../../index.html") Home
+          a.mobile-nav-link(href="../solutions/") Solutions
+          a.mobile-nav-link(href="../industries/") Industries
+          a.mobile-nav-link(href="index.html") Expertise
+          a.mobile-nav-link(href="../resources/") Resources
+          a.mobile-nav-link(href="../company/") Company
+          a.mobile-nav-link(href="../contact/") Contact
+          a.mobile-nav-link.mobile-nav-track(href="../../track/index.html") Track
+
+    main.main-content
+      // SECTION 1 — HERO
+      section.hero-section
+        .container
+          h1.hero-title Technical Expertise & Compliance
+          p.hero-subtitle Validated cold-chain capabilities supporting biotech, medical, and research shipments.
+
+      // SECTION 2 — Technical & Compliance Capabilities
+      section.expertise-cards-section.section
+        .container
+          .section-header
+            h2.section-title Technical & Compliance Capabilities
+
+      // Section 1: Temperature Monitoring - 左圖右文
+      section.industry-section.section
+        .container
+          .industry-section-content.industry-layout-left-image
+            .industry-visual
+              .industry-image-placeholder ICON
+            .industry-text
+              h2.industry-section-title Temperature Monitoring
+              p.industry-section-description Continuous real-time tracking and data logging for temperature-sensitive shipments.
+
+      // Section 2: Packaging Validation - 左文右圖
+      section.industry-section.section
+        .container
+          .industry-section-content.industry-layout-right-image
+            .industry-visual
+              .industry-image-placeholder ICON
+            .industry-text
+              h2.industry-section-title Packaging Validation
+              p.industry-section-description Qualified and validated packaging systems for all temperature ranges.
+
+      // Section 3: Quality Management - 左圖右文
+      section.industry-section.section
+        .container
+          .industry-section-content.industry-layout-left-image
+            .industry-visual
+              .industry-image-placeholder ICON
+            .industry-text
+              h2.industry-section-title Quality Management
+              p.industry-section-description SOP-based quality assurance processes ensuring regulatory compliance.
+
+      // Section 4: Data Security - 左文右圖
+      section.industry-section.section
+        .container
+          .industry-section-content.industry-layout-right-image
+            .industry-visual
+              .industry-image-placeholder ICON
+            .industry-text
+              h2.industry-section-title Data Security
+              p.industry-section-description Secure chain-of-custody documentation and encrypted data transmission.
+
+      // SECTION 3 — Certificates Library
+      section.certificates-section.section
+        .container
+          .section-header
+            h2.section-title Certificates Library
+          .certificates-list
+            .certificate-list-item
+              .certificate-list-icon-placeholder ICON
+              .certificate-list-content
+                h3.certificate-list-title Validated Packaging Summary
+                p.certificate-list-description Performance validation for 2–8°C, −20°C, −80°C, and LN2 packaging systems.
+            .certificate-list-item
+              .certificate-list-icon-placeholder ICON
+              .certificate-list-content
+                h3.certificate-list-title Dry Ice Safety Data Sheet (SDS)
+                p.certificate-list-description Safety guidelines and handling information for dry ice usage.
+            .certificate-list-item
+              .certificate-list-icon-placeholder ICON
+              .certificate-list-content
+                h3.certificate-list-title LN2 Shipper Handling & Preparation Guide
+                p.certificate-list-description Instructions for safe handling and pre-conditioning of LN2 dry shippers.
+            .certificate-list-item
+              .certificate-list-icon-placeholder ICON
+              .certificate-list-content
+                h3.certificate-list-title Chain-of-Custody Record (Sample Template)
+                p.certificate-list-description Sample template demonstrating end-to-end shipment custody control.
+
+      // CTA Section
+      section.cta-footer-section.expertise-cta-section
+        .container
+          .cta-footer-content
+            h2.cta-footer-title Need detailed compliance documentation?
+            p.cta-footer-subtitle Contact our team to review validated records and technical details.
+            .cta-footer-actions
+              a.btn.btn-primary(href="../contact/") Contact Us
+
+    include ../components/footer.pug
+    script(src="../../js/main.js")

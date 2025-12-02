@@ -1,0 +1,154 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title TailorMed｜Article Title
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap")
+    link(rel="stylesheet", href="../../css/main.css")
+  body
+    header.site-header
+      .container
+        .header-content
+          .brand
+            .logo-placeholder LOGO
+          nav.site-nav
+            a.nav-link(href="../../index.html") Home
+            a.nav-link(href="../solutions/") Solutions
+            a.nav-link(href="../industries/") Industries
+            a.nav-link(href="../expertise/") Expertise
+            a.nav-link(href="index.html") Resources
+            a.nav-link(href="../company/") Company
+            a.nav-link(href="../contact/") Contact
+          .header-actions
+            a.btn.btn-track(href="../../track/index.html") Track
+          button.hamburger-menu(type="button", aria-label="Toggle navigation")
+            span.hamburger-line
+            span.hamburger-line
+            span.hamburger-line
+        .mobile-nav
+          a.mobile-nav-link(href="../../index.html") Home
+          a.mobile-nav-link(href="../solutions/") Solutions
+          a.mobile-nav-link(href="../industries/") Industries
+          a.mobile-nav-link(href="../expertise/") Expertise
+          a.mobile-nav-link(href="index.html") Resources
+          a.mobile-nav-link(href="../company/") Company
+          a.mobile-nav-link(href="../contact/") Contact
+          a.mobile-nav-link.mobile-nav-track(href="../../track/index.html") Track
+
+    main.main-content
+      // Breadcrumb
+      section.breadcrumb-section
+        .container
+          .breadcrumb
+            span.breadcrumb-item Home
+            span.breadcrumb-separator /
+            span.breadcrumb-item Resources
+            span.breadcrumb-separator /
+            span.breadcrumb-item Case Studies
+            span.breadcrumb-separator /
+            span.breadcrumb-item.breadcrumb-current Article Title Placeholder
+
+      // Main Content Body
+      section.article-content-section.section
+        .container
+          .article-content-layout
+            .article-content-main
+              // Featured Image
+              .article-featured-image-placeholder FEATURED IMAGE
+
+              // Article Header
+              .article-header-main
+                .article-category Case Study
+                h1.article-title Article Title Placeholder - This Can Span Multiple Lines If Needed
+                .article-meta
+                  span.article-meta-item Jan 15, 2025
+                  span.article-meta-separator ·
+                  span.article-meta-item 5 min read
+                  span.article-meta-separator ·
+                  span.article-meta-item Author Name Placeholder
+                .article-intro
+                  p This is a placeholder introduction paragraph that provides context for the article. It should be approximately two to three lines long and give readers a clear understanding of what the article will cover. This summary helps set expectations before diving into the detailed content.
+
+              // Article Content Sections
+              // Section: Background
+              h2.article-content-heading Background
+              p.article-content-paragraph This is a placeholder paragraph for the background section. It provides context and sets the stage for understanding the challenges and solutions discussed in this article. The content should be informative and help readers understand the situation before diving into specific details.
+              p.article-content-paragraph This is a second paragraph in the background section. It continues to build context and may include additional details about the circumstances, requirements, or initial conditions that led to the need for the logistics solution described in this case study or article.
+              p.article-content-paragraph A third paragraph may provide further context or historical information that helps readers fully understand the background and context of the situation being discussed.
+
+              // Section: Challenges
+              h2.article-content-heading Challenges
+              ul.article-content-list
+                li Challenge placeholder 1: Description of the first major challenge encountered in this scenario.
+                li Challenge placeholder 2: Description of the second major challenge that needed to be addressed.
+                li Challenge placeholder 3: Description of additional challenges or constraints that impacted the logistics process.
+
+              // Section: TailorMed Solution
+              h2.article-content-heading TailorMed Solution
+              p.article-content-paragraph This paragraph describes the solution approach taken by TailorMed to address the challenges mentioned above. It explains the methodology, processes, and specific steps implemented to ensure successful delivery and compliance.
+              p.article-content-paragraph A second paragraph may detail specific technologies, packaging systems, or operational procedures that were utilized as part of the solution. This helps readers understand the practical implementation of the approach.
+              ul.article-content-list
+                li Solution component 1: Description of a key element of the solution.
+                li Solution component 2: Description of another important aspect of the solution.
+                li Solution component 3: Additional solution elements that contributed to success.
+
+            // Sidebar - Key Details & Download (right side)
+            .article-sidebar
+              .sidebar-widget
+                h3.sidebar-widget-title Key Details
+                .key-details-list
+                  .key-detail-item
+                    .key-detail-label Industry
+                    .key-detail-value Biotech
+                  .key-detail-item
+                    .key-detail-label Shipment type
+                    .key-detail-value Research samples
+                  .key-detail-item
+                    .key-detail-label Temperature range
+                    .key-detail-value -80°C
+                  .key-detail-item
+                    .key-detail-label Origin / Destination
+                    .key-detail-value Taipei to Boston
+              .sidebar-widget
+                h3.sidebar-widget-title Download / Related Document
+                a.btn.btn-secondary(href="#") Download PDF
+
+      // Article Footer Actions
+      section.article-footer-section.section
+        .container
+          .article-footer-divider
+          .article-back-link
+            a.article-back-link-text(href="case-studies.html") ← Back to Resources
+          .article-footer-cta
+            h3.article-footer-cta-title Have a similar logistics challenge?
+            p.article-footer-cta-subtitle Contact our team to discuss a tailored solution.
+            a.btn.btn-primary(href="../../contact/") Contact Us
+
+      // Related Resources
+      section.related-resources-section.section
+        .container
+          .section-header
+            h2.section-title Related Resources
+          .related-resources-grid
+            .related-resource-card
+              .related-resource-category Case Study
+              h3.related-resource-title Related Article Title Placeholder 1
+              .related-resource-meta Jan 10, 2025
+              a.related-resource-link(href="#") Read More →
+            .related-resource-card
+              .related-resource-category Insight
+              h3.related-resource-title Related Article Title Placeholder 2
+              .related-resource-meta Jan 5, 2025
+              a.related-resource-link(href="#") Read More →
+            .related-resource-card
+              .related-resource-category Whitepaper
+              h3.related-resource-title Related Article Title Placeholder 3
+              .related-resource-meta Dec 28, 2024
+              a.related-resource-link(href="#") Read More →
+
+    include ../components/footer.pug
+    script(src="../../js/main.js")
+

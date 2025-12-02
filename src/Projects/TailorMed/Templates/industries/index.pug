@@ -1,0 +1,137 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title TailorMed｜Industries
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap")
+    link(rel="stylesheet", href="../css/main.css")
+  body
+    header.site-header
+      .container
+        .header-content
+          .brand
+            .logo-placeholder LOGO
+          nav.site-nav
+            a.nav-link(href="../index.html") Home
+            a.nav-link(href="../solutions/") Solutions
+            a.nav-link(href="index.html") Industries
+            a.nav-link(href="../expertise/") Expertise
+            a.nav-link(href="../resources/") Resources
+            a.nav-link(href="../company/") Company
+            a.nav-link(href="../contact/") Contact
+          .header-actions
+            a.btn.btn-track(href="../track/index.html") Track
+          button.hamburger-menu(type="button", aria-label="Toggle navigation")
+            span.hamburger-line
+            span.hamburger-line
+            span.hamburger-line
+        .mobile-nav
+          a.mobile-nav-link(href="../index.html") Home
+          a.mobile-nav-link(href="../solutions/") Solutions
+          a.mobile-nav-link(href="index.html") Industries
+          a.mobile-nav-link(href="../expertise/") Expertise
+          a.mobile-nav-link(href="../resources/") Resources
+          a.mobile-nav-link(href="../company/") Company
+          a.mobile-nav-link(href="../contact/") Contact
+          a.mobile-nav-link.mobile-nav-track(href="../track/index.html") Track
+
+    main.main-content
+      // Hero Section
+      section.hero-section
+        .container
+          h1.hero-title Industries We Serve
+          p.hero-subtitle Compliant logistics solutions tailored to diverse life-science sectors.
+
+      // Industry Sections
+      // Section 1: Biotech - 左圖右文
+      section.industry-section.section
+        .container
+          .industry-section-content.industry-layout-left-image
+            .industry-visual
+              .industry-image-placeholder IMAGE
+            .industry-text
+              h2.industry-section-title Biotech
+              p.industry-section-description Temperature-controlled transport for biologics and cell therapies
+              .industry-details
+                p Industry details and logistics solutions placeholder text...
+              .industry-cta
+                a.btn.btn-primary(href="biotech.html") Learn More
+
+      // Section 2: Clinical Trials - 左文右圖
+      section.industry-section.section
+        .container
+          .industry-section-content.industry-layout-right-image
+            .industry-visual
+              .industry-image-placeholder IMAGE
+            .industry-text
+              h2.industry-section-title Clinical Trials (CROs)
+              p.industry-section-description GxP-compliant handling of investigational products
+              .industry-details
+                p Industry details and logistics solutions placeholder text...
+              .industry-cta
+                a.btn.btn-primary(href="biotech.html") Learn More
+
+      // Section 3: Hospitals - 左圖右文
+      section.industry-section.section
+        .container
+          .industry-section-content.industry-layout-left-image
+            .industry-visual
+              .industry-image-placeholder IMAGE
+            .industry-text
+              h2.industry-section-title Hospitals
+              p.industry-section-description Reliable delivery of critical medical supplies and samples
+              .industry-details
+                p Industry details and logistics solutions placeholder text...
+              .industry-cta
+                a.btn.btn-primary(href="biotech.html") Learn More
+
+      // Section 4: IVF / Reproductive Medicine - 左文右圖
+      section.industry-section.section
+        .container
+          .industry-section-content.industry-layout-right-image
+            .industry-visual
+              .industry-image-placeholder IMAGE
+            .industry-text
+              h2.industry-section-title IVF / Reproductive Medicine
+              p.industry-section-description Specialized handling for time-sensitive reproductive materials
+              .industry-details
+                p Industry details and logistics solutions placeholder text...
+              .industry-cta
+                a.btn.btn-primary(href="biotech.html") Learn More
+
+      // Section 5: Pharma - 左圖右文
+      section.industry-section.section
+        .container
+          .industry-section-content.industry-layout-left-image
+            .industry-visual
+              .industry-image-placeholder IMAGE
+            .industry-text
+              h2.industry-section-title Pharma
+              p.industry-section-description GDP-compliant distribution of pharmaceutical products
+              .industry-details
+                p Industry details and logistics solutions placeholder text...
+              .industry-cta
+                a.btn.btn-primary(href="biotech.html") Learn More
+
+      // Supporting Note Section
+      section.supporting-note-section.section
+        .container
+          .supporting-note-content
+            p.supporting-note-text Our team supports sensitive, time-critical shipments across clinical research, biotech, pharmaceutical, and medical sectors.
+
+      // CTA Section
+      section.cta-footer-section
+        .container
+          .cta-footer-content
+            h2.cta-footer-title Ready to Get Started?
+            p.cta-footer-subtitle Let's discuss your logistics needs
+            .cta-footer-actions
+              a.btn.btn-primary(href="#") Request Consultation
+              a.btn.btn-secondary(href="../track/index.html") Track Shipment
+
+    include ../components/footer.pug
+    script(src="../js/main.js")
+

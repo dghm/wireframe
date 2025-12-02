@@ -1,0 +1,119 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title TailorMed｜Contact
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap")
+    link(rel="stylesheet", href="../../css/main.css")
+  body
+    header.site-header
+      .container
+        .header-content
+          .brand
+            .logo-placeholder LOGO
+          nav.site-nav
+            a.nav-link(href="../../index.html") Home
+            a.nav-link(href="../solutions/") Solutions
+            a.nav-link(href="../industries/") Industries
+            a.nav-link(href="../expertise/") Expertise
+            a.nav-link(href="../resources/") Resources
+            a.nav-link(href="../company/") Company
+            a.nav-link(href="index.html") Contact
+          .header-actions
+            a.btn.btn-track(href="../../track/index.html") Track
+          button.hamburger-menu(type="button", aria-label="Toggle navigation")
+            span.hamburger-line
+            span.hamburger-line
+            span.hamburger-line
+        .mobile-nav
+          a.mobile-nav-link(href="../../index.html") Home
+          a.mobile-nav-link(href="../solutions/") Solutions
+          a.mobile-nav-link(href="../industries/") Industries
+          a.mobile-nav-link(href="../expertise/") Expertise
+          a.mobile-nav-link(href="../resources/") Resources
+          a.mobile-nav-link(href="../company/") Company
+          a.mobile-nav-link(href="index.html") Contact
+          a.mobile-nav-link.mobile-nav-track(href="../../track/index.html") Track
+
+    main.main-content
+      // SECTION 1 — HERO
+      section.hero-section
+        .container
+          h1.hero-title Get in Touch with TailorMed
+          p.hero-subtitle We're here to support your logistics and cold-chain requirements. Contact our operations or customer service team for assistance.
+
+      // SECTION 2 — Contact Form
+      section.contact-form-section.section
+        .container
+          .contact-form-wrapper
+            .section-header
+              h2.section-title Contact Us
+            form.contact-form(action="#", method="post")
+              .form-row
+                .form-group.form-group-required
+                  label.form-label(for="name") Name
+                  input.form-input(type="text", id="name", name="name", required)
+              .form-row
+                .form-group
+                  label.form-label(for="company") Company
+                  input.form-input(type="text", id="company", name="company")
+              .form-row
+                .form-group.form-group-required
+                  label.form-label(for="email") Email
+                  input.form-input(type="email", id="email", name="email", required)
+              .form-row
+                .form-group
+                  label.form-label(for="phone") Phone
+                  input.form-input(type="tel", id="phone", name="phone")
+              .form-row
+                .form-group.form-group-required
+                  label.form-label(for="inquiry-type") Inquiry Type
+                  select.form-select(id="inquiry-type", name="inquiry-type", required)
+                    option(value="") Please select...
+                    option(value="general") General Inquiry
+                    option(value="shipment") Shipment Support
+                    option(value="partnership") Partnership
+                    option(value="others") Others
+              .form-row
+                .form-group.form-group-required
+                  label.form-label(for="message") Message
+                  textarea.form-textarea(id="message", name="message", rows="6", required)
+              .form-actions
+                button.btn.btn-primary(type="submit") Send Message
+
+      // SECTION 3 — Regional Contact Information
+      section.contact-regions-section.section
+        .container
+          .section-header
+            h2.section-title Regional Contact Information
+          .contact-regions-grid
+            .region-contact-card
+              h3.region-contact-title Taiwan (HQ)
+              .region-contact-info
+                .contact-info-item
+                  .contact-info-label Address
+                  .contact-info-value Address placeholder
+                .contact-info-item
+                  .contact-info-label Phone
+                  .contact-info-value Phone placeholder
+                .contact-info-item
+                  .contact-info-label Email
+                  .contact-info-value info@tailormed-intl.com
+            .region-contact-card
+              h3.region-contact-title North America
+              .region-contact-info
+                .contact-info-item
+                  .contact-info-label Address
+                  .contact-info-value Address placeholder
+                .contact-info-item
+                  .contact-info-label Phone
+                  .contact-info-value Phone placeholder
+                .contact-info-item
+                  .contact-info-label Email
+                  .contact-info-value Email placeholder
+
+    include ../components/footer.pug
+    script(src="../../js/main.js")

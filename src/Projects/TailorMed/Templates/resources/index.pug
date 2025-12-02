@@ -1,0 +1,110 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title TailorMed｜Resources
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&display=swap")
+    link(rel="stylesheet", href="../../css/main.css")
+  body
+    header.site-header
+      .container
+        .header-content
+          .brand
+            .logo-placeholder LOGO
+          nav.site-nav
+            a.nav-link(href="../../index.html") Home
+            a.nav-link(href="../solutions/") Solutions
+            a.nav-link(href="../industries/") Industries
+            a.nav-link(href="../expertise/") Expertise
+            a.nav-link(href="index.html") Resources
+            a.nav-link(href="../company/") Company
+            a.nav-link(href="../contact/") Contact
+          .header-actions
+            a.btn.btn-track(href="../../track/index.html") Track
+          button.hamburger-menu(type="button", aria-label="Toggle navigation")
+            span.hamburger-line
+            span.hamburger-line
+            span.hamburger-line
+        .mobile-nav
+          a.mobile-nav-link(href="../../index.html") Home
+          a.mobile-nav-link(href="../solutions/") Solutions
+          a.mobile-nav-link(href="../industries/") Industries
+          a.mobile-nav-link(href="../expertise/") Expertise
+          a.mobile-nav-link(href="index.html") Resources
+          a.mobile-nav-link(href="../company/") Company
+          a.mobile-nav-link(href="../contact/") Contact
+          a.mobile-nav-link.mobile-nav-track(href="../../track/index.html") Track
+
+    main.main-content
+      // SECTION 1 — HERO
+      section.hero-section
+        .container
+          h1.hero-title Knowledge resources supporting life-science logistics.
+          p.hero-subtitle Explore research-driven insights, documentation, and expert guidance.
+
+      // SECTION 2 — Four Resource Entry Cards
+      section.resources-grid-section.section
+        .container
+          .resources-grid
+            .resource-card
+              .resource-card-icon-placeholder ICON
+              h3.resource-card-title Case Studies
+              p.resource-card-description Real-world examples of solved logistics challenges.
+              a.btn.btn-primary(href="case-studies.html") View All
+            .resource-card
+              .resource-card-icon-placeholder ICON
+              h3.resource-card-title Insights
+              p.resource-card-description Expert articles on cold-chain, compliance, and operations.
+              a.btn.btn-primary(href="case-studies.html") View All
+            .resource-card
+              .resource-card-icon-placeholder ICON
+              h3.resource-card-title Whitepapers
+              p.resource-card-description Technical documentation and validated guidance.
+              a.btn.btn-primary(href="case-studies.html") View All
+
+      // SECTION 3 — FAQ Accordion
+      section.resources-faq-section.section
+        .container
+          .section-header
+            h2.section-title Frequently Asked Questions
+          .faq-list
+            .faq-item
+              h3.faq-question Question 1 (placeholder)
+              .faq-answer
+                p Answer placeholder text for question 1. This section will contain detailed information when expanded.
+            .faq-item
+              h3.faq-question Question 2 (placeholder)
+              .faq-answer
+                p Answer placeholder text for question 2. This section will contain detailed information when expanded.
+            .faq-item
+              h3.faq-question Question 3 (placeholder)
+              .faq-answer
+                p Answer placeholder text for question 3. This section will contain detailed information when expanded.
+            .faq-item
+              h3.faq-question Question 4 (placeholder)
+              .faq-answer
+                p Answer placeholder text for question 4. This section will contain detailed information when expanded.
+            .faq-item
+              h3.faq-question Question 5 (placeholder)
+              .faq-answer
+                p Answer placeholder text for question 5. This section will contain detailed information when expanded.
+            .faq-item
+              h3.faq-question Question 6 (placeholder)
+              .faq-answer
+                p Answer placeholder text for question 6. This section will contain detailed information when expanded.
+
+      // SECTION 4 — Footer CTA
+      section.cta-footer-section.resources-cta-section
+        .container
+          .cta-footer-content
+            h2.cta-footer-title Need support for your next shipment?
+            p.cta-footer-subtitle Contact our operations team for technical assistance.
+            .cta-footer-actions
+              a.btn.btn-primary(href="../contact/") Contact Us
+
+    include ../components/footer.pug
+    script(src="../../js/main.js")
+

@@ -76,21 +76,41 @@ const main = async () => {
 
   try {
     console.log('📝 編譯 Pug 模板...');
-    const pugFiles = fs
-      .readdirSync(TEMPLATES_DIR)
-      .filter((file) => file.endsWith('.pug'));
-
-    if (pugFiles.length === 0) {
-      console.warn('⚠️ TailorMed: 找不到 Pug 模板');
-    }
-
-    pugFiles.forEach((file) => {
-      const templatePath = path.join(TEMPLATES_DIR, file);
-      const html = pug.renderFile(templatePath, { pretty: true });
-      const outputName = file.replace(/\.pug$/, '.html');
-      fs.writeFileSync(path.join(PROJECT_DIST, outputName), html);
-      console.log(`  ✅ 生成 dist/Projects/TailorMed/${outputName}`);
-    });
+    
+    const compilePugRecursive = (dir, relativePath = '') => {
+      const entries = fs.readdirSync(dir, { withFileTypes: true });
+      
+      entries.forEach((entry) => {
+        const fullPath = path.join(dir, entry.name);
+        
+        if (entry.isDirectory()) {
+          // 遞歸處理子目錄
+          const newRelativePath = relativePath ? `${relativePath}/${entry.name}` : entry.name;
+          compilePugRecursive(fullPath, newRelativePath);
+        } else if (entry.name.endsWith('.pug')) {
+          // 編譯 Pug 文件
+          const html = pug.renderFile(fullPath, { pretty: true });
+          const outputName = entry.name.replace(/\.pug$/, '.html');
+          
+          // 確定輸出目錄
+          let outputDir = PROJECT_DIST;
+          if (relativePath) {
+            outputDir = path.join(PROJECT_DIST, relativePath);
+            ensureDir(outputDir);
+          }
+          
+          const outputPath = path.join(outputDir, outputName);
+          fs.writeFileSync(outputPath, html);
+          
+          const displayPath = relativePath 
+            ? `dist/Projects/TailorMed/${relativePath}/${outputName}`
+            : `dist/Projects/TailorMed/${outputName}`;
+          console.log(`  ✅ 生成 ${displayPath}`);
+        }
+      });
+    };
+    
+    compilePugRecursive(TEMPLATES_DIR);
   } catch (error) {
     console.error('❌ Pug 編譯失敗:', error.message);
     process.exit(1);
