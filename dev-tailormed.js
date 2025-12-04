@@ -29,7 +29,7 @@ compileProcess.on('close', (code) => {
       '-c',
       'blue,green',
       'node watch-tailormed.js',
-      'http-server dist/Projects/TailorMed -p 8080 -o',
+      'http-server dist/Projects/TailorMed -p 3001 -o',
     ],
     {
       stdio: 'inherit',

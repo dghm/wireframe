@@ -940,13 +940,14 @@ body
 .site-footer
   background-color primary-color
   color #fff
-  padding spacing-xl 0 spacing-lg
+  padding spacing-xl 0 calc(spacing-lg + 60px)
   border-top 1px solid rgba(255, 255, 255, 0.1)
 
 .footer-content
   display grid
   grid-template-columns 2fr repeat(4, 1fr)
   gap spacing-lg
+  margin-top spacing-lg
   margin-bottom spacing-xl
 
   @media (max-width: breakpoint-tablet)
@@ -1080,6 +1081,7 @@ body
 .footer-bottom
   border-top 1px solid rgba(255, 255, 255, 0.1)
   padding-top spacing-lg
+  padding-bottom 60px
   display flex
   justify-content space-between
   align-items center
@@ -1089,6 +1091,7 @@ body
   @media (max-width: breakpoint-mobile)
     flex-direction column
     text-align center
+    padding-bottom 70px
 
 .site-footer__copy
   color rgba(255, 255, 255, 0.6)
@@ -1857,10 +1860,29 @@ body
   display flex
   gap spacing-sm
   justify-content center
+  align-items center
 
   @media (max-width: breakpoint-mobile)
     flex-direction column
     align-items center
+
+  .btn-primary
+    background-color #fff
+    color primary-color
+    border-color #fff
+
+    &:hover
+      background-color rgba(255, 255, 255, 0.9)
+      border-color rgba(255, 255, 255, 0.9)
+
+  .btn-secondary
+    background-color transparent
+    color #fff
+    border-color #fff
+
+    &:hover
+      background-color rgba(255, 255, 255, 0.1)
+      border-color rgba(255, 255, 255, 0.8)
 
 // Industries Page Styles
 .industry-section
@@ -4006,13 +4028,15 @@ body
 
 // Regional Contact Information Section
 .contact-regions-section
-  padding spacing-xl 0
+  margin-top spacing-xl
+  margin-bottom spacing-xl
 
 .contact-regions-grid
   display grid
   grid-template-columns repeat(2, 1fr)
   gap spacing-lg
   margin-top spacing-xl
+  margin-bottom 48px
   max-width 1000px
   margin-left auto
   margin-right auto

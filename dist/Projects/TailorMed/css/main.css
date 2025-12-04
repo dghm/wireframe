@@ -925,13 +925,14 @@ body {
 .site-footer {
   background-color: #143463;
   color: #fff;
-  padding: 48px 0 32px;
+  padding: 48px 0 calc((spacing-lg + 60px));
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 .footer-content {
   display: grid;
   grid-template-columns: 2fr repeat(4, 1fr);
   gap: 32px;
+  margin-top: 32px;
   margin-bottom: 48px;
 }
 @media (max-width: 1024px) {
@@ -1069,6 +1070,7 @@ body {
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 32px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1079,6 +1081,7 @@ body {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    padding-bottom: 70px;
   }
 }
 .site-footer__copy {
@@ -1854,12 +1857,31 @@ body {
   display: flex;
   gap: 16px;
   justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .cta-footer-actions {
     flex-direction: column;
     align-items: center;
   }
+}
+.cta-footer-actions .btn-primary {
+  background-color: #fff;
+  color: #143463;
+  border-color: #fff;
+}
+.cta-footer-actions .btn-primary:hover {
+  background-color: rgba(255,255,255,0.9);
+  border-color: rgba(255,255,255,0.9);
+}
+.cta-footer-actions .btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+.cta-footer-actions .btn-secondary:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.8);
 }
 .industry-section {
   background-color: #f8f9fa;
@@ -3987,13 +4009,15 @@ body {
   text-align: center;
 }
 .contact-regions-section {
-  padding: 48px 0;
+  margin-top: 48px;
+  margin-bottom: 48px;
 }
 .contact-regions-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin-top: 48px;
+  margin-bottom: 48px;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
