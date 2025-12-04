@@ -50,4 +50,49 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
+
+  // Language Switcher Toggle
+  const languageSwitcher = document.querySelector('.language-switcher-fixed');
+  const languageSwitcherBtn = document.querySelector('.language-switcher-btn');
+
+  if (languageSwitcher && languageSwitcherBtn) {
+    languageSwitcherBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      languageSwitcher.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (event) {
+      if (!languageSwitcher.contains(event.target)) {
+        languageSwitcher.classList.remove('active');
+      }
+    });
+
+    // Handle language option clicks
+    const languageOptions = document.querySelectorAll(
+      '.language-switcher-option'
+    );
+    languageOptions.forEach(function (option) {
+      option.addEventListener('click', function (e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        const langText = this.querySelector('span').textContent.trim();
+
+        // Update button text
+        const buttonText = languageSwitcherBtn.querySelector(
+          '.language-switcher-text'
+        );
+        if (buttonText) {
+          buttonText.textContent = langText;
+        }
+
+        // Close dropdown
+        languageSwitcher.classList.remove('active');
+
+        // Here you can add actual language switching logic
+        // For example: window.location.href = `?lang=${lang}`;
+        console.log('Language switched to:', lang);
+      });
+    });
+  }
 });

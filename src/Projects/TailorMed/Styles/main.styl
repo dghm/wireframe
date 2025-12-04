@@ -3396,6 +3396,28 @@ body
   font-weight 500
   color text-color
 
+// Sidebar Article Title & Excerpt
+.sidebar-article-title
+  font-size font-size-large
+  font-weight 700
+  color primary-color
+  margin-bottom spacing-md
+  margin-top 0
+  line-height 1.4
+
+.sidebar-article-excerpt
+  font-size font-size-base
+  line-height 1.6
+  color text-color
+  font-weight 300
+
+  p
+    margin 0
+    margin-bottom spacing-sm
+
+    &:last-child
+      margin-bottom 0
+
 // Featured Image (inside article-content-main)
 .article-featured-image-placeholder
   width 100%
@@ -4024,6 +4046,106 @@ body
   display flex
   flex-direction column
   gap spacing-xs
+
+// Language Switcher Fixed (Bottom Right)
+.language-switcher-fixed
+  position fixed
+  bottom 0
+  right spacing-lg
+  z-index 10000
+  font-family font-family-primary
+
+  @media (max-width: breakpoint-mobile)
+    right spacing-md
+
+.language-switcher-btn
+  display flex
+  align-items center
+  gap spacing-xs
+  padding spacing-sm spacing-md
+  background-color #fff
+  border 1px solid #e9ecef
+  border-radius 8px 8px 0 0
+  box-shadow 0 4px 12px rgba(0, 0, 0, 0.15)
+  cursor pointer
+  transition all 0.3s ease
+  font-family font-family-primary
+  font-size font-size-base
+  font-weight 500
+  color text-color
+  min-width 120px
+  justify-content flex-start
+
+  &:hover
+    box-shadow 0 6px 16px rgba(0, 0, 0, 0.2)
+
+  &:active
+    transform translateY(0)
+
+.language-switcher-icon
+  display flex
+  align-items center
+  justify-content center
+  width 20px
+  height 20px
+  color primary-color
+  flex-shrink 0
+
+  svg
+    width 100%
+    height 100%
+    display block
+
+.language-switcher-text
+  white-space nowrap
+  color text-color
+
+.language-switcher-dropdown
+  position absolute
+  bottom 100%
+  right 0
+  margin-bottom spacing-xs
+  background-color #fff
+  border 1px solid #e9ecef
+  border-radius 8px
+  box-shadow 0 4px 12px rgba(0, 0, 0, 0.15)
+  min-width 180px
+  opacity 0
+  visibility hidden
+  transform translateY(10px)
+  transition all 0.3s ease
+  overflow hidden
+
+  .language-switcher-fixed.active &
+    opacity 1
+    visibility visible
+    transform translateY(0)
+
+.language-switcher-option
+  display flex
+  align-items center
+  gap spacing-sm
+  padding spacing-sm spacing-md
+  text-decoration none
+  color text-color
+  font-size font-size-small
+  font-weight 400
+  transition all 0.2s ease
+  border-bottom 1px solid #f8f9fa
+
+  &:last-child
+    border-bottom none
+
+  &:hover
+    background-color #f8f9fa
+    color primary-color
+
+  .language-flag
+    font-size 1.2rem
+    line-height 1
+
+  span
+    flex 1
 
 .contact-info-label
   font-size font-size-small

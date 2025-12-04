@@ -95,26 +95,13 @@ html(lang="zh-TW")
                 li Solution component 2: Description of another important aspect of the solution.
                 li Solution component 3: Additional solution elements that contributed to success.
 
-            // Sidebar - Key Details & Download (right side)
+            // Sidebar - Article Title & Excerpt (right side)
             .article-sidebar
               .sidebar-widget
-                h3.sidebar-widget-title Key Details
-                .key-details-list
-                  .key-detail-item
-                    .key-detail-label Industry
-                    .key-detail-value Biotech
-                  .key-detail-item
-                    .key-detail-label Shipment type
-                    .key-detail-value Research samples
-                  .key-detail-item
-                    .key-detail-label Temperature range
-                    .key-detail-value -80°C
-                  .key-detail-item
-                    .key-detail-label Origin / Destination
-                    .key-detail-value Taipei to Boston
-              .sidebar-widget
-                h3.sidebar-widget-title Download / Related Document
-                a.btn.btn-secondary(href="#") Download PDF
+                h3.sidebar-widget-title Article Title
+                h4.sidebar-article-title Article Title Placeholder
+                .sidebar-article-excerpt
+                  p This is a placeholder excerpt that provides a brief summary of the article content. It should be concise and give readers a quick overview of what the article covers.
 
       // Article Footer Actions
       section.article-footer-section.section
@@ -150,5 +137,6 @@ html(lang="zh-TW")
               a.related-resource-link(href="#") Read More →
 
     include ../components/footer.pug
+    include ../components/language-switcher.pug
     script(src="../../js/main.js")
 
