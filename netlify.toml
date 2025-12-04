@@ -1,0 +1,37 @@
+# Netlify 部署配置 - Wireframe 專案
+# 此配置會將整個 Wireframe 專案（包含所有子專案）部署到 Netlify
+
+[build]
+  # 建置命令：安裝依賴並編譯所有專案
+  command = "npm install && npm run build:tailormed"
+  
+  # 發布目錄：dist/Projects 包含所有編譯後的專案
+  publish = "dist/Projects"
+
+# 重定向規則：處理 SPA 路由（如果需要）
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# 安全標頭
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# 針對特定路徑的標頭設定
+[[headers]]
+  for = "/Permission-Matrix/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/TailorMed/track/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+

@@ -125,6 +125,34 @@ copyDir(path.join(SRC_DIR, 'Assets'), path.join(DIST_DIR, 'images'));
 
 console.log('✅ 靜態資源已就緒');
 
+// 4. 編譯 Permission-Matrix 子專案
+console.log('\n🔐 開始編譯 Permission-Matrix 子專案...');
+try {
+  const permissionMatrixDir = path.join(SRC_DIR, 'Permission-Matrix');
+  const permissionMatrixDistDir = path.join(DIST_DIR, 'Permission-Matrix');
+  
+  if (fs.existsSync(permissionMatrixDir)) {
+    const compileScript = path.join(permissionMatrixDir, 'compile.js');
+    if (fs.existsSync(compileScript)) {
+      // 執行 Permission-Matrix 的編譯腳本
+      const { execSync } = require('child_process');
+      execSync(`node ${compileScript}`, { 
+        stdio: 'inherit',
+        cwd: ROOT_DIR 
+      });
+      console.log('✅ Permission-Matrix 編譯完成');
+    } else {
+      console.warn('⚠️ 未找到 Permission-Matrix 編譯腳本');
+    }
+  } else {
+    console.warn('⚠️ 未找到 Permission-Matrix 目錄');
+  }
+} catch (error) {
+  console.error('❌ Permission-Matrix 編譯失敗:', error.message);
+  // 不中斷整個編譯流程，只警告
+  console.warn('⚠️ 繼續編譯其他專案...');
+}
+
 console.log(
   '🎉 編譯完成！可以在 dist/Projects/TailorMed/index.html 預覽 TailorMed 主專案'
 );
