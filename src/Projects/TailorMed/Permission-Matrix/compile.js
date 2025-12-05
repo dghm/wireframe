@@ -9,8 +9,8 @@ const SCRIPT_DIR = path.join(ROOT_DIR, 'Javascript');
 const DATA_DIR = path.join(ROOT_DIR, 'data');
 const TEMPLATE_DIR = path.join(ROOT_DIR, 'Templates');
 const COMPONENTS_DIR = path.join(ROOT_DIR, 'components');
-// 編譯到專案根目錄的 dist，使用簡潔的路徑
-const DIST_DIR = path.join(ROOT_DIR, '../../../../dist/Projects/Permission-Matrix');
+// 編譯到 TailorMed 專案目錄下，作為子單元
+const DIST_DIR = path.join(ROOT_DIR, '../../../../dist/Projects/TailorMed/Permission-Matrix');
 
 function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) {
@@ -62,7 +62,7 @@ try {
 
     const outputName = file.replace(/\.pug$/, '.html');
     fs.writeFileSync(path.join(DIST_DIR, outputName), html);
-    console.log(`  ✅ 已生成 dist/Projects/Permission-Matrix/${outputName}`);
+    console.log(`  ✅ 已生成 dist/Projects/TailorMed/Permission-Matrix/${outputName}`);
   });
 } catch (error) {
   console.error('❌ Pug 編譯失敗:', error.message);
@@ -99,7 +99,7 @@ try {
         const outputName = file.replace(/\.styl$/, '.css');
         fs.writeFileSync(path.join(cssDir, outputName), css);
         console.log(
-          `  ✅ 已生成 dist/Projects/Permission-Matrix/css/${outputName}`
+          `  ✅ 已生成 dist/Projects/TailorMed/Permission-Matrix/css/${outputName}`
         );
       });
   });
@@ -121,6 +121,6 @@ if (fs.existsSync(COMPONENTS_DIR)) {
 console.log('✅ 靜態資源已就緒');
 
 console.log(
-  '🎉 編譯完成！可以在 dist/Projects/Permission-Matrix/index.html 預覽權限矩陣系統'
+  '🎉 編譯完成！可以在 dist/Projects/TailorMed/Permission-Matrix/index.html 預覽權限矩陣系統'
 );
 

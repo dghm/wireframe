@@ -297,17 +297,9 @@ try {
         <div class="project-links">
           <a href="./TailorMed/index.html" class="project-link">主頁</a>
           <a href="./TailorMed/track/index.html" class="project-link secondary">貨件追蹤</a>
+          <a href="./TailorMed/Permission-Matrix/index.html" class="project-link secondary">權限矩陣</a>
         </div>
         <span class="badge">企業網站</span>
-      </div>
-      
-      <div class="project-card">
-        <h2 class="project-title">🔐 Permission-Matrix</h2>
-        <p class="project-description">資料庫權限矩陣系統</p>
-        <div class="project-links">
-          <a href="./Permission-Matrix/index.html" class="project-link">權限矩陣</a>
-        </div>
-        <span class="badge">管理系統</span>
       </div>
       
       <div class="project-card">
