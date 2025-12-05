@@ -169,9 +169,22 @@ try {
     // ./css/main.css -> ./TailorMed/css/main.css
     // ./js/main.js -> ./TailorMed/js/main.js
     // ./images/ -> ./TailorMed/images/
-    // 但保持其他頁面連結不變（如 solutions/, industries/ 等）
     indexContent = indexContent.replace(/href=["']\.\/(css|js|images)/g, 'href="./TailorMed/$1');
     indexContent = indexContent.replace(/src=["']\.\/(css|js|images)/g, 'src="./TailorMed/$1');
+    
+    // 調整頁面連結路徑：將相對路徑改為指向 TailorMed 目錄
+    // solutions/ -> ./TailorMed/solutions/
+    // track/index.html -> ./TailorMed/track/index.html
+    // company/index.html -> ./TailorMed/company/index.html
+    // 但保持 index.html 不變（因為根路徑就是 index.html）
+    indexContent = indexContent.replace(/href=(["'])(?!https?:\/\/|#|\.\/TailorMed|index\.html)([^"']+)\1/g, (match, quote, path) => {
+      // 跳過已經是絕對路徑或 TailorMed 路徑的連結
+      if (path === 'index.html' || path.startsWith('#')) {
+        return match;
+      }
+      // 調整相對路徑
+      return `href=${quote}./TailorMed/${path}${quote}`;
+    });
     
     // 寫入根目錄
     fs.writeFileSync(rootIndexPath, indexContent);
