@@ -153,200 +153,34 @@ try {
   console.warn('⚠️ 繼續編譯其他專案...');
 }
 
-// 5. 生成專案總覽首頁
-console.log('\n📋 生成專案總覽首頁...');
+// 5. 將 TailorMed 主頁複製到根目錄作為首頁，並調整資源路徑
+console.log('\n📋 設置根路徑首頁...');
 try {
-  const indexPath = path.join(ROOT_DIR, 'dist/Projects/index.html');
-  const indexHtml = `<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wireframe Projects - 專案總覽</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      padding: 2rem;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    header {
-      text-align: center;
-      color: white;
-      margin-bottom: 3rem;
-    }
-    
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    }
-    
-    .subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-    
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .project-card {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-    }
-    
-    .project-title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #667eea;
-    }
-    
-    .project-description {
-      color: #666;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-    }
-    
-    .project-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    
-    .project-link {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #667eea;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-      text-align: center;
-    }
-    
-    .project-link:hover {
-      background: #5568d3;
-    }
-    
-    .project-link.secondary {
-      background: #764ba2;
-    }
-    
-    .project-link.secondary:hover {
-      background: #63408a;
-    }
-    
-    .badge {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      background: #e0e7ff;
-      color: #667eea;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-    }
-    
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-      
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>🚀 Wireframe Projects</h1>
-      <p class="subtitle">所有專案總覽與快速導航</p>
-    </header>
-    
-    <div class="projects-grid">
-      <div class="project-card">
-        <h2 class="project-title">🏥 TailorMed</h2>
-        <p class="project-description">專業冷鏈物流公司網站</p>
-        <div class="project-links">
-          <a href="./TailorMed/index.html" class="project-link">主頁</a>
-          <a href="./TailorMed/track/index.html" class="project-link secondary">貨件追蹤</a>
-          <a href="./TailorMed/Permission-Matrix/index.html" class="project-link secondary">權限矩陣</a>
-        </div>
-        <span class="badge">企業網站</span>
-      </div>
-      
-      <div class="project-card">
-        <h2 class="project-title">📚 Knowledge Base</h2>
-        <p class="project-description">技術知識庫與文件</p>
-        <div class="project-links">
-          <a href="./knowledgeBase/index.html" class="project-link">知識庫首頁</a>
-        </div>
-        <span class="badge">文件系統</span>
-      </div>
-      
-      <div class="project-card">
-        <h2 class="project-title">🏭 YAANFUHE</h2>
-        <p class="project-description">企業官方網站</p>
-        <div class="project-links">
-          <a href="./YAANFUHE/index.html" class="project-link">網站首頁</a>
-        </div>
-        <span class="badge">企業網站</span>
-      </div>
-      
-      <div class="project-card">
-        <h2 class="project-title">⚡ YnEnergy</h2>
-        <p class="project-description">綠色能源解決方案</p>
-        <div class="project-links">
-          <a href="./ynenergy/index.html" class="project-link">能源網站</a>
-        </div>
-        <span class="badge">能源網站</span>
-      </div>
-      
-      <div class="project-card">
-        <h2 class="project-title">📄 Temp Single Page</h2>
-        <p class="project-description">單頁式網站模板</p>
-        <div class="project-links">
-          <a href="./Temp_singlePage/index.html" class="project-link">單頁網站</a>
-        </div>
-        <span class="badge">模板</span>
-      </div>
-    </div>
-  </div>
-</body>
-</html>`;
+  const tailormedIndexPath = path.join(DIST_DIR, 'index.html');
+  const rootIndexPath = path.join(ROOT_DIR, 'dist/Projects/index.html');
   
-  ensureDir(path.dirname(indexPath));
-  fs.writeFileSync(indexPath, indexHtml);
-  console.log('  ✅ 已生成專案總覽首頁');
+  if (fs.existsSync(tailormedIndexPath)) {
+    ensureDir(path.dirname(rootIndexPath));
+    
+    // 讀取 TailorMed 主頁內容
+    let indexContent = fs.readFileSync(tailormedIndexPath, 'utf8');
+    
+    // 調整資源路徑：將相對路徑改為指向 TailorMed 目錄
+    // ./css/main.css -> ./TailorMed/css/main.css
+    // ./js/main.js -> ./TailorMed/js/main.js
+    // ./images/ -> ./TailorMed/images/
+    // 但保持其他頁面連結不變（如 solutions/, industries/ 等）
+    indexContent = indexContent.replace(/href=["']\.\/(css|js|images)/g, 'href="./TailorMed/$1');
+    indexContent = indexContent.replace(/src=["']\.\/(css|js|images)/g, 'src="./TailorMed/$1');
+    
+    // 寫入根目錄
+    fs.writeFileSync(rootIndexPath, indexContent);
+    console.log('  ✅ 已將 TailorMed 主頁設置為根路徑首頁（已調整資源路徑）');
+  } else {
+    console.warn('⚠️ 未找到 TailorMed 主頁，跳過根路徑設置');
+  }
 } catch (error) {
-  console.error('❌ 生成首頁失敗:', error.message);
+  console.error('❌ 設置根路徑首頁失敗:', error.message);
   // 不中斷編譯流程
 }
 

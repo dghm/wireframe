@@ -1,184 +1,343 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wireframe Projects - 專案總覽</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      padding: 2rem;
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    header {
-      text-align: center;
-      color: white;
-      margin-bottom: 3rem;
-    }
-    
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    }
-    
-    .subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-    
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .project-card {
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-    }
-    
-    .project-title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #667eea;
-    }
-    
-    .project-description {
-      color: #666;
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-    }
-    
-    .project-links {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    
-    .project-link {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #667eea;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-      text-align: center;
-    }
-    
-    .project-link:hover {
-      background: #5568d3;
-    }
-    
-    .project-link.secondary {
-      background: #764ba2;
-    }
-    
-    .project-link.secondary:hover {
-      background: #63408a;
-    }
-    
-    .badge {
-      display: inline-block;
-      padding: 0.25rem 0.75rem;
-      background: #e0e7ff;
-      color: #667eea;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      margin-top: 0.5rem;
-    }
-    
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-      
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>🚀 Wireframe Projects</h1>
-      <p class="subtitle">所有專案總覽與快速導航</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TailorMed｜專案首頁</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;500;700&amp;display=swap">
+    <link rel="stylesheet" href="./TailorMed/css/main.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-content">
+          <div class="brand">
+            <div class="logo-placeholder">LOGO</div>
+          </div>
+          <nav class="site-nav"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="solutions/">Solutions</a><a class="nav-link" href="industries/">Industries</a><a class="nav-link" href="expertise/">Expertise</a><a class="nav-link" href="resources/">Resources</a><a class="nav-link" href="company/">Company</a><a class="nav-link" href="contact/">Contact</a></nav>
+          <div class="header-actions"><a class="btn btn-track" href="track/index.html">Track</a></div>
+          <button class="hamburger-menu" type="button" aria-label="Toggle navigation"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+        </div>
+        <div class="mobile-nav"><a class="mobile-nav-link" href="index.html">Home</a><a class="mobile-nav-link" href="solutions/">Solutions</a><a class="mobile-nav-link" href="industries/">Industries</a><a class="mobile-nav-link" href="expertise/">Expertise</a><a class="mobile-nav-link" href="resources/">Resources</a><a class="mobile-nav-link" href="company/">Company</a><a class="mobile-nav-link" href="contact/">Contact</a><a class="mobile-nav-link mobile-nav-track" href="track/index.html">Track</a></div>
+      </div>
     </header>
-    
-    <div class="projects-grid">
-      <div class="project-card">
-        <h2 class="project-title">🏥 TailorMed</h2>
-        <p class="project-description">專業冷鏈物流公司網站</p>
-        <div class="project-links">
-          <a href="./TailorMed/index.html" class="project-link">主頁</a>
-          <a href="./TailorMed/track/index.html" class="project-link secondary">貨件追蹤</a>
-          <a href="./TailorMed/Permission-Matrix/index.html" class="project-link secondary">權限矩陣</a>
+    <main class="main-content">
+      <!-- Hero Section-->
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="hero-title">Welcome to TailorMed</h1>
+          <p class="hero-subtitle">Your trusted partner in logistics and transportation solutions</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#">Track</a><a class="btn btn-secondary" href="#">Learn More</a></div>
         </div>
-        <span class="badge">企業網站</span>
-      </div>
-      
-      <div class="project-card">
-        <h2 class="project-title">📚 Knowledge Base</h2>
-        <p class="project-description">技術知識庫與文件</p>
-        <div class="project-links">
-          <a href="./knowledgeBase/index.html" class="project-link">知識庫首頁</a>
+      </section>
+      <!-- Trust Bar (Hidden)-->
+      <!-- Solutions Section-->
+      <section class="solutions-section section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Services Overview</h2>
+            <p class="section-subtitle">Comprehensive logistics services tailored to your needs</p>
+          </div>
+          <div class="solutions-grid">
+            <div class="solution-card">
+              <div class="solution-icon-placeholder">ICON</div>
+              <h3 class="solution-title">Cell & Gene Therapy</h3>
+              <p class="solution-description">Cell & Gene Therapy logistics solutions</p><a class="solution-link" href="#">Learn More →</a>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon-placeholder">ICON</div>
+              <h3 class="solution-title">Bio-Samples Logistics</h3>
+              <p class="solution-description">Bio-Samples Logistics services</p><a class="solution-link" href="#">Learn More →</a>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon-placeholder">ICON</div>
+              <h3 class="solution-title">Clinical Trial Support</h3>
+              <p class="solution-description">Clinical Trial Support services</p><a class="solution-link" href="#">Learn More →</a>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon-placeholder">ICON</div>
+              <h3 class="solution-title">Vaccine Distribution</h3>
+              <p class="solution-description">Vaccine Distribution services</p><a class="solution-link" href="#">Learn More →</a>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon-placeholder">ICON</div>
+              <h3 class="solution-title">Temperature-Controlled Storage</h3>
+              <p class="solution-description">Temperature-Controlled Storage solutions</p><a class="solution-link" href="#">Learn More →</a>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon-placeholder">ICON</div>
+              <h3 class="solution-title">Urgent Life Science Delivery</h3>
+              <p class="solution-description">Urgent Life Science Delivery services</p><a class="solution-link" href="#">Learn More →</a>
+            </div>
+          </div>
         </div>
-        <span class="badge">文件系統</span>
-      </div>
-      
-      <div class="project-card">
-        <h2 class="project-title">🏭 YAANFUHE</h2>
-        <p class="project-description">企業官方網站</p>
-        <div class="project-links">
-          <a href="./YAANFUHE/index.html" class="project-link">網站首頁</a>
+      </section>
+      <!-- How We Work Section-->
+      <section class="how-we-work-section section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">How We Work</h2>
+            <p class="section-subtitle">Our streamlined process ensures reliable delivery</p>
+          </div>
+          <div class="workflow-steps">
+            <div class="workflow-step">
+              <div class="step-number">1</div>
+              <div class="step-icon-placeholder">ICON</div>
+              <h3 class="step-title">Collection</h3>
+              <p class="step-description">Secure collection from origin</p>
+              <div class="step-arrow">→</div>
+            </div>
+            <div class="workflow-step">
+              <div class="step-number">2</div>
+              <div class="step-icon-placeholder">ICON</div>
+              <h3 class="step-title">Transport</h3>
+              <p class="step-description">Temperature-controlled transportation</p>
+              <div class="step-arrow">→</div>
+            </div>
+            <div class="workflow-step">
+              <div class="step-number">3</div>
+              <div class="step-icon-placeholder">ICON</div>
+              <h3 class="step-title">Monitor</h3>
+              <p class="step-description">Real-time tracking and monitoring</p>
+              <div class="step-arrow">→</div>
+            </div>
+            <div class="workflow-step">
+              <div class="step-number">4</div>
+              <div class="step-icon-placeholder">ICON</div>
+              <h3 class="step-title">Delivery</h3>
+              <p class="step-description">Safe and timely delivery to destination</p>
+            </div>
+          </div>
         </div>
-        <span class="badge">企業網站</span>
-      </div>
-      
-      <div class="project-card">
-        <h2 class="project-title">⚡ YnEnergy</h2>
-        <p class="project-description">綠色能源解決方案</p>
-        <div class="project-links">
-          <a href="./ynenergy/index.html" class="project-link">能源網站</a>
+      </section>
+      <!-- Expertise Section-->
+      <section class="expertise-section section">
+        <div class="container">
+          <div class="expertise-content">
+            <div class="expertise-image">
+              <div class="expertise-image-placeholder">IMAGE</div>
+            </div>
+            <div class="expertise-text">
+              <div class="section-header">
+                <h2 class="section-title">Our Expertise</h2>
+                <p class="section-subtitle">Decades of experience delivering excellence</p>
+              </div>
+              <div class="expertise-features">
+                <div class="expertise-feature">
+                  <div class="feature-icon-placeholder">✓</div>
+                  <h4 class="feature-title">Global Network</h4>
+                  <p class="feature-description">Extensive network spanning multiple continents</p>
+                </div>
+                <div class="expertise-feature">
+                  <div class="feature-icon-placeholder">✓</div>
+                  <h4 class="feature-title">Technology-Driven</h4>
+                  <p class="feature-description">Advanced tracking and management systems</p>
+                </div>
+                <div class="expertise-feature">
+                  <div class="feature-icon-placeholder">✓</div>
+                  <h4 class="feature-title">Expert Team</h4>
+                  <p class="feature-description">Skilled professionals with industry expertise</p>
+                </div>
+                <div class="expertise-feature">
+                  <div class="feature-icon-placeholder">✓</div>
+                  <h4 class="feature-title">24/7 Support</h4>
+                  <p class="feature-description">Round-the-clock customer service</p>
+                </div>
+              </div>
+              <div class="expertise-stats">
+                <div class="stat-item">
+                  <div class="stat-number">50+</div>
+                  <div class="stat-label">Countries Served</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">1000+</div>
+                  <div class="stat-label">Clients Worldwide</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">99.9%</div>
+                  <div class="stat-label">On-Time Delivery</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">24/7</div>
+                  <div class="stat-label">Support Available</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <span class="badge">能源網站</span>
-      </div>
-      
-      <div class="project-card">
-        <h2 class="project-title">📄 Temp Single Page</h2>
-        <p class="project-description">單頁式網站模板</p>
-        <div class="project-links">
-          <a href="./Temp_singlePage/index.html" class="project-link">單頁網站</a>
+      </section>
+      <!-- Global Network Section-->
+      <section class="global-network-section section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Global Network</h2>
+            <p class="section-subtitle">Our worldwide presence ensures seamless logistics solutions</p>
+          </div>
+          <div class="global-network-content">
+            <div class="network-locations">
+              <div class="location-item">
+                <h3 class="location-title">Headquarters</h3>
+                <p class="location-address">Taipei, Taiwan</p>
+                <p class="location-details">123 Logistics Street, Taipei 100, Taiwan</p>
+                <p class="location-contact">Tel: +886 2 1234 5678</p>
+              </div>
+              <div class="location-item">
+                <h3 class="location-title">Regional Office</h3>
+                <p class="location-address">Singapore</p>
+                <p class="location-details">456 Business Park, Singapore 018956</p>
+                <p class="location-contact">Tel: +65 6123 4567</p>
+              </div>
+            </div>
+            <div class="network-map">
+              <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5!2d121.5654!3d25.0330!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da9c9e1f%3A0x1206bcf082fd10a6!2sTaipei%2C%20Taiwan!5e0!3m2!1sen!2sus!4v1234567890" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
         </div>
-        <span class="badge">模板</span>
+      </section>
+      <!-- Compliance Badges Bar-->
+      <section class="compliance-badges-bar">
+        <div class="container">
+          <div class="compliance-badges-content">
+            <div class="compliance-badge">
+              <div class="badge-placeholder">BADGE 1</div>
+            </div>
+            <div class="compliance-badge">
+              <div class="badge-placeholder">BADGE 2</div>
+            </div>
+            <div class="compliance-badge">
+              <div class="badge-placeholder">BADGE 3</div>
+            </div>
+            <div class="compliance-badge">
+              <div class="badge-placeholder">BADGE 4</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Insight Section-->
+      <section class="insight-section section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Latest Insights</h2>
+            <p class="section-subtitle">Stay informed with our latest articles and resources</p>
+          </div>
+          <div class="insight-grid">
+            <div class="insight-card">
+              <div class="insight-image-placeholder">IMAGE</div>
+              <div class="insight-content">
+                <div class="insight-date">Dec 15, 2024</div>
+                <h3 class="insight-title">Future of Global Logistics: Trends to Watch</h3>
+                <p class="insight-excerpt">Explore the emerging trends shaping the logistics industry in 2025...</p><a class="insight-link" href="#">Read More →</a>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-image-placeholder">IMAGE</div>
+              <div class="insight-content">
+                <div class="insight-date">Nov 28, 2024</div>
+                <h3 class="insight-title">Optimizing Supply Chains in a Digital Era</h3>
+                <p class="insight-excerpt">How digital transformation is revolutionizing supply chain management...</p><a class="insight-link" href="#">Read More →</a>
+              </div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-image-placeholder">IMAGE</div>
+              <div class="insight-content">
+                <div class="insight-date">Nov 10, 2024</div>
+                <h3 class="insight-title">Sustainable Logistics: Our Commitment</h3>
+                <p class="insight-excerpt">Learn about our initiatives towards greener transportation solutions...</p><a class="insight-link" href="#">Read More →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section-->
+      <!-- Support Section-->
+      <!-- Contact CTA Section-->
+      <section class="contact-cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-subtitle">Let's discuss how TailorMed can help your business grow</p>
+            <div class="cta-form-placeholder">
+              <div class="form-field-placeholder">Name</div>
+              <div class="form-field-placeholder">Email</div>
+              <div class="form-field-placeholder">Message</div><a class="btn btn-primary" href="#">Send Message</a>
+            </div>
+            <div class="cta-contact-info">
+              <div class="contact-info-item">
+                <div class="info-label">Email</div>
+                <div class="info-value">info@tailormed.com</div>
+              </div>
+              <div class="contact-info-item">
+                <div class="info-label">Phone</div>
+                <div class="info-value">+886 2 1234 5678</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand"><a href="index.html">
+              <div class="logo-placeholder">LOGO</div></a>
+            <p class="footer-description">Trusted cold-chain logistics for biotech and life-science shipments.</p>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">Company</h4>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="company/index.html">About Us</a></li>
+              <li><a class="footer-link" href="#">Leadership</a></li>
+              <li><a class="footer-link" href="#">Global Network</a></li>
+              <li><a class="footer-link" href="#">Newsroom</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">Solutions</h4>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="solutions/index.html">Services Overview</a></li>
+              <li><a class="footer-link" href="industries/index.html">Industries We Serve</a></li>
+              <li><a class="footer-link" href="industries/biotech.html">Biotech Logistics</a></li>
+              <li><a class="footer-link" href="expertise/index.html">Compliance & Expertise</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">Resources</h4>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="resources/index.html">Overview</a></li>
+              <li><a class="footer-link" href="resources/case-studies.html">Case Studies</a></li>
+              <li><a class="footer-link" href="#">Insights</a></li>
+              <li><a class="footer-link" href="#">Whitepapers</a></li>
+              <li><a class="footer-link" href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">Support</h4>
+            <ul class="footer-links">
+              <li><a class="footer-link" href="track/index.html">Tracking</a></li>
+              <li><a class="footer-link" href="contact/index.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="site-footer__copy">© 2025 TailorMed. All Rights Reserved.</p>
+          <div class="footer-legal-links"><a class="footer-legal-link" href="#">Terms of Use</a><a class="footer-legal-link" href="#">Privacy Policy</a><a class="footer-legal-link" href="#">Cookies Notice</a></div>
+        </div>
       </div>
+    </footer>
+    <div class="language-switcher-fixed">
+      <button class="language-switcher-btn" type="button" aria-label="Language Switcher">
+        <div class="language-switcher-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="currentColor"></path>
+          </svg>
+        </div><span class="language-switcher-text">English</span>
+      </button>
+      <div class="language-switcher-dropdown"><a class="language-switcher-option" href="#" data-lang="en">
+          <div class="language-flag">🇺🇸</div><span>English</span></a><a class="language-switcher-option" href="#" data-lang="zh-TW">
+          <div class="language-flag">🇹🇼</div><span>繁體中文</span></a></div>
     </div>
-  </div>
-</body>
+    <script src="./TailorMed/js/main.js"></script>
+  </body>
 </html>
