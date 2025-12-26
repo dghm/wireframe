@@ -1,0 +1,245 @@
+doctype html
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title YLPM 奕錸精機 | 系統統包 × 機電整合 × 建築介面協調
+    link(rel="stylesheet", href="/Projects/YLPM/css/main.css")
+  body
+    // Header
+    header.site-header
+      .container
+        .header-brand
+          .logo-placeholder LOGO
+        nav.site-nav
+          a.nav-link(href="./") 首頁
+          a.nav-link(href="#services") 服務項目
+          a.nav-link(href="#cases") 工程實績
+          a.nav-link(href="#partners") 生態伙伴
+          a.nav-link(href="#news") 最新消息
+          a.nav-link(href="#contact") 聯絡我們
+
+    main
+      // 1. HERO 區：統包定位
+      section.hero-section
+        .container
+          .row
+            .col.col-lg-6.mb-md
+              h1.hero-title 系統統包 × 機電整合 × 建築介面協調
+              h2.hero-subtitle 從規劃、設計、整合到施工的完整工程統包服務
+              .hero-actions.mt-lg
+                a.btn.btn-primary(href="#services") 了解服務
+                a.btn.btn-secondary(href="#contact") 聯絡我們
+            .col.col-lg-6
+              .hero-image-placeholder
+                .image-placeholder 工程統包示意圖
+
+      // 2. 專業資格區
+      section.qualifications-section
+        .container
+          .section-header
+            h2.section-title 專業資格
+          .row
+            .col.col-lg-4.col-md-4.mb-md
+              .qualification-card
+                .qualification-title 甲級水電承裝業
+                .qualification-badge BADGE
+            .col.col-lg-4.col-md-4.mb-md
+              .qualification-card
+                .qualification-title 丙級空調承裝業
+                .qualification-badge BADGE
+            .col.col-lg-4.col-md-4.mb-md
+              .qualification-card
+                .qualification-title 系統整合專業能力
+                .qualification-badge BADGE
+
+      // 3. 服務項目（摘要入口）
+      section.section#services
+        .container
+          .section-header
+            h2.section-title 服務項目
+          .row
+            .col.col-lg-6.mb-md
+              .service-card-large
+                .service-card-header
+                  h3.service-card-title A. 系統統包規劃・設計・整合
+                .service-card-body
+                  p.service-summary 提供機電整合、系統架構設計、跨工種介面協調。
+                .service-card-footer
+                  a.btn.btn-small(href="#") 了解更多
+            .col.col-lg-6.mb-md
+              .service-card-large
+                .service-card-header
+                  h3.service-card-title B. 系統統包工程施工
+                .service-card-body
+                  p.service-summary 水電、空調、弱電、消防及 BMS 施工與整合管理。
+                .service-card-footer
+                  a.btn.btn-small(href="#") 了解更多
+
+      // 4. 工程整合能力（摘要版）
+      section.section#capabilities
+        .container
+          .section-header
+            h2.section-title 工程整合能力
+          .row
+            .col.col-lg-4.col-md-4.mb-md
+              .capability-block
+                .capability-icon ICON
+                h3.capability-title 介面協調
+            .col.col-lg-4.col-md-4.mb-md
+              .capability-block
+                .capability-icon ICON
+                h3.capability-title 機電 × 建築整合
+            .col.col-lg-4.col-md-4.mb-md
+              .capability-block
+                .capability-icon ICON
+                h3.capability-title 標準化統包流程
+
+      // 5. 精選工程實績（入口摘要）
+      section.section#cases
+        .container
+          .section-header
+            h2.section-title 工程實績
+          .row
+            .col.col-lg-4.col-md-6.mb-md
+              .case-card
+                .case-image-placeholder
+                  .image-placeholder CASE IMAGE
+                .case-card-body
+                  h3.case-title 專案名稱 Placeholder
+                  p.case-description 案例說明文字，描述專案內容與成果
+                .case-card-footer
+                  a.btn.btn-small(href="#") 查看詳情
+            .col.col-lg-4.col-md-6.mb-md
+              .case-card
+                .case-image-placeholder
+                  .image-placeholder CASE IMAGE
+                .case-card-body
+                  h3.case-title 專案名稱 Placeholder
+                  p.case-description 案例說明文字，描述專案內容與成果
+                .case-card-footer
+                  a.btn.btn-small(href="#") 查看詳情
+            .col.col-lg-4.col-md-6.mb-md
+              .case-card
+                .case-image-placeholder
+                  .image-placeholder CASE IMAGE
+                .case-card-body
+                  h3.case-title 專案名稱 Placeholder
+                  p.case-description 案例說明文字，描述專案內容與成果
+                .case-card-footer
+                  a.btn.btn-small(href="#") 查看詳情
+          .section-footer.mt-lg.text-center
+            a.btn.btn-secondary(href="#") 查看全部工程實績
+
+      // 6. 生態伙伴（Logo Wall 摘要版）
+      section.section#partners
+        .container
+          .section-header
+            h2.section-title 生態伙伴
+          .partners-grid
+            .partner-logo
+              .logo-placeholder LOGO 1
+            .partner-logo
+              .logo-placeholder LOGO 2
+            .partner-logo
+              .logo-placeholder LOGO 3
+            .partner-logo
+              .logo-placeholder LOGO 4
+            .partner-logo
+              .logo-placeholder LOGO 5
+            .partner-logo
+              .logo-placeholder LOGO 6
+            .partner-logo
+              .logo-placeholder LOGO 7
+            .partner-logo
+              .logo-placeholder LOGO 8
+          .section-footer.mt-lg.text-center
+            a.btn.btn-secondary(href="#") 查看全部伙伴
+
+      // 7. 最新消息（摘要入口）
+      section.section#news
+        .container
+          .section-header
+            h2.section-title 最新消息
+          .news-list
+            .news-item
+              .news-date 2024.12.15
+              .news-content
+                h3.news-title 消息標題 Placeholder
+                p.news-excerpt 簡短文字 Placeholder
+                a.btn.btn-small(href="#") 查看內容
+            .news-item
+              .news-date 2024.12.10
+              .news-content
+                h3.news-title 消息標題 Placeholder
+                p.news-excerpt 簡短文字 Placeholder
+                a.btn.btn-small(href="#") 查看內容
+            .news-item
+              .news-date 2024.12.05
+              .news-content
+                h3.news-title 消息標題 Placeholder
+                p.news-excerpt 簡短文字 Placeholder
+                a.btn.btn-small(href="#") 查看內容
+          .section-footer.mt-lg.text-center
+            a.btn.btn-secondary(href="#") 查看全部消息
+
+      // 8. 底部 CTA
+      section.cta-section
+        .container
+          .cta-content
+            h2.cta-title 需要統包規劃或施工協助嗎？
+            .cta-actions
+              a.btn.btn-primary(href="#contact") 聯絡我們
+
+    // 8. Footer
+    footer.site-footer
+      .container
+        .footer-content
+          .footer-section
+            h4.footer-title 導覽連結
+            ul.footer-links
+              li
+                a(href="./") 首頁
+              li
+                a(href="#services") 服務項目
+              li
+                a(href="#cases") 工程實績
+              li
+                a(href="#partners") 生態伙伴
+              li
+                a(href="#news") 最新消息
+              li
+                a(href="#contact") 聯絡我們
+          .footer-section
+            h4.footer-title 服務項目
+            ul.footer-links
+              li
+                a(href="#services") 系統統包規劃設計
+              li
+                a(href="#services") 系統統包工程施工
+              li
+                a(href="#services") 機電整合
+              li
+                a(href="#services") 建築介面協調
+          .footer-section
+            h4.footer-title 專業能力
+            ul.footer-links
+              li
+                a(href="#capabilities") 跨工種介面協調
+              li
+                a(href="#capabilities") 機電與建築整合
+              li
+                a(href="#capabilities") 標準化統包流程
+          .footer-section
+            h4.footer-title 聯絡資訊
+            ul.footer-links
+              li
+                | 電話：03-3529393 分機 21
+              li
+                | 傳真：03-3528383
+              li
+                | 地址：桃園市大園區大豐二街 49 號
+              li
+                | Email：sales@ylpm.com.tw
+        .footer-bottom
+          p © 2024 YLPM 奕錸精機. All Rights Reserved.

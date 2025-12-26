@@ -1,0 +1,865 @@
+// YLPM 專案主樣式 - 灰階 Wireframe
+
+// 導入變數
+@import 'variables.styl'
+
+// 重置樣式
+*
+  margin 0
+  padding 0
+  box-sizing border-box
+
+// 基礎樣式
+html
+  font-size font-size-base
+  line-height 1.6
+
+body
+  font-family font-family-primary
+  color text-color
+  background-color background-color
+  line-height 1.6
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+// 容器系統
+.container
+  max-width container-max-width
+  margin 0 auto
+  padding 0 container-padding
+  width 100%
+
+// 12欄格線系統
+.row
+  display flex
+  flex-wrap wrap
+  margin 0 (grid-gutter / -2)
+
+.col
+  padding 0 (grid-gutter / 2)
+  flex 0 0 100%
+  max-width 100%
+
+// 格線欄位（1-12欄）
+for i in 1..12
+  .col-{i}
+    padding 0 (grid-gutter / 2)
+    flex 0 0 ((i / grid-columns) * 100%)
+    max-width ((i / grid-columns) * 100%)
+
+// 響應式格線
+@media (min-width: breakpoint-mobile)
+  for i in 1..12
+    .col-md-{i}
+      flex 0 0 ((i / grid-columns) * 100%)
+      max-width ((i / grid-columns) * 100%)
+
+@media (min-width: breakpoint-tablet)
+  for i in 1..12
+    .col-lg-{i}
+      flex 0 0 ((i / grid-columns) * 100%)
+      max-width ((i / grid-columns) * 100%)
+
+// 字級階層
+h1, .h1
+  font-size font-size-h1
+  font-weight 700
+  line-height 1.2
+  color gray-700
+  margin-bottom spacing-md
+
+h2, .h2
+  font-size font-size-h2
+  font-weight 700
+  line-height 1.3
+  color gray-700
+  margin-bottom spacing-md
+
+h3, .h3
+  font-size font-size-h3
+  font-weight 600
+  line-height 1.4
+  color gray-600
+  margin-bottom spacing-sm
+
+h4, .h4
+  font-size font-size-large
+  font-weight 600
+  line-height 1.4
+  color gray-600
+  margin-bottom spacing-sm
+
+p, .body-text
+  font-size font-size-body
+  line-height 1.6
+  color text-color
+  margin-bottom spacing-sm
+
+// 按鈕樣式（Wireframe）
+.btn
+  display inline-block
+  padding spacing-sm spacing-md
+  font-size font-size-button
+  font-weight 500
+  text-align center
+  text-decoration none
+  border border-width-medium solid gray-600
+  background-color transparent
+  color gray-700
+  cursor pointer
+  transition all 0.2s ease
+  min-width 120px
+
+  &:hover
+    background-color gray-100
+    border-color gray-700
+
+.btn-primary
+  background-color gray-600
+  color background-color
+  border-color gray-600
+
+  &:hover
+    background-color gray-700
+    border-color gray-700
+
+.btn-secondary
+  background-color transparent
+  color gray-700
+  border-color gray-600
+
+.btn-small
+  min-width 100px
+  padding spacing-xs spacing-sm
+  font-size font-size-small
+
+// Placeholder 樣式
+.placeholder
+  background-color gray-100
+  border border-width-thin solid gray-200
+  display flex
+  align-items center
+  justify-content center
+  color gray-400
+  font-size font-size-small
+  text-align center
+
+// 圖片 Placeholder
+.image-placeholder
+  @extend .placeholder
+  min-height 200px
+  width 100%
+
+// 圖示 Placeholder
+.icon-placeholder
+  @extend .placeholder
+  width 48px
+  height 48px
+  border-radius 0
+
+// Logo Placeholder
+.logo-placeholder
+  @extend .placeholder
+  width 120px
+  height 40px
+  font-weight 600
+
+// Header
+.site-header
+  border-bottom border-width-medium solid gray-200
+  background-color background-color
+  padding spacing-md 0
+
+  .container
+    display flex
+    align-items center
+    justify-content space-between
+
+.header-brand
+  .logo-placeholder
+    margin 0
+
+.site-nav
+  display flex
+  gap spacing-lg
+  list-style none
+
+  .nav-link
+    font-size font-size-body
+    color text-color
+    text-decoration none
+    padding spacing-xs spacing-sm
+    border-bottom border-width-thin solid transparent
+
+    &:hover
+      border-bottom-color gray-600
+
+// Hero Section
+.hero-section
+  padding spacing-xxl 0
+  border-bottom border-width-thin solid gray-200
+
+  .hero-title
+    margin-bottom spacing-md
+
+  .hero-subtitle
+    font-size font-size-h2
+    color text-color-secondary
+    margin-bottom spacing-lg
+    font-weight 400
+
+  .hero-actions
+    display flex
+    gap spacing-md
+    margin-top spacing-lg
+
+  .hero-content
+    text-align center
+    margin-bottom spacing-lg
+
+.hero-image-placeholder
+  height 400px
+  width 100%
+
+  .image-placeholder
+    height 100%
+    min-height 400px
+
+// 專業資格顯示
+.qualifications-section
+  padding spacing-xl 0
+  background-color gray-100
+  border-bottom border-width-thin solid gray-200
+
+  .section-header
+    margin-bottom spacing-lg
+
+.qualification-card
+  border border-width-thin solid gray-200
+  padding spacing-md
+  background-color background-color
+  text-align center
+
+  .qualification-title
+    font-size font-size-body
+    font-weight 600
+    color gray-700
+    margin-bottom spacing-sm
+
+  .qualification-badge
+    @extend .placeholder
+    height 60px
+    width 100%
+    margin-top spacing-sm
+
+// Section 通用樣式
+.section
+  padding spacing-xxl 0
+  border-bottom border-width-thin solid gray-200
+
+  &:last-child
+    border-bottom none
+
+.section-header
+  text-align center
+  margin-bottom spacing-xl
+
+  .section-title
+    margin-bottom spacing-sm
+
+  .section-subtitle
+    font-size font-size-large
+    color text-color-secondary
+    max-width 600px
+    margin 0 auto
+
+.section-footer
+  margin-top spacing-lg
+  padding-top spacing-lg
+  border-top border-width-thin solid gray-200
+
+// 服務概要區
+.summary-box
+  max-width 800px
+  margin 0 auto
+  padding spacing-lg
+  border border-width-thin solid gray-200
+  background-color background-color
+
+  .summary-text
+    font-size font-size-body
+    color text-color-secondary
+    line-height 1.8
+    margin-bottom spacing-md
+
+    &:last-child
+      margin-bottom 0
+
+// 服務區塊（內頁詳細版）
+.service-section
+  margin-bottom spacing-xl
+
+  .service-section-title
+    font-size font-size-h2
+    font-weight 600
+    color gray-700
+    margin-bottom spacing-lg
+    text-align center
+
+.service-description-box
+  max-width 900px
+  margin 0 auto spacing-lg
+  padding spacing-lg
+  border border-width-thin solid gray-200
+  background-color gray-100
+
+  .service-description
+    font-size font-size-body
+    color text-color-secondary
+    line-height 1.8
+    margin 0
+
+.service-items-list
+  display grid
+  grid-template-columns repeat(auto-fit, minmax(280px, 1fr))
+  gap spacing-md
+  margin-top spacing-lg
+
+.service-item-box
+  display flex
+  align-items flex-start
+  gap spacing-sm
+  padding spacing-md
+  border border-width-thin solid gray-200
+  background-color background-color
+
+  .service-item-icon
+    @extend .icon-placeholder
+    width 32px
+    height 32px
+    flex-shrink 0
+
+  .service-item-text
+    font-size font-size-body
+    color text-color
+    line-height 1.6
+
+// 能力卡片（內頁詳細版）
+.capability-card-large
+  border border-width-thin solid gray-200
+  padding spacing-lg
+  background-color background-color
+  height 100%
+  display flex
+  flex-direction column
+
+  .capability-card-title
+    font-size font-size-h3
+    font-weight 600
+    color gray-700
+    margin-bottom spacing-md
+    text-align center
+
+  .capability-card-content
+    flex 1
+
+    p
+      font-size font-size-body
+      color text-color-secondary
+      line-height 1.8
+      margin-bottom spacing-sm
+
+      &:last-child
+        margin-bottom 0
+
+// 工作流程
+.process-flow
+  display flex
+  flex-wrap wrap
+  justify-content center
+  align-items center
+  gap spacing-md
+  margin-top spacing-xl
+
+.process-step
+  display flex
+  flex-direction column
+  align-items center
+  gap spacing-sm
+  flex 1
+  min-width 150px
+  max-width 180px
+
+  .process-step-number
+    @extend .icon-placeholder
+    width 48px
+    height 48px
+    font-weight 600
+    font-size font-size-large
+
+  .process-step-title
+    font-size font-size-body
+    font-weight 500
+    color gray-700
+    text-align center
+
+  .process-step-arrow
+    font-size font-size-large
+    color gray-400
+    margin spacing-xs 0
+
+@media (max-width: breakpoint-tablet)
+  .process-flow
+    flex-direction column
+
+  .process-step
+    max-width 100%
+    flex-direction row
+    justify-content flex-start
+    width 100%
+
+    .process-step-arrow
+      transform rotate(90deg)
+      margin 0 spacing-sm
+
+// 專業資格卡片（內頁版）
+.qualification-card-large
+  border border-width-medium solid gray-200
+  padding spacing-xl
+  background-color background-color
+  text-align center
+
+  .qualification-title
+    font-size font-size-h3
+    font-weight 600
+    color gray-700
+    margin-bottom spacing-md
+
+  .qualification-badge
+    @extend .placeholder
+    height 80px
+    width 100%
+    margin-top spacing-md
+
+.qualification-note
+  text-align center
+  max-width 600px
+  margin spacing-md auto 0
+
+  p
+    font-size font-size-body
+    color text-color-secondary
+    line-height 1.6
+
+// 產業卡片
+.industry-card
+  border border-width-thin solid gray-200
+  padding spacing-lg
+  background-color background-color
+  text-align center
+  height 100%
+
+  .industry-icon
+    @extend .icon-placeholder
+    width 64px
+    height 64px
+    margin 0 auto spacing-md
+
+  .industry-title
+    font-size font-size-h3
+    font-weight 600
+    color gray-700
+
+// Card 樣式（Wireframe）
+.card
+  border border-width-thin solid gray-200
+  padding spacing-md
+  background-color background-color
+
+  .card-header
+    border-bottom border-width-thin solid gray-200
+    padding-bottom spacing-sm
+    margin-bottom spacing-md
+
+  .card-body
+    padding spacing-sm 0
+
+  .card-footer
+    border-top border-width-thin solid gray-200
+    padding-top spacing-sm
+    margin-top spacing-md
+
+// 大型服務卡片
+.service-card-large
+  border border-width-medium solid gray-200
+  padding spacing-lg
+  background-color background-color
+  height 100%
+  display flex
+  flex-direction column
+
+  .service-card-header
+    border-bottom border-width-thin solid gray-200
+    padding-bottom spacing-md
+    margin-bottom spacing-md
+
+    .service-card-title
+      font-size font-size-h3
+      font-weight 600
+      color gray-700
+
+  .service-card-body
+    flex 1
+    padding spacing-sm 0
+
+    .service-item
+      display flex
+      align-items center
+      gap spacing-sm
+      margin-bottom spacing-sm
+
+      .service-item-icon
+        @extend .icon-placeholder
+        width 32px
+        height 32px
+        flex-shrink 0
+
+      .service-item-text
+        font-size font-size-body
+        color text-color
+
+    .service-summary
+      font-size font-size-body
+      color text-color-secondary
+      line-height 1.6
+      margin 0
+
+  .service-card-footer
+    border-top border-width-thin solid gray-200
+    padding-top spacing-md
+    margin-top spacing-md
+
+// 能力展示區塊
+.capability-block
+  border border-width-thin solid gray-200
+  padding spacing-lg
+  background-color background-color
+  text-align center
+  height 100%
+
+  .capability-icon
+    @extend .icon-placeholder
+    width 64px
+    height 64px
+    margin 0 auto spacing-md
+
+  .capability-title
+    font-size font-size-h3
+    font-weight 600
+    color gray-700
+    margin-bottom spacing-sm
+
+  .capability-description
+    font-size font-size-body
+    color text-color-secondary
+    display none
+
+// 案例卡片
+.case-card
+  border border-width-thin solid gray-200
+  background-color background-color
+  height 100%
+  display flex
+  flex-direction column
+
+  .case-image-placeholder
+    width 100%
+    height 200px
+    overflow hidden
+
+    .image-placeholder
+      height 100%
+      min-height 200px
+
+  .case-card-body
+    padding spacing-md
+    flex 1
+
+    .case-title
+      font-size font-size-h3
+      font-weight 600
+      color gray-700
+      margin-bottom spacing-sm
+
+    .case-description
+      font-size font-size-body
+      color text-color-secondary
+
+  .case-card-footer
+    padding spacing-md
+    border-top border-width-thin solid gray-200
+
+// 生態伙伴 Logo Wall
+.partners-grid
+  display flex
+  flex-wrap nowrap
+  gap spacing-lg
+  align-items center
+  justify-content center
+  overflow-x auto
+
+.partner-logo
+  display flex
+  justify-content center
+  align-items center
+  padding spacing-md
+  border border-width-thin solid gray-200
+  background-color background-color
+  min-height 100px
+  flex-shrink 0
+  min-width 150px
+
+  .logo-placeholder
+    width 100%
+    height 60px
+    margin 0
+
+// 最新消息
+.news-list
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap spacing-md
+
+.news-item
+  display flex
+  flex-direction column
+  padding spacing-md
+  border border-width-thin solid gray-200
+  background-color background-color
+
+  .news-date
+    font-size font-size-small
+    color text-color-secondary
+    font-weight 500
+    margin-bottom spacing-sm
+
+  .news-content
+    flex 1
+    display flex
+    flex-direction column
+
+    .news-title
+      font-size font-size-h3
+      font-weight 600
+      color gray-700
+      margin-bottom spacing-xs
+
+    .news-excerpt
+      font-size font-size-body
+      color text-color-secondary
+      margin 0
+      margin-bottom spacing-sm
+      flex 1
+
+    .btn
+      margin-top auto
+
+@media (max-width: breakpoint-tablet)
+  .news-list
+    grid-template-columns repeat(2, 1fr)
+
+@media (max-width: breakpoint-mobile)
+  .news-list
+    grid-template-columns 1fr
+
+// CTA 區
+.cta-section
+  padding spacing-xxl 0
+  background-color gray-100
+  border-bottom border-width-thin solid gray-200
+
+  .cta-content
+    text-align center
+
+    .cta-title
+      font-size font-size-h2
+      font-weight 600
+      color gray-700
+      margin-bottom spacing-lg
+
+    .cta-actions
+      display flex
+      justify-content center
+      gap spacing-md
+
+// Grid 系統
+.grid
+  display grid
+  gap spacing-md
+
+.grid-2
+  grid-template-columns repeat(2, 1fr)
+
+.grid-3
+  grid-template-columns repeat(3, 1fr)
+
+.grid-4
+  grid-template-columns repeat(4, 1fr)
+
+@media (max-width: breakpoint-tablet)
+  .grid-3
+    grid-template-columns repeat(2, 1fr)
+
+  .grid-4
+    grid-template-columns repeat(2, 1fr)
+
+@media (max-width: breakpoint-mobile)
+  .grid-2,
+  .grid-3,
+  .grid-4
+    grid-template-columns 1fr
+
+// Feature Item
+.feature-item
+  padding spacing-md
+  border border-width-thin solid gray-200
+
+  .feature-icon
+    margin-bottom spacing-md
+
+  .feature-title
+    margin-bottom spacing-sm
+
+  .feature-description
+    color text-color-secondary
+
+// Stats Grid
+.stats-grid
+  display grid
+  grid-template-columns repeat(auto-fit, minmax(200px, 1fr))
+  gap spacing-lg
+
+.stat-item
+  text-align center
+  padding spacing-md
+  border border-width-thin solid gray-200
+  background-color background-color
+
+  .stat-number
+    font-size font-size-h2
+    font-weight 700
+    color gray-700
+    margin-bottom spacing-xs
+
+  .stat-label
+    font-size font-size-small
+    color text-color-secondary
+    text-transform uppercase
+    letter-spacing 1px
+
+.stats-section
+  padding spacing-md
+
+// Footer
+.site-footer
+  border-top border-width-medium solid gray-200
+  padding spacing-xl 0
+  background-color gray-100
+
+  .footer-content
+    display grid
+    grid-template-columns repeat(auto-fit, minmax(200px, 1fr))
+    gap spacing-lg
+
+  .footer-section
+    .footer-title
+      font-size font-size-large
+      font-weight 600
+      margin-bottom spacing-md
+      color gray-700
+
+    .footer-links
+      list-style none
+
+      li
+        margin-bottom spacing-xs
+
+        a
+          color text-color-secondary
+          text-decoration none
+          font-size font-size-small
+
+          &:hover
+            color gray-700
+
+  .footer-bottom
+    margin-top spacing-xl
+    padding-top spacing-md
+    border-top border-width-thin solid gray-200
+    text-align center
+    font-size font-size-small
+    color text-color-secondary
+
+// Form Elements (Wireframe)
+.form-group
+  margin-bottom spacing-md
+
+.form-label
+  display block
+  font-size font-size-small
+  font-weight 500
+  color gray-600
+  margin-bottom spacing-xs
+
+.form-input
+  width 100%
+  padding spacing-sm
+  border border-width-thin solid gray-200
+  background-color background-color
+  font-size font-size-body
+  color text-color
+
+  &::placeholder
+    color gray-300
+
+.form-textarea
+  @extend .form-input
+  min-height 120px
+  resize vertical
+
+// List Styles
+.list-unstyled
+  list-style none
+
+.list-item
+  padding spacing-sm 0
+  border-bottom border-width-thin solid gray-200
+
+  &:last-child
+    border-bottom none
+
+// Divider
+.divider
+  height border-width-thin
+  background-color gray-200
+  margin spacing-lg 0
+
+// Spacing Utilities
+.mt-sm { margin-top: spacing-sm }
+.mt-md { margin-top: spacing-md }
+.mt-lg { margin-top: spacing-lg }
+.mb-sm { margin-bottom: spacing-sm }
+.mb-md { margin-bottom: spacing-md }
+.mb-lg { margin-bottom: spacing-lg }
+.pt-sm { padding-top: spacing-sm }
+.pt-md { padding-top: spacing-md }
+.pt-lg { padding-top: spacing-lg }
+.pb-sm { padding-bottom: spacing-sm }
+.pb-md { padding-bottom: spacing-md }
+.pb-lg { padding-bottom: spacing-lg }
+
+// Text Utilities
+.text-center { text-align: center }
+.text-left { text-align: left }
+.text-right { text-align: right }
+.text-secondary { color: text-color-secondary }
