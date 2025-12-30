@@ -893,17 +893,48 @@ p, .body-text
   padding spacing-lg 0
   border-top border-width-thin solid gray-600
 
-  .footer-content
+  // 上區：左側 menu，右側 Copyright
+  .footer-top
     display flex
     justify-content space-between
-    align-items flex-start
+    align-items center
     flex-wrap wrap
-    gap spacing-lg
+    gap spacing-md
+    padding-bottom spacing-md
+    border-bottom border-width-thin solid gray-600
+    margin-bottom spacing-md
 
     @media (max-width: breakpoint-mobile)
       flex-direction column
       text-align center
-      align-items center
+
+  // 下區：公司資訊
+  .footer-bottom
+    .footer-info
+      .footer-company
+        font-size font-size-body
+        font-weight 600
+        color white
+        margin-bottom spacing-sm
+
+      .footer-details
+        display flex
+        flex-direction column
+        gap spacing-xs
+
+      .footer-detail-item
+        font-size font-size-small
+        color gray-300
+        line-height 1.6
+
+      .footer-email-link
+        color white
+        text-decoration none
+        transition color 0.2s ease
+
+        &:hover
+          color gray-200
+          text-decoration underline
 
   .footer-nav
     display flex
@@ -925,41 +956,11 @@ p, .body-text
     &:hover
       color white
 
-  .footer-info
-    flex 1
-    min-width 200px
-    max-width 300px
-
-    .footer-company
-      font-size font-size-body
-      font-weight 600
-      color white
-      margin-bottom spacing-sm
-
-    .footer-details
-      display flex
-      flex-direction column
-      gap spacing-xs
-
-    .footer-detail-item
-      font-size font-size-small
-      color gray-300
-      line-height 1.6
-
-    .footer-email-link
-      color white
-      text-decoration none
-      transition color 0.2s ease
-
-      &:hover
-        color gray-200
-        text-decoration underline
-
   .footer-copyright
     color white
     font-size font-size-small
     margin 0
-    text-align left
+    text-align right
 
     @media (max-width: breakpoint-mobile)
       text-align center
@@ -967,12 +968,6 @@ p, .body-text
     p
       margin 0
       color white
-
-  .footer-info
-    text-align right
-
-    @media (max-width: breakpoint-mobile)
-      text-align center
 
 // Form Elements (Wireframe)
 .form-group

@@ -99,15 +99,18 @@ html(lang="zh-TW")
     // Footer
     footer.site-footer
       .container
-        .footer-content
-          .footer-copyright
-            p © 2025 YLPM co., Ltd All Rights Reserved.
+        // 上區：左側 menu，右側 Copyright
+        .footer-top
           nav.footer-nav
             a.footer-link(href="../") 首頁
             a.footer-link(href="../services/") 服務項目
             a.footer-link(href="../cases/") 工程實績
             a.footer-link(href="../partners/") 生態伙伴
             a.footer-link(href="./") 最新消息
+          .footer-copyright
+            p © 2025 YLPM co., Ltd All Rights Reserved.
+        // 下區：公司資訊
+        .footer-bottom
           .footer-info
             .footer-company 奕錸精機股份有限公司
             .footer-details
