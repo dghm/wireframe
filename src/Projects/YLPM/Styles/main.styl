@@ -298,6 +298,18 @@ p, .body-text
 // 服務區塊（內頁詳細版）
 .service-section
   margin-bottom spacing-xl
+  position relative
+
+  .service-badge
+    display inline-block
+    padding 4px 12px
+    background-color gray-200
+    color gray-700
+    font-size font-size-small
+    font-weight 500
+    border-radius 2px
+    margin-bottom spacing-sm
+    text-align center
 
   .service-section-title
     font-size font-size-h2
@@ -305,6 +317,31 @@ p, .body-text
     color gray-700
     margin-bottom spacing-lg
     text-align center
+
+// 服務分類樣式
+.service-core
+  background-color white
+  padding spacing-xl 0
+
+  .service-badge
+    background-color gray-800
+    color white
+
+.service-extension
+  background-color gray-50
+  padding spacing-xl 0
+
+  .service-badge
+    background-color gray-300
+    color gray-800
+
+.service-background
+  background-color white
+  padding spacing-xl 0
+
+  .service-badge
+    background-color gray-100
+    color gray-600
 
 .service-description-box
   max-width 900px
