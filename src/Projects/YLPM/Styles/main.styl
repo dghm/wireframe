@@ -1386,7 +1386,7 @@ p, .body-text
 
 .news-grid
   display grid
-  grid-template-columns repeat(3, 1fr)
+  grid-template-columns repeat(6, 1fr)
   gap spacing-lg
 
   @media (max-width: breakpoint-tablet)
@@ -1395,16 +1395,22 @@ p, .body-text
   @media (max-width: breakpoint-mobile)
     grid-template-columns 1fr
 
-  // 第4和第5個卡片（下排）只佔2欄
+  // 上排3個卡片：每個佔2欄（2+2+2=6）
+  .news-card:nth-child(1),
+  .news-card:nth-child(2),
+  .news-card:nth-child(3)
+    grid-column span 2
+
+    @media (max-width: breakpoint-tablet)
+      grid-column span 1
+
+  // 下排2個卡片：每個佔3欄（3+3=6）
   .news-card:nth-child(4),
   .news-card:nth-child(5)
-    grid-column span 1
+    grid-column span 3
 
-    @media (min-width: breakpoint-tablet + 1px)
-      // 在桌面版，第4和第5個卡片應該只佔1欄，但整體佈局是3欄
-      // 所以需要特殊處理，讓它們只顯示2個
-      // 實際上，我們讓第4個卡片佔1.5欄，第5個卡片佔1.5欄
-      // 但這樣會複雜，所以我們保持簡單：讓它們各佔1欄，但整體網格是3欄
+    @media (max-width: breakpoint-tablet)
+      grid-column span 1
 
 .news-card
   background-color white
