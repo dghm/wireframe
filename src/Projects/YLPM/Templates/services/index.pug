@@ -20,68 +20,83 @@ html(lang="zh-TW")
           a.nav-link(href="../#contact") 聯絡我們
 
     main
-      // 1. 頁首 HERO 區（標題區）
-      section.hero-section
+      // 1. Hero Section（黑色背景）
+      section.hero-section.hero-dark
         .container
           .hero-content
             h1.hero-title 服務項目
-            h2.hero-subtitle 工程整合能力與專案執行服務
+            h2.hero-subtitle 提供機電工程與系統整合相關服務，協助各類工程專案穩定執行。
 
-      // 2. 我們的主要服務
-      section.section
+      // 2. MEP 機電工程（圖片左，文字右）
+      section.section.service-item-section
         .container
-          .section-header
-            h2.section-title 我們的主要服務
-          .row
-            .col.col-lg-4.col-md-4.mb-md
-              .service-card
-                h3.service-card-title 機電工程（MEP）
-                .service-card-content
-                  p 提供機電工程統包、系統整合與工程執行服務，適用於建築工程、廠房工程及各類工程專案之機電需求。
-            .col.col-lg-4.col-md-4.mb-md
-              .service-card
-                h3.service-card-title 系統統包工程
-                .service-card-content
-                  p 從規劃設計到施工執行的完整統包服務，涵蓋水電、空調、弱電、消防等系統工程。
-            .col.col-lg-4.col-md-4.mb-md
-              .service-card
-                h3.service-card-title 系統整合與工程協調
-                .service-card-content
-                  p 協助不同系統與工種間的協調整合，確保工程順利進行與品質管理。
+          .service-item-row
+            .service-item-image
+              .image-placeholder SERVICE IMAGE
+            .service-item-content
+              h2.service-item-title 機電工程（MEP）
+              p.service-item-description 提供建築與產業工程所需之機電系統整合與施工服務，包含電力、空調、給排水、消防等相關工程項目，依專案需求進行整合與執行。
 
-      // 3. 工程執行角色
+      // 3. 系統統包工程（文字左，圖片右）
+      section.section.service-item-section.service-item-reverse
+        .container
+          .service-item-row
+            .service-item-content
+              h2.service-item-title 系統統包工程
+              p.service-item-description 依工程專案需求，提供系統規劃、整合與工程統包服務，協助客戶整合不同系統與工種，確保工程執行流程順暢與成果穩定。
+            .service-item-image
+              .image-placeholder SERVICE IMAGE
+
+      // 4. 系統整合與工程協調（圖片左，文字右）
+      section.section.service-item-section
+        .container
+          .service-item-row
+            .service-item-image
+              .image-placeholder SERVICE IMAGE
+            .service-item-content
+              h2.service-item-title 系統整合與工程協調
+              p.service-item-description 具備跨系統、跨工種之整合經驗，協助工程專案中不同系統之整合、協調與執行管理，確保工程進度、品質與整體運作穩定。
+
+      // 5. 工程執行角色（四欄）
       section.section#execution-role
         .container
           .section-header
             h2.section-title 工程執行角色
-          .role-list
-            .role-item
-              .role-icon ICON
-              .role-text 依工程需求進行整體規劃與整合
-            .role-item
-              .role-icon ICON
-              .role-text 協助不同系統與工種間的協調
-            .role-item
-              .role-icon ICON
-              .role-text 重視施工品質與工程安全
-            .role-item
-              .role-icon ICON
-              .role-text 配合專案條件進行彈性執行
+          .row
+            .col.col-lg-3.col-md-6.mb-md
+              .execution-role-item
+                .execution-role-icon ICON
+                .execution-role-text 依工程需求進行整體規劃與整合
+            .col.col-lg-3.col-md-6.mb-md
+              .execution-role-item
+                .execution-role-icon ICON
+                .execution-role-text 協助不同系統與工種間的協調
+            .col.col-lg-3.col-md-6.mb-md
+              .execution-role-item
+                .execution-role-icon ICON
+                .execution-role-text 重視施工品質與工程安全
+            .col.col-lg-3.col-md-6.mb-md
+              .execution-role-item
+                .execution-role-icon ICON
+                .execution-role-text 配合專案條件進行彈性執行
 
-      // 4. 專業資格
+      // 6. 專業資格（三個卡片）
       section.section#qualifications
         .container
           .section-header
             h2.section-title 專業資格
-          .qualifications-list
-            .qualification-item
-              .qualification-title 甲級水電承裝業
-            .qualification-item
-              .qualification-title 丙級空調承裝業
-            .qualification-item
-              .qualification-title 系統整合相關工程經驗
+          .row
+            .col.col-lg-4.col-md-4.mb-md
+              .qualification-card
+                .qualification-title 甲級水電承裝業
+            .col.col-lg-4.col-md-4.mb-md
+              .qualification-card
+                .qualification-title 丙級空調承裝業
+            .col.col-lg-4.col-md-4.mb-md
+              .qualification-card
+                .qualification-title 系統整合相關工程經驗
 
-      // 5. CTA 區
+      // 7. CTA 區
       section.cta-section
         .container
           .cta-content
@@ -136,4 +151,4 @@ html(lang="zh-TW")
               li
                 | Email：sales@ylpm.com.tw
         .footer-bottom
-          p © 2024 YLPM 奕錸精機. All Rights Reserved.
+          p © 2025 YLPM co., Ltd All Rights Reserved.

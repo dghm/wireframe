@@ -20,7 +20,42 @@ html(lang="zh-TW")
           a.nav-link(href="../#contact") 聯絡我們
 
     main
-      // 1. 生態伙伴列表
+      // 1. Hero Section（黑色背景）
+      section.hero-section.hero-dark
+        .container
+          .hero-content
+            h1.hero-title 生態伙伴
+            h2.hero-subtitle 與優質合作夥伴共同完成各類工程專案，建立穩定的工程生態網絡。
+
+      // 2. 合作夥伴 Logo 展示（左右交替佈局）
+      section.section.partner-item-section
+        .container
+          .partner-item-row
+            .partner-item-image
+              .image-placeholder PARTNER IMAGE
+            .partner-item-content
+              h2.partner-item-title 合作夥伴類別 Placeholder
+              p.partner-item-description 說明合作夥伴的類型與合作內容，展現工程生態網絡的完整性與專業性。
+
+      section.section.partner-item-section.partner-item-reverse
+        .container
+          .partner-item-row
+            .partner-item-content
+              h2.partner-item-title 合作夥伴類別 Placeholder
+              p.partner-item-description 說明合作夥伴的類型與合作內容，展現工程生態網絡的完整性與專業性。
+            .partner-item-image
+              .image-placeholder PARTNER IMAGE
+
+      section.section.partner-item-section
+        .container
+          .partner-item-row
+            .partner-item-image
+              .image-placeholder PARTNER IMAGE
+            .partner-item-content
+              h2.partner-item-title 合作夥伴類別 Placeholder
+              p.partner-item-description 說明合作夥伴的類型與合作內容，展現工程生態網絡的完整性與專業性。
+
+      // 3. 合作夥伴 Logo Grid（一排 4 個，三排）
       section.section
         .container
           .section-header
@@ -51,11 +86,11 @@ html(lang="zh-TW")
             .partner-logo
               .logo-placeholder LOGO 12
 
-      // 3. CTA 區
+      // 4. CTA 區
       section.cta-section
         .container
           .cta-content
-            h2.cta-title 需要統包規劃或施工協助嗎？
+            h2.cta-title 需要機電工程或系統整合協助嗎？
             .cta-actions
               a.btn.btn-primary(href="../#contact") 聯絡我們
 
@@ -82,20 +117,18 @@ html(lang="zh-TW")
             h4.footer-title 服務項目
             ul.footer-links
               li
-                a(href="../services/#service-a") 系統統包規劃設計
+                a(href="../services/#") 機電工程（MEP）
               li
-                a(href="../services/#service-b") 系統統包工程施工
+                a(href="../services/#") 系統統包工程
               li
-                a(href="../services/#capabilities") 工程整合能力
+                a(href="../services/#") 系統整合與工程協調
           .footer-section
             h4.footer-title 專業能力
             ul.footer-links
               li
-                a(href="../services/#capabilities") 跨工種介面協調
+                a(href="../services/#execution-role") 工程執行角色
               li
-                a(href="../services/#capabilities") 機電與建築整合
-              li
-                a(href="../services/#capabilities") 標準化統包流程
+                a(href="../services/#qualifications") 專業資格
           .footer-section
             h4.footer-title 聯絡資訊
             ul.footer-links
@@ -108,5 +141,4 @@ html(lang="zh-TW")
               li
                 | Email：sales@ylpm.com.tw
         .footer-bottom
-          p © 2024 YLPM 奕錸精機. All Rights Reserved.
-
+          p © 2025 YLPM co., Ltd All Rights Reserved.
