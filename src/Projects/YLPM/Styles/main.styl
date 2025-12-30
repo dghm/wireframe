@@ -923,6 +923,77 @@ p, .body-text
 .text-right { text-align: right }
 .text-secondary { color: text-color-secondary }
 
+// Service Card (簡化版)
+.service-card
+  border border-width-thin solid gray-200
+  padding spacing-lg
+  background-color white
+  height 100%
+  display flex
+  flex-direction column
+
+  .service-card-title
+    font-size font-size-h3
+    font-weight 600
+    color gray-800
+    margin-bottom spacing-md
+
+  .service-card-content
+    flex 1
+
+    p
+      font-size font-size-body
+      color text-color-secondary
+      line-height 1.7
+      margin 0
+
+// Role List (工程執行角色)
+.role-list
+  display flex
+  flex-direction column
+  gap spacing-md
+  max-width 800px
+  margin 0 auto
+
+.role-item
+  display flex
+  align-items flex-start
+  gap spacing-md
+  padding spacing-md
+  border-left border-width-medium solid gray-300
+
+  .role-icon
+    @extend .icon-placeholder
+    width 32px
+    height 32px
+    flex-shrink 0
+
+  .role-text
+    font-size font-size-body
+    color text-color
+    line-height 1.6
+    flex 1
+
+// Qualifications List (簡化版)
+.qualifications-list
+  display flex
+  flex-direction column
+  gap spacing-md
+  max-width 600px
+  margin 0 auto
+
+.qualification-item
+  padding spacing-md
+  border border-width-thin solid gray-200
+  background-color white
+  text-align center
+
+  .qualification-title
+    font-size font-size-body
+    font-weight 500
+    color gray-800
+    margin 0
+
 // Blog Styles (WordPress-like)
 .blog-section
   padding spacing-lg 0
