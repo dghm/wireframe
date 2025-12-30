@@ -20,91 +20,90 @@ html(lang="zh-TW")
           a.nav-link(href="../#contact") 聯絡我們
 
     main
-      // 1. 頁首 HERO 區（標題區）
-      section.hero-section
+      // 1. 標題區
+      section.section.news-header-section
         .container
-          .hero-content
-            h1.hero-title 最新消息
-            h2.hero-subtitle 公司動態與產業資訊
+          h1.news-page-title 最新消息
 
-      // 2. 部落格文章列表（WordPress 風格）
-      section.section.blog-section
+      // 2. 文章卡片網格（5個卡片：3個在上排，2個在下排）
+      section.section.news-grid-section
         .container
-          .blog-layout
-            // 主要內容區
-            .blog-main
-              // 文章卡片列表
-              .blog-posts
-                // 文章卡片 1
-                article.blog-post
-                  .post-thumbnail
-                    .image-placeholder POST IMAGE
-                  .post-content
-                    .post-meta
-                      span.post-date 2024年12月15日
-                      span.post-category 公司動態
-                    h2.post-title
-                      a(href="#") 系統統包工程新技術應用：提升施工效率與品質
-                    .post-excerpt
-                      p 本文介紹最新的系統統包工程技術應用，包括機電整合、建築介面協調等專業領域的最新發展。透過標準化流程與創新技術，我們能夠為客戶提供更優質的工程服務...
-                    .post-footer
-                      a.btn.btn-small(href="#") 閱讀更多
-                      span.post-author 發布者：YLPM 編輯部
+          .news-grid
+            // 文章卡片 1
+            article.news-card
+              .news-card-image
+                .image-placeholder NEWS IMAGE
+              .news-card-content
+                h2.news-card-title 智慧製造新時代：工業4.0定義、技術架構與企業轉型實例 2025
+                .news-card-meta
+                  span.news-author ylpm Roya
+                  span.news-date 2 10月, 2025
+                  span.news-comments 尚無留言
+                .news-card-excerpt
+                  p 工業4.0正以數位化浪潮重塑全球製造業。根據 Microso...
+                a.btn.btn-primary.news-read-more(href="#") Read more
 
-                // 文章卡片 2
-                article.blog-post
-                  .post-thumbnail
-                    .image-placeholder POST IMAGE
-                  .post-content
-                    .post-meta
-                      span.post-date 2024年12月10日
-                      span.post-category 產業資訊
-                    h2.post-title
-                      a(href="#") 智慧建築趨勢：BMS 系統整合的重要性與未來展望
-                    .post-excerpt
-                      p 隨著智慧建築概念的興起，BMS（建築管理系統）的整合已成為現代建築不可或缺的一環。本文探討 BMS 系統整合的關鍵技術與未來發展趨勢...
-                    .post-footer
-                      a.btn.btn-small(href="#") 閱讀更多
-                      span.post-author 發布者：YLPM 編輯部
+            // 文章卡片 2
+            article.news-card
+              .news-card-image
+                .image-placeholder NEWS IMAGE
+              .news-card-content
+                h2.news-card-title 2025年值得關注的五大製造業趨勢
+                .news-card-meta
+                  span.news-author ylpm Roya
+                  span.news-date 2 10月, 2025
+                  span.news-comments 尚無留言
+                .news-card-excerpt
+                  p 當我們回顧 2024年的趨勢時，我們意識到製造業正處於一個...
+                a.btn.btn-primary.news-read-more(href="#") Read more
 
-                // 文章卡片 3
-                article.blog-post
-                  .post-thumbnail
-                    .image-placeholder POST IMAGE
-                  .post-content
-                    .post-meta
-                      span.post-date 2024年12月5日
-                      span.post-category 工程實績
-                    h2.post-title
-                      a(href="#") 成功案例分享：大型科技廠房機電統包專案
-                    .post-excerpt
-                      p 分享我們近期完成的科技廠房機電統包專案，從規劃設計到施工完成，展現專業的統包服務能力與跨工種協調整合經驗...
-                    .post-footer
-                      a.btn.btn-small(href="#") 閱讀更多
-                      span.post-author 發布者：YLPM 編輯部
+            // 文章卡片 3
+            article.news-card
+              .news-card-image
+                .image-placeholder NEWS IMAGE
+              .news-card-content
+                h2.news-card-title 製造業數位轉型，最新2025趨勢、成功案例、方法一次看
+                .news-card-meta
+                  span.news-author ylpm Roya
+                  span.news-date 2 10月, 2025
+                  span.news-comments 尚無留言
+                .news-card-excerpt
+                  p 數位轉型正重塑製造業，從電子製造到車廠轉型，企業透過AI...
+                a.btn.btn-primary.news-read-more(href="#") Read more
 
-            // 側邊欄
-            .blog-sidebar
-              // 分類
-              .sidebar-widget.categories-widget
-                h3.widget-title 分類
-                ul.category-list
-                  li
-                    a(href="#") 公司動態 (12)
-                  li
-                    a(href="#") 產業資訊 (8)
-                  li
-                    a(href="#") 工程實績 (15)
-                  li
-                    a(href="#") 技術分享 (6)
-                  li
-                    a(href="#") 最新消息 (5)
+            // 文章卡片 4
+            article.news-card
+              .news-card-image
+                .image-placeholder NEWS IMAGE
+              .news-card-content
+                h2.news-card-title 精密機械工具的綠色轉型契機
+                .news-card-meta
+                  span.news-author ylpm Roya
+                  span.news-date 2 10月, 2025
+                  span.news-comments 尚無留言
+                .news-card-excerpt
+                  p 在全球氣候危機與資源枯竭的雙重壓力下，「永續發展」已成為各產...
+                a.btn.btn-primary.news-read-more(href="#") Read more
+
+            // 文章卡片 5
+            article.news-card
+              .news-card-image
+                .image-placeholder NEWS IMAGE
+              .news-card-content
+                h2.news-card-title CONSTRUCTION 4.0: WHAT WE KNOW AND WHERE WE ARE HEADED?
+                .news-card-meta
+                  span.news-author ylpm Roya
+                  span.news-date 2 10月, 2025
+                  span.news-comments 尚無留言
+                .news-card-excerpt
+                  p 主要內容與核心技術建築4.0結合了物聯網(IoT)、大數據...
+                a.btn.btn-primary.news-read-more(href="#") Read more
 
       // 3. CTA 區
       section.cta-section
         .container
           .cta-content
-            h2.cta-title 需要統包規劃或施工協助嗎？
+            h2.cta-title 需要機電工程或系統整合協助嗎？
             .cta-actions
               a.btn.btn-primary(href="../#contact") 聯絡我們
 
@@ -120,4 +119,3 @@ html(lang="zh-TW")
             a.footer-link(href="./") 最新消息
           .footer-copyright
             p © 2025 YLPM co., Ltd All Rights Reserved.
-
