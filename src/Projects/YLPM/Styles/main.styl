@@ -862,43 +862,48 @@ p, .body-text
 
 // Footer
 .site-footer
-  border-top border-width-medium solid gray-200
-  padding spacing-xl 0
-  background-color gray-100
+  background-color gray-700
+  padding spacing-lg 0
+  border-top border-width-thin solid gray-600
 
   .footer-content
-    display grid
-    grid-template-columns repeat(auto-fit, minmax(200px, 1fr))
+    display flex
+    justify-content space-between
+    align-items center
+    flex-wrap wrap
+    gap spacing-md
+
+    @media (max-width: breakpoint-mobile)
+      flex-direction column
+      text-align center
+
+  .footer-nav
+    display flex
     gap spacing-lg
+    list-style none
+    margin 0
+    padding 0
+    flex-wrap wrap
 
-  .footer-section
-    .footer-title
-      font-size font-size-large
-      font-weight 600
-      margin-bottom spacing-md
-      color gray-700
+    @media (max-width: breakpoint-mobile)
+      justify-content center
 
-    .footer-links
-      list-style none
+  .footer-link
+    color gray-300
+    text-decoration none
+    font-size font-size-body
+    transition color 0.2s ease
 
-      li
-        margin-bottom spacing-xs
+    &:hover
+      color white
 
-        a
-          color text-color-secondary
-          text-decoration none
-          font-size font-size-small
-
-          &:hover
-            color gray-700
-
-  .footer-bottom
-    margin-top spacing-xl
-    padding-top spacing-md
-    border-top border-width-thin solid gray-200
-    text-align center
+  .footer-copyright
+    color gray-300
     font-size font-size-small
-    color text-color-secondary
+    margin 0
+
+    p
+      margin 0
 
 // Form Elements (Wireframe)
 .form-group
