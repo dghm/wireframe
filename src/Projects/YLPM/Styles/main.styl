@@ -911,21 +911,31 @@ p, .body-text
   // 下區：公司資訊
   .footer-bottom
     .footer-info
+      display flex
+      flex-wrap wrap
+      align-items center
+      gap spacing-md
+      font-size font-size-small
+      color gray-300
+
       .footer-company
         font-size font-size-body
         font-weight 600
         color white
-        margin-bottom spacing-sm
+        margin-right spacing-sm
 
       .footer-details
         display flex
-        flex-direction column
-        gap spacing-xs
+        flex-direction row
+        flex-wrap wrap
+        gap spacing-md
+        align-items center
 
       .footer-detail-item
         font-size font-size-small
         color gray-300
         line-height 1.6
+        white-space nowrap
 
       .footer-email-link
         color white
@@ -935,6 +945,17 @@ p, .body-text
         &:hover
           color gray-200
           text-decoration underline
+
+    @media (max-width: breakpoint-mobile)
+      .footer-info
+        flex-direction column
+        text-align center
+        align-items flex-start
+
+        .footer-details
+          flex-direction column
+          align-items flex-start
+          gap spacing-xs
 
   .footer-nav
     display flex
